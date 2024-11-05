@@ -29,7 +29,9 @@ namespace Teacher_Evaluation
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            UI_RegisterStud uI_RegisterStud = new UI_RegisterStud();
+            uI_RegisterStud.Show();
+            this.Hide();
         }
     }
 }
