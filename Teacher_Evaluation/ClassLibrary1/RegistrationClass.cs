@@ -10,5 +10,12 @@ namespace ClassLibrary1
             string pattern = @"^[0-9]{4}-[0-9]{2}$";
             return Regex.IsMatch(studentnum, pattern); 
         }
+
+        public bool validpaassword(Student student)
+        {
+            string password = student.Password;
+            string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[A-Za-z0-9@$!%*?&]{8,}$";
+            return Regex.IsMatch(password, pattern);
+        }
     }
 }
