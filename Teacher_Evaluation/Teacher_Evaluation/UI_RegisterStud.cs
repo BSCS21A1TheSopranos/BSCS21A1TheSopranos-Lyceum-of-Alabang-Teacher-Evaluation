@@ -22,16 +22,21 @@ namespace Teacher_Evaluation
         {
             Student student = new Student(textBox1.Text, textBox3.Text, textBox2.Text);
             RegistrationClass registration = new RegistrationClass();
-            if (registration.validstudentNo(student))
+            LoginForm loginForm = new LoginForm();
+            if (registration.validstudentNo(student) && (registration.validpaassword(student)))
             {
-                LoginForm loginForm = new LoginForm();
                 loginForm.Show();
                 this.Close();
             }
-            else {
+            if (!registration.validstudentNo(student)){
                 textBox3.Text = "Inavalid Format. must be ####-##";
+
             }
-           
+            if (!registration.validpaassword(student))
+            {
+                textBox2.Text = "Minimum of 8 characters with at least one uppercase, lowercase, number, and special character (@, $, !, %, *, ?, &).";
+            }
+
         }
     }
 }
