@@ -20,10 +20,18 @@ namespace Teacher_Evaluation
 
         private void button1_Click(object sender, EventArgs e)
         {
-            StudentClass.Student student = new StudentClass.Student(textBox1.Text, textBox3.Text, textBox2.Text);
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            this.Close();
+            Student student = new Student(textBox1.Text, textBox3.Text, textBox2.Text);
+            RegistrationClass registration = new RegistrationClass();
+            if (registration.validstudentNo(student))
+            {
+                LoginForm loginForm = new LoginForm();
+                loginForm.Show();
+                this.Close();
+            }
+            else {
+                textBox3.Text = "Inavalid Format. must be ####-##";
+            }
+           
         }
     }
 }
