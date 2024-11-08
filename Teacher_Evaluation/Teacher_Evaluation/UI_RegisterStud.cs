@@ -23,12 +23,8 @@ namespace Teacher_Evaluation
             Student student = new Student(textBox1.Text, textBox3.Text, textBox2.Text);
             RegistrationClass registration = new RegistrationClass();
             LoginForm loginForm = new LoginForm();
-            if (registration.validstudentNo(student) && (registration.validpaassword(student)))
+            if (!registration.validstudentNo(student))
             {
-                loginForm.Show();
-                this.Close();
-            }
-            if (!registration.validstudentNo(student)){
                 textBox3.Text = "Inavalid Format. must be ####-##";
 
             }
@@ -36,6 +32,16 @@ namespace Teacher_Evaluation
             {
                 textBox2.Text = "Minimum of 8 characters with at least one uppercase, lowercase, number, and special character (@, $, !, %, *, ?, &).";
             }
+            if (registration.validstudentNo(student) && (registration.validpaassword(student)))
+            {
+                registration.encryptpassword(student);
+                loginForm.Show();
+                this.Close();
+            }
+        }
+
+        private void UI_RegisterStud_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -16,7 +16,7 @@ namespace ClassLibrary1
         {
             this.name = name;
             this.studentNumber = studentNumber.TrimEnd();
-            this.password = password;
+            this.password = password.TrimEnd();
         }
 
         public string Name
