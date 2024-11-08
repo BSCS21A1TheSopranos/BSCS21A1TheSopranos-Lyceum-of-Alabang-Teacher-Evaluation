@@ -132,7 +132,7 @@
             // 
             button1.BackColor = Color.AliceBlue;
             button1.BackgroundImageLayout = ImageLayout.Center;
-            button1.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Black;
             button1.Location = new Point(500, 409);
             button1.Name = "button1";
@@ -146,7 +146,7 @@
             // 
             button2.BackColor = Color.AliceBlue;
             button2.BackgroundImageLayout = ImageLayout.Center;
-            button2.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.Black;
             button2.Location = new Point(224, 335);
             button2.Name = "button2";
@@ -154,6 +154,7 @@
             button2.TabIndex = 11;
             button2.Text = "NEXT";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // label8
             // 
