@@ -38,21 +38,31 @@ namespace Teacher_Evaluation
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             LoginClass login = new LoginClass();
             if (login.checkusername(textBox1.Text) && login.checkpassword(textBox2.Text) && login.checkstudentno(textBox3.Text))
             {
                 this.Close();
             }
-            if (!login.checkusername(textBox1.Text)){
+            if (!login.checkusername(textBox1.Text))
+            {
                 textBox1.Text = "maliq";
             }
-            if (!login.checkstudentno(textBox3.Text)) {
+            if (!login.checkstudentno(textBox3.Text))
+            {
                 textBox3.Text = "maliw";
             }
-            if (!login.checkpassword(textBox2.Text)) {
+            if (!login.checkpassword(textBox2.Text))
+            {
                 textBox2.Text = "malie";
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Admin admin = new Admin();
+            admin.Show();
+            this.Hide();
         }
     }
 }
