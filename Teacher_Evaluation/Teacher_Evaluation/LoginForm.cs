@@ -1,4 +1,5 @@
 using ClassLibrary1;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Teacher_Evaluation
 {
@@ -38,31 +39,42 @@ namespace Teacher_Evaluation
 
         private void button2_Click(object sender, EventArgs e)
         {
+            UserInfo user = DatabaseConnection.UserData(textBox3.Text);
 
-            LoginClass login = new LoginClass();
-            if (login.checkusername(textBox1.Text) && login.checkpassword(textBox2.Text) && login.checkstudentno(textBox3.Text))
+            if (user != null)
             {
-                this.Close();
+                LoginClass login = new LoginClass(user.Password, user.Role, user.ID);
+                if (login.checkpassword(textBox2.Text) && login.checkstudentno(textBox3.Text))
+                {
+                    if (user.Role == "Admin")
+                    {
+                        Admin admin = new Admin();
+                        admin.Show();
+                        this.Hide();
+                    }
+                    else if(user.Role == "Student")
+                    {
+                        this.Close();
+                    }
+                }
+                if (!login.checkstudentno(textBox3.Text))
+                {
+                    textBox3.Text = "maliw";
+                }
+                if (!login.checkpassword(textBox2.Text))
+                {
+                    textBox2.Text = "malie";
+                }
             }
-            if (!login.checkusername(textBox1.Text))
+            else
             {
-                textBox1.Text = "maliq";
-            }
-            if (!login.checkstudentno(textBox3.Text))
-            {
-                textBox3.Text = "maliw";
-            }
-            if (!login.checkpassword(textBox2.Text))
-            {
-                textBox2.Text = "malie";
+                label9.Text = "User Not Found";
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void label9_Click(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
-            admin.Show();
-            this.Hide();
+
         }
     }
 }
