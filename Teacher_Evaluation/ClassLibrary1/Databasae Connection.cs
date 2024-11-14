@@ -19,6 +19,59 @@ namespace Teacher_Evaluation
             cmd.ExecuteNonQuery();
             connection.Close();
         }
-    
+
+        public static UserInfo UserData(string userno)
+        {
+            UserInfo user = null;
+            connection.Open();
+            try
+            {
+                var tables = new (string TableName, string IDField)[]
+                {
+            ("Students", "StudentID"),
+            ("Prof", "ProfID"),
+            ("Admin", "AdminNO")
+                };
+
+                OleDbCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.Text;
+
+                foreach (var (tableName, idField) in tables)
+                {
+                    command.CommandText = $"SELECT * FROM {tableName} WHERE {idField} = @userNo";
+                    command.Parameters.Clear();
+                    command.Parameters.AddWithValue("@userNo", userno);
+
+                    using (OleDbDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            user = new UserInfo
+                            {
+                                ID = reader[idField].ToString(),
+                                Role = reader["Role"].ToString(),
+                                Password = reader["Password"].ToString()
+                            };
+                            return user;
+                        }
+                    }
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return user;
+        }
+
+
     }
+
+    public class UserInfo
+    {
+        public string ID { get; set; }
+        public string Role { get; set; }
+        public string Password { get; set; }
+    }
+
 }
