@@ -9,9 +9,16 @@ namespace ClassLibrary1
 {
     public class LoginClass
     {
-        public string testpassword = "KkQ+kNT0LaX36D1j0v8F9g=="; //Qwerty123@
-        public string testusername = "username";
-        public string teststudentno = "2014-23";
+        public string testpassword;
+        public string testusername;
+        public string teststudentno;
+
+        public LoginClass(string testpassword, string testusername, string teststudentno)
+        {
+            this.testpassword = testpassword;
+            this.testusername = testusername;
+            this.teststudentno = teststudentno;
+        }
 
         public bool checkpassword(string password)
         {
