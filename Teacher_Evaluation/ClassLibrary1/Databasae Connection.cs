@@ -152,6 +152,31 @@ namespace Teacher_Evaluation
             return GetTeachersByIDs(teacherInfos);
         }
 
+        public static void InsertEvaluation(string teacherID, string subject, string feedback)
+        {
+            try
+            {
+                connection.Open();
+                string query = @"
+                INSERT INTO Evaluation (Teacher, Subject, Feedback)
+                VALUES (@TeacherID, @Subject, @TeacherFeedback)";
+
+                using (OleDbCommand cmd = new OleDbCommand(query, connection))
+                {
+                    cmd.Parameters.Add("@TeacherID", OleDbType.VarChar).Value = teacherID;
+                    cmd.Parameters.Add("@Subject", OleDbType.VarChar).Value = subject;
+                    cmd.Parameters.Add("@TeacherFeedback", OleDbType.VarChar).Value = feedback;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                    connection.Close();
+            }
+        }
+
+
     }
 
     public class UserInfo
