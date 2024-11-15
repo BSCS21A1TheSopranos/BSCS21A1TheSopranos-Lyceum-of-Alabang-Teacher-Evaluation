@@ -31,6 +31,7 @@
             dataGridView1 = new DataGridView();
             Subject = new DataGridViewTextBoxColumn();
             Teacher = new DataGridViewTextBoxColumn();
+            TeachersID = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -38,25 +39,38 @@
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Subject, Teacher });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Subject, Teacher, TeachersID });
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(800, 450);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
             // Subject
             // 
             Subject.HeaderText = "Subject";
             Subject.MinimumWidth = 6;
             Subject.Name = "Subject";
+            Subject.ReadOnly = true;
             // 
             // Teacher
             // 
             Teacher.HeaderText = "Teacher";
             Teacher.MinimumWidth = 6;
             Teacher.Name = "Teacher";
+            Teacher.ReadOnly = true;
+            // 
+            // TeachersID
+            // 
+            TeachersID.HeaderText = "Column1";
+            TeachersID.MinimumWidth = 6;
+            TeachersID.Name = "TeachersID";
+            TeachersID.ReadOnly = true;
+            TeachersID.Visible = false;
             // 
             // Form1
             // 
@@ -75,5 +89,6 @@
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Subject;
         private DataGridViewTextBoxColumn Teacher;
+        private DataGridViewTextBoxColumn TeachersID;
     }
 }
