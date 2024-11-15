@@ -54,7 +54,9 @@ namespace Teacher_Evaluation
                     }
                     else if(user.Role == "Student")
                     {
-                        this.Close();
+                        Form1 form = new Form1(user.ID);
+                        form.Show();
+                        this.Hide();
                     }
                 }
                 if (!login.checkstudentno(textBox3.Text))
