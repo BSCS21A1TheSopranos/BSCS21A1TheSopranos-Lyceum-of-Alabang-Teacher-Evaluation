@@ -48,7 +48,11 @@ namespace Teacher_Evaluation
 
         }
 
-
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Close();
+        }
     }
 }

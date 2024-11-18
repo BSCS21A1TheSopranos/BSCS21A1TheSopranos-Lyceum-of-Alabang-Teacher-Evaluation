@@ -44,6 +44,7 @@
             label9 = new Label();
             label10 = new Label();
             textBox4 = new TextBox();
+            button2 = new Button();
             textBox1 = new TextBox();
             SuspendLayout();
             // 
@@ -63,10 +64,8 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(243, 196, 27);
-            button1.FlatAppearance.BorderColor = Color.FromArgb(64, 0, 64);
+            button1.FlatAppearance.BorderColor = Color.Gold;
             button1.FlatAppearance.BorderSize = 5;
-            button1.FlatAppearance.MouseDownBackColor = Color.Lime;
-            button1.FlatAppearance.MouseOverBackColor = Color.Red;
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Book Antiqua", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.Location = new Point(517, 324);
@@ -219,6 +218,23 @@
             textBox4.TabIndex = 16;
             textBox4.Tag = "";
             // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.Control;
+            button2.BackgroundImageLayout = ImageLayout.None;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Book Antiqua", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.SteelBlue;
+            button2.Location = new Point(517, 372);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(220, 31);
+            button2.TabIndex = 17;
+            button2.Text = "Already have an account?";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
             // UI_RegisterStud
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -226,6 +242,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(834, 472);
+            Controls.Add(button2);
             Controls.Add(textBox4);
             Controls.Add(label3);
             Controls.Add(label10);
@@ -265,5 +282,6 @@
         private Label label9;
         private Label label10;
         private TextBox textBox4;
+        private Button button2;
     }
 }
