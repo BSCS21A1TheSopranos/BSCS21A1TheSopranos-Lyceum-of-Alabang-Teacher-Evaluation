@@ -23,9 +23,10 @@ namespace Teacher_Evaluation
             Student student = new Student(textBox1.Text, textBox3.Text, textBox2.Text);
             RegistrationClass registration = new RegistrationClass();
             LoginForm loginForm = new LoginForm();
+
             if (!registration.validstudentNo(student))
             {
-                textBox3.Text = "Inavalid Format. must be ####-##";
+                textBox3.Text = "Invalid Format. It must be ####-##";
 
             }
             if (!registration.validpaassword(student))
@@ -39,11 +40,15 @@ namespace Teacher_Evaluation
                 loginForm.Show();
                 this.Close();
             }
+
         }
 
         private void UI_RegisterStud_Load(object sender, EventArgs e)
         {
 
         }
+
+
+
     }
 }
