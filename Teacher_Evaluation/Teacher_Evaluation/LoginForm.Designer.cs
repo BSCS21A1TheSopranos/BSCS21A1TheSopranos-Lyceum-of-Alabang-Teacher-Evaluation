@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             label1 = new Label();
             textBox1 = new TextBox();
             label2 = new Label();
@@ -48,9 +49,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(347, 9);
+            label1.Location = new Point(315, 18);
             label1.Name = "label1";
-            label1.Size = new Size(315, 33);
+            label1.Size = new Size(252, 25);
             label1.TabIndex = 0;
             label1.Text = "TEACHER EVALUATION";
             label1.Click += label1_Click;
@@ -58,10 +59,11 @@
             // textBox1
             // 
             textBox1.BackColor = SystemColors.InactiveCaption;
-            textBox1.Location = new Point(461, 120);
+            textBox1.Location = new Point(404, 89);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(329, 32);
+            textBox1.Size = new Size(288, 25);
             textBox1.TabIndex = 1;
             // 
             // label2
@@ -70,30 +72,29 @@
             label2.BackColor = SystemColors.ActiveCaption;
             label2.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(222, 187);
+            label2.Location = new Point(194, 140);
             label2.Name = "label2";
-            label2.Size = new Size(205, 33);
+            label2.Size = new Size(0, 25);
             label2.TabIndex = 2;
-            label2.Text = "Student Number:";
             label2.Click += label2_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(224, 249);
+            label3.Location = new Point(196, 187);
             label3.Name = "label3";
-            label3.Size = new Size(129, 33);
+            label3.Size = new Size(0, 25);
             label3.TabIndex = 3;
-            label3.Text = "Password:";
             // 
             // textBox2
             // 
             textBox2.BackColor = SystemColors.InactiveCaption;
-            textBox2.Location = new Point(461, 249);
+            textBox2.Location = new Point(403, 187);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(329, 33);
+            textBox2.Size = new Size(288, 26);
             textBox2.TabIndex = 4;
             // 
             // label5
@@ -101,33 +102,30 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Red;
-            label5.Location = new Point(543, 155);
+            label5.Location = new Point(475, 116);
             label5.Name = "label5";
-            label5.Size = new Size(160, 17);
+            label5.Size = new Size(0, 13);
             label5.TabIndex = 7;
-            label5.Text = "*This is Required to Fill up";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Red;
-            label6.Location = new Point(543, 285);
+            label6.Location = new Point(475, 214);
             label6.Name = "label6";
-            label6.Size = new Size(160, 17);
+            label6.Size = new Size(0, 13);
             label6.TabIndex = 8;
-            label6.Text = "*This is Required to Fill up";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Red;
-            label7.Location = new Point(555, 221);
+            label7.Location = new Point(486, 166);
             label7.Name = "label7";
-            label7.Size = new Size(129, 17);
+            label7.Size = new Size(0, 13);
             label7.TabIndex = 9;
-            label7.Text = "*Please Select Above\r\n";
             // 
             // button1
             // 
@@ -135,9 +133,10 @@
             button1.BackgroundImageLayout = ImageLayout.Center;
             button1.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(501, 409);
+            button1.Location = new Point(438, 307);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(290, 33);
+            button1.Size = new Size(254, 25);
             button1.TabIndex = 10;
             button1.Text = "REGISTER";
             button1.UseVisualStyleBackColor = false;
@@ -149,9 +148,10 @@
             button2.BackgroundImageLayout = ImageLayout.Center;
             button2.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.Black;
-            button2.Location = new Point(224, 335);
+            button2.Location = new Point(196, 251);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(566, 43);
+            button2.Size = new Size(495, 32);
             button2.TabIndex = 11;
             button2.Text = "NEXT";
             button2.UseVisualStyleBackColor = false;
@@ -161,9 +161,9 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(224, 408);
+            label8.Location = new Point(196, 306);
             label8.Name = "label8";
-            label8.Size = new Size(270, 33);
+            label8.Size = new Size(219, 25);
             label8.TabIndex = 12;
             label8.Text = "Doesn't Have Account?";
             label8.Click += label8_Click;
@@ -171,10 +171,11 @@
             // textBox3
             // 
             textBox3.BackColor = SystemColors.InactiveCaption;
-            textBox3.Location = new Point(461, 187);
+            textBox3.Location = new Point(403, 140);
+            textBox3.Margin = new Padding(3, 2, 3, 2);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(329, 33);
+            textBox3.Size = new Size(288, 26);
             textBox3.TabIndex = 13;
             // 
             // label4
@@ -183,31 +184,30 @@
             label4.BackColor = SystemColors.ActiveCaption;
             label4.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(222, 119);
+            label4.Location = new Point(194, 89);
             label4.Name = "label4";
-            label4.Size = new Size(132, 33);
+            label4.Size = new Size(0, 25);
             label4.TabIndex = 14;
-            label4.Text = "Username:";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(461, 312);
+            label9.Location = new Point(403, 234);
             label9.Name = "label9";
-            label9.Size = new Size(50, 20);
+            label9.Size = new Size(38, 15);
             label9.TabIndex = 16;
             label9.Text = "label9";
             label9.Click += label9_Click;
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ActiveCaption;
-            BackgroundImage = Properties.Resources.OIP;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1022, 509);
+            ClientSize = new Size(831, 471);
             Controls.Add(label9);
             Controls.Add(label4);
             Controls.Add(textBox3);
@@ -222,8 +222,8 @@
             Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "LoginForm";
-            Text = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
