@@ -43,6 +43,7 @@
             textBox3 = new TextBox();
             label4 = new Label();
             label9 = new Label();
+            checkBox1 = new CheckBox();
             SuspendLayout();
             // 
             // label1
@@ -92,10 +93,10 @@
             textBox2.BackColor = SystemColors.InactiveCaption;
             textBox2.Location = new Point(403, 187);
             textBox2.Margin = new Padding(3, 2, 3, 2);
-            textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(288, 26);
+            textBox2.Size = new Size(288, 23);
             textBox2.TabIndex = 4;
+            textBox2.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -199,6 +200,16 @@
             label9.Text = "label9";
             label9.Click += label9_Click;
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(663, 224);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(15, 14);
+            checkBox1.TabIndex = 17;
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -208,6 +219,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(831, 471);
+            Controls.Add(checkBox1);
             Controls.Add(label9);
             Controls.Add(label4);
             Controls.Add(textBox3);
@@ -245,5 +257,6 @@
         private TextBox textBox3;
         private Label label4;
         private Label label9;
+        private CheckBox checkBox1;
     }
 }
