@@ -89,6 +89,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "StudentForm";
             Text = "StudentForm";
+            Load += StudentForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
