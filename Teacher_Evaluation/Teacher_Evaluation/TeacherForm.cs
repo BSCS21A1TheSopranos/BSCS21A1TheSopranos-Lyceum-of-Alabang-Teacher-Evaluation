@@ -54,7 +54,8 @@ namespace Teacher_Evaluation
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            AddTeacher add = new AddTeacher();
+            add.Show();
         }
 
         private void TeacherForm_Load(object sender, EventArgs e)

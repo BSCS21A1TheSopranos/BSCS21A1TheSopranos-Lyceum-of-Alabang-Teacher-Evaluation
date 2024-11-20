@@ -52,7 +52,7 @@ namespace Teacher_Evaluation
                         admin.Show();
                         this.Hide();
                     }
-                    else if(user.Role == "Student")
+                    else if (user.Role == "Student")
                     {
                         Form1 form = new Form1(user.ID);
                         form.Show();
@@ -75,6 +75,11 @@ namespace Teacher_Evaluation
         }
 
         private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
