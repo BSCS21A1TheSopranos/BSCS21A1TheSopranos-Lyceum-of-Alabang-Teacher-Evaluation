@@ -68,5 +68,20 @@ namespace Teacher_Evaluation
         {
             LoadForm(new Survey());
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DialogResult response = MessageBox.Show(
+        "Are you sure that you want to exit the application?",
+        "EXIT THE APP",
+        MessageBoxButtons.YesNo,
+        MessageBoxIcon.Question
+    );
+
+            if (response == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

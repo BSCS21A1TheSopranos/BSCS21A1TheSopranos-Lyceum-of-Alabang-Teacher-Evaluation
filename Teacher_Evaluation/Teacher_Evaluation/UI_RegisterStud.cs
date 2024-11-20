@@ -54,5 +54,19 @@ namespace Teacher_Evaluation
             loginForm.Show();
             this.Close();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox2.UseSystemPasswordChar = false;
+                textBox4.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = true;
+                textBox4.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

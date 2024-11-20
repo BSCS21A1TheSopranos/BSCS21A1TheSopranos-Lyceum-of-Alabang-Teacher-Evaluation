@@ -52,7 +52,7 @@ namespace Teacher_Evaluation
                         admin.Show();
                         this.Hide();
                     }
-                    else if(user.Role == "Student")
+                    else if (user.Role == "Student")
                     {
                         Form1 form = new Form1(user.ID);
                         form.Show();
@@ -77,6 +77,18 @@ namespace Teacher_Evaluation
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox2.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = true;
+            }
         }
     }
 }
