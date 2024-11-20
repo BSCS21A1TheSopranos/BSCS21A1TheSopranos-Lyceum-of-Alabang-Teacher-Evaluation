@@ -190,6 +190,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "AddTeacher";
             Text = "AddTeacher";
+            Load += AddTeacher_Load;
             ResumeLayout(false);
             PerformLayout();
         }
