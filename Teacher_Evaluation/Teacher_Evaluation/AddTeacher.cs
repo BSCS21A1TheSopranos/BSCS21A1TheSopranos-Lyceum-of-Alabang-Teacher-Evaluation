@@ -43,7 +43,7 @@ namespace Teacher_Evaluation
                 MessageBox.Show("All fields must be filled out.");
                 return;
             }
-            
+
 
             try
             {
@@ -81,6 +81,11 @@ namespace Teacher_Evaluation
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void AddTeacher_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
