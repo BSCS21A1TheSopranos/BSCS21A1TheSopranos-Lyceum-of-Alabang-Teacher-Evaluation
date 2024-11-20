@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             TextBox textBox1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UI_RegisterStud));
             button1 = new Button();
             label1 = new Label();
             label3 = new Label();
@@ -239,7 +238,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImage = Properties.Resources.loa_building;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(834, 472);
             Controls.Add(button2);

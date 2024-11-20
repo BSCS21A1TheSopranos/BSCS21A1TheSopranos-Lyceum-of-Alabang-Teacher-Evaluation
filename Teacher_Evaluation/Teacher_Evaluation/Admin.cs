@@ -27,6 +27,8 @@ namespace Teacher_Evaluation
             this.mainpanel.Controls.Add(f);
             this.mainpanel.Tag = f;
             f.Show();
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -37,6 +39,7 @@ namespace Teacher_Evaluation
         private void button1_Click(object sender, EventArgs e)
         {
             LoadForm(new Dashboard());
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -69,19 +72,57 @@ namespace Teacher_Evaluation
             LoadForm(new Survey());
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnMinimize_Click(object sender, EventArgs e)
         {
-            DialogResult response = MessageBox.Show(
-        "Are you sure that you want to exit the application?",
-        "EXIT THE APP",
-        MessageBoxButtons.YesNo,
-        MessageBoxIcon.Question
-    );
-
-            if (response == DialogResult.Yes)
+            if (WindowState == FormWindowState.Normal)
             {
-                this.Close();
+                this.WindowState = FormWindowState.Maximized;
             }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+            if (mainpanel.Controls.Count > 0)
+            {
+                var form = mainpanel.Controls[0] as Form;
+                if (form != null)
+                {
+                    // Ensure the form inside the panel resizes appropriately
+                    form.WindowState = this.WindowState;
+                }
+            }
+        }
+
+        private void mainpanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label2 = new Label();
             mainpanel = new Panel();
             panel2 = new Panel();
+            buttonMinimize = new Button();
+            buttonMaximize = new Button();
+            buttonClose = new Button();
             label1 = new Label();
             button5 = new Button();
             panel1 = new Panel();
@@ -39,34 +41,73 @@
             button2 = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
+            panel2.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(299, 28);
-            label2.Name = "label2";
-            label2.Size = new Size(0, 45);
-            label2.TabIndex = 1;
-            // 
             // mainpanel
             // 
-            mainpanel.Dock = DockStyle.Bottom;
             mainpanel.Location = new Point(280, 39);
             mainpanel.Name = "mainpanel";
             mainpanel.Size = new Size(735, 666);
             mainpanel.TabIndex = 2;
+            mainpanel.Paint += mainpanel_Paint_1;
             // 
             // panel2
             // 
             panel2.BackColor = SystemColors.ActiveCaption;
-            panel2.Location = new Point(0, 0);
+            panel2.Controls.Add(buttonMinimize);
+            panel2.Controls.Add(buttonMaximize);
+            panel2.Controls.Add(buttonClose);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(280, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1015, 33);
+            panel2.Size = new Size(735, 33);
             panel2.TabIndex = 0;
+            panel2.Paint += panel2_Paint_1;
+            // 
+            // buttonMinimize
+            // 
+            buttonMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonMinimize.BackgroundImage = Properties.Resources.minimize;
+            buttonMinimize.Cursor = Cursors.Hand;
+            buttonMinimize.FlatAppearance.BorderSize = 0;
+            buttonMinimize.FlatStyle = FlatStyle.Flat;
+            buttonMinimize.Location = new Point(638, 5);
+            buttonMinimize.Name = "buttonMinimize";
+            buttonMinimize.Size = new Size(25, 23);
+            buttonMinimize.TabIndex = 2;
+            buttonMinimize.UseVisualStyleBackColor = true;
+            buttonMinimize.Click += buttonMinimize_Click;
+            // 
+            // buttonMaximize
+            // 
+            buttonMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonMaximize.BackgroundImage = Properties.Resources.maximize;
+            buttonMaximize.Cursor = Cursors.Hand;
+            buttonMaximize.FlatAppearance.BorderSize = 0;
+            buttonMaximize.FlatStyle = FlatStyle.Flat;
+            buttonMaximize.Location = new Point(672, 5);
+            buttonMaximize.Name = "buttonMaximize";
+            buttonMaximize.Size = new Size(25, 23);
+            buttonMaximize.TabIndex = 1;
+            buttonMaximize.UseVisualStyleBackColor = true;
+            buttonMaximize.Click += buttonMaximize_Click;
+            // 
+            // buttonClose
+            // 
+            buttonClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonClose.BackgroundImage = Properties.Resources.close;
+            buttonClose.Cursor = Cursors.Hand;
+            buttonClose.FlatAppearance.BorderSize = 0;
+            buttonClose.FlatStyle = FlatStyle.Flat;
+            buttonClose.Location = new Point(702, 5);
+            buttonClose.Name = "buttonClose";
+            buttonClose.Size = new Size(25, 23);
+            buttonClose.TabIndex = 0;
+            buttonClose.UseVisualStyleBackColor = true;
+            buttonClose.Click += buttonClose_Click;
             // 
             // label1
             // 
@@ -82,6 +123,7 @@
             // 
             // button5
             // 
+            button5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button5.Cursor = Cursors.Hand;
             button5.FlatAppearance.BorderSize = 2;
             button5.FlatStyle = FlatStyle.Flat;
@@ -93,7 +135,6 @@
             button5.TabIndex = 1;
             button5.Text = "Log Out";
             button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
             // 
             // panel1
             // 
@@ -113,6 +154,7 @@
             // 
             // button4
             // 
+            button4.Anchor = AnchorStyles.Left;
             button4.BackColor = SystemColors.MenuHighlight;
             button4.Cursor = Cursors.Hand;
             button4.FlatAppearance.BorderSize = 0;
@@ -131,6 +173,7 @@
             // 
             // button3
             // 
+            button3.Anchor = AnchorStyles.Left;
             button3.BackColor = SystemColors.MenuHighlight;
             button3.Cursor = Cursors.Hand;
             button3.FlatAppearance.BorderSize = 0;
@@ -139,7 +182,7 @@
             button3.ForeColor = SystemColors.ButtonFace;
             button3.Image = Properties.Resources.teacher;
             button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(26, 388);
+            button3.Location = new Point(26, 390);
             button3.Name = "button3";
             button3.Size = new Size(254, 55);
             button3.TabIndex = 3;
@@ -149,6 +192,7 @@
             // 
             // button2
             // 
+            button2.Anchor = AnchorStyles.Left;
             button2.BackColor = SystemColors.MenuHighlight;
             button2.Cursor = Cursors.Hand;
             button2.FlatAppearance.BorderSize = 0;
@@ -157,7 +201,7 @@
             button2.ForeColor = SystemColors.ButtonFace;
             button2.Image = Properties.Resources.student;
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(26, 320);
+            button2.Location = new Point(26, 322);
             button2.Name = "button2";
             button2.Size = new Size(254, 55);
             button2.TabIndex = 2;
@@ -167,6 +211,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Left;
             button1.BackColor = SystemColors.MenuHighlight;
             button1.Cursor = Cursors.Hand;
             button1.FlatAppearance.BorderSize = 0;
@@ -175,7 +220,7 @@
             button1.ForeColor = SystemColors.ButtonFace;
             button1.Image = Properties.Resources.home;
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(26, 246);
+            button1.Location = new Point(26, 248);
             button1.Name = "button1";
             button1.Size = new Size(254, 55);
             button1.TabIndex = 1;
@@ -200,20 +245,18 @@
             ClientSize = new Size(1015, 705);
             Controls.Add(panel2);
             Controls.Add(mainpanel);
-            Controls.Add(label2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Admin";
             Text = "Admin";
+            panel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private Label label2;
         private Panel mainpanel;
         private Panel panel2;
         private Label label1;
@@ -224,5 +267,8 @@
         private Button button2;
         private Button button1;
         private PictureBox pictureBox1;
+        private Button buttonMinimize;
+        private Button buttonMaximize;
+        private Button buttonClose;
     }
 }

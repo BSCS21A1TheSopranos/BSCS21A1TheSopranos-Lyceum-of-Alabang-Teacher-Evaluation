@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic.Logging;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Reflection.Emit;
 using System.Windows.Forms;
@@ -33,22 +32,7 @@ namespace Teacher_Evaluation
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult response = MessageBox.Show(
-           "Are you sure that you want to exit the application?",
-           "EXIT THE APP",
-           MessageBoxButtons.YesNo,
-           MessageBoxIcon.Question
-       );
-
-            if (response == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }
