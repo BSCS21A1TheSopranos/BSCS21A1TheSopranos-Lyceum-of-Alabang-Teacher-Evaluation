@@ -104,7 +104,7 @@ namespace Teacher_Evaluation
                 var form = mainpanel.Controls[0] as Form;
                 if (form != null)
                 {
-                    // Ensure the form inside the panel resizes appropriately
+                    
                     form.WindowState = this.WindowState;
                 }
             }
