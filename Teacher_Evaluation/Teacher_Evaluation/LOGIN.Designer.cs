@@ -42,6 +42,7 @@
             label6 = new Label();
             textBox3 = new TextBox();
             label7 = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -51,27 +52,27 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.FromArgb(31, 51, 92);
-            pictureBox1.Location = new Point(519, -41);
+            pictureBox1.Location = new Point(519, -40);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(454, 692);
+            pictureBox1.Size = new Size(456, 692);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             pictureBox2.BackColor = SystemColors.ControlLight;
-            pictureBox2.Location = new Point(556, 37);
+            pictureBox2.Location = new Point(556, 30);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(365, 557);
+            pictureBox2.Size = new Size(365, 576);
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox3
             // 
-            pictureBox3.Location = new Point(556, 37);
+            pictureBox3.Location = new Point(556, 30);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(365, 73);
+            pictureBox3.Size = new Size(365, 55);
             pictureBox3.TabIndex = 3;
             pictureBox3.TabStop = false;
             // 
@@ -79,7 +80,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Bookman Old Style", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(616, 54);
+            label1.Location = new Point(609, 37);
             label1.Name = "label1";
             label1.Size = new Size(251, 40);
             label1.TabIndex = 4;
@@ -87,7 +88,7 @@
             // 
             // pictureBox4
             // 
-            pictureBox4.Location = new Point(556, 578);
+            pictureBox4.Location = new Point(556, 590);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(365, 16);
             pictureBox4.TabIndex = 5;
@@ -98,7 +99,7 @@
             label3.AutoSize = true;
             label3.BackColor = SystemColors.ControlLight;
             label3.Font = new Font("Book Antiqua", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(588, 144);
+            label3.Location = new Point(588, 105);
             label3.Name = "label3";
             label3.Size = new Size(188, 22);
             label3.TabIndex = 7;
@@ -107,7 +108,7 @@
             // textBox1
             // 
             textBox1.BackColor = SystemColors.InactiveCaption;
-            textBox1.Location = new Point(588, 169);
+            textBox1.Location = new Point(588, 130);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(302, 27);
             textBox1.TabIndex = 8;
@@ -117,7 +118,7 @@
             label2.AutoSize = true;
             label2.BackColor = SystemColors.ControlLight;
             label2.Font = new Font("Book Antiqua", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(588, 239);
+            label2.Location = new Point(588, 200);
             label2.Name = "label2";
             label2.Size = new Size(167, 22);
             label2.TabIndex = 9;
@@ -129,7 +130,7 @@
             label4.BackColor = SystemColors.ControlLight;
             label4.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Firebrick;
-            label4.Location = new Point(666, 199);
+            label4.Location = new Point(672, 160);
             label4.Name = "label4";
             label4.Size = new Size(143, 17);
             label4.TabIndex = 10;
@@ -138,7 +139,7 @@
             // textBox2
             // 
             textBox2.BackColor = SystemColors.InactiveCaption;
-            textBox2.Location = new Point(588, 264);
+            textBox2.Location = new Point(588, 225);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(302, 27);
             textBox2.TabIndex = 11;
@@ -149,7 +150,7 @@
             label5.BackColor = SystemColors.ControlLight;
             label5.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Firebrick;
-            label5.Location = new Point(666, 294);
+            label5.Location = new Point(672, 255);
             label5.Name = "label5";
             label5.Size = new Size(143, 17);
             label5.TabIndex = 12;
@@ -160,7 +161,7 @@
             label6.AutoSize = true;
             label6.BackColor = SystemColors.ControlLight;
             label6.Font = new Font("Book Antiqua", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(588, 344);
+            label6.Location = new Point(588, 299);
             label6.Name = "label6";
             label6.Size = new Size(105, 22);
             label6.TabIndex = 13;
@@ -169,7 +170,7 @@
             // textBox3
             // 
             textBox3.BackColor = SystemColors.InactiveCaption;
-            textBox3.Location = new Point(588, 369);
+            textBox3.Location = new Point(588, 324);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(302, 27);
             textBox3.TabIndex = 14;
@@ -181,11 +182,23 @@
             label7.BackColor = SystemColors.ControlLight;
             label7.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Firebrick;
-            label7.Location = new Point(666, 399);
+            label7.Location = new Point(672, 354);
             label7.Name = "label7";
             label7.Size = new Size(143, 17);
             label7.TabIndex = 15;
             label7.Text = "Please Fill Up This Area";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(243, 196, 27);
+            button1.Font = new Font("Bookman Old Style", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = SystemColors.ActiveCaptionText;
+            button1.Location = new Point(588, 396);
+            button1.Name = "button1";
+            button1.Size = new Size(302, 38);
+            button1.TabIndex = 16;
+            button1.Text = "LOGIN";
+            button1.UseVisualStyleBackColor = false;
             // 
             // LOGIN
             // 
@@ -194,6 +207,7 @@
             BackgroundImage = Properties.Resources.LOA;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(953, 629);
+            Controls.Add(button1);
             Controls.Add(label7);
             Controls.Add(textBox3);
             Controls.Add(label6);
@@ -234,5 +248,6 @@
         private Label label6;
         private TextBox textBox3;
         private Label label7;
+        private Button button1;
     }
 }
