@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             mainpanel = new Panel();
-            panel2 = new Panel();
-            buttonMinimize = new Button();
-            buttonMaximize = new Button();
-            buttonClose = new Button();
             label1 = new Label();
             button5 = new Button();
             panel1 = new Panel();
@@ -41,7 +37,6 @@
             button2 = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
-            panel2.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -54,61 +49,6 @@
             mainpanel.TabIndex = 2;
             mainpanel.Paint += mainpanel_Paint_1;
             mainpanel.Resize += mainpanel_Resize;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.ActiveCaption;
-            panel2.Controls.Add(buttonMinimize);
-            panel2.Controls.Add(buttonMaximize);
-            panel2.Controls.Add(buttonClose);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(280, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(735, 33);
-            panel2.TabIndex = 0;
-            panel2.Paint += panel2_Paint_1;
-            // 
-            // buttonMinimize
-            // 
-            buttonMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonMinimize.BackgroundImage = Properties.Resources.minimize;
-            buttonMinimize.Cursor = Cursors.Hand;
-            buttonMinimize.FlatAppearance.BorderSize = 0;
-            buttonMinimize.FlatStyle = FlatStyle.Flat;
-            buttonMinimize.Location = new Point(638, 5);
-            buttonMinimize.Name = "buttonMinimize";
-            buttonMinimize.Size = new Size(25, 23);
-            buttonMinimize.TabIndex = 2;
-            buttonMinimize.UseVisualStyleBackColor = true;
-            buttonMinimize.Click += buttonMinimize_Click;
-            // 
-            // buttonMaximize
-            // 
-            buttonMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonMaximize.BackgroundImage = Properties.Resources.maximize;
-            buttonMaximize.Cursor = Cursors.Hand;
-            buttonMaximize.FlatAppearance.BorderSize = 0;
-            buttonMaximize.FlatStyle = FlatStyle.Flat;
-            buttonMaximize.Location = new Point(672, 5);
-            buttonMaximize.Name = "buttonMaximize";
-            buttonMaximize.Size = new Size(25, 23);
-            buttonMaximize.TabIndex = 1;
-            buttonMaximize.UseVisualStyleBackColor = true;
-            buttonMaximize.Click += buttonMaximize_Click;
-            // 
-            // buttonClose
-            // 
-            buttonClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonClose.BackgroundImage = Properties.Resources.close;
-            buttonClose.Cursor = Cursors.Hand;
-            buttonClose.FlatAppearance.BorderSize = 0;
-            buttonClose.FlatStyle = FlatStyle.Flat;
-            buttonClose.Location = new Point(702, 5);
-            buttonClose.Name = "buttonClose";
-            buttonClose.Size = new Size(25, 23);
-            buttonClose.TabIndex = 0;
-            buttonClose.UseVisualStyleBackColor = true;
-            buttonClose.Click += buttonClose_Click;
             // 
             // label1
             // 
@@ -244,13 +184,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1015, 705);
-            Controls.Add(panel2);
             Controls.Add(mainpanel);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "Admin";
             Text = "Admin";
-            panel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -259,7 +196,6 @@
 
         #endregion
         private Panel mainpanel;
-        private Panel panel2;
         private Label label1;
         private Button button5;
         private Panel panel1;
@@ -268,8 +204,5 @@
         private Button button2;
         private Button button1;
         private PictureBox pictureBox1;
-        private Button buttonMinimize;
-        private Button buttonMaximize;
-        private Button buttonClose;
     }
 }
