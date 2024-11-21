@@ -15,6 +15,7 @@ namespace Teacher_Evaluation
         public Admin()
         {
             InitializeComponent();
+            
         }
 
         public void LoadForm(object Form)
@@ -104,8 +105,8 @@ namespace Teacher_Evaluation
                 var form = mainpanel.Controls[0] as Form;
                 if (form != null)
                 {
-                    
-                    form.WindowState = this.WindowState;
+                    form.Dock = DockStyle.Fill;
+                    form.Refresh();
                 }
             }
         }
@@ -123,6 +124,12 @@ namespace Teacher_Evaluation
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void mainpanel_Resize(object sender, EventArgs e)
+        {
+            panel1.Width = this.ClientSize.Width;
+        panel1.Height = this.ClientSize.Height;
         }
     }
 }
