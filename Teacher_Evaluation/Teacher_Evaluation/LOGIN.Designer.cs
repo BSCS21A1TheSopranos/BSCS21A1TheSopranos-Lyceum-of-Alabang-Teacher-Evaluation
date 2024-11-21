@@ -35,6 +35,10 @@
             pictureBox4 = new PictureBox();
             label3 = new Label();
             textBox1 = new TextBox();
+            label2 = new Label();
+            label4 = new Label();
+            textBox2 = new TextBox();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -105,6 +109,49 @@
             textBox1.Size = new Size(302, 27);
             textBox1.TabIndex = 8;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = SystemColors.ControlLight;
+            label2.Font = new Font("Book Antiqua", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(588, 239);
+            label2.Name = "label2";
+            label2.Size = new Size(167, 22);
+            label2.TabIndex = 9;
+            label2.Text = "STUDENT NUMBER";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = SystemColors.ControlLight;
+            label4.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Firebrick;
+            label4.Location = new Point(666, 199);
+            label4.Name = "label4";
+            label4.Size = new Size(143, 17);
+            label4.TabIndex = 10;
+            label4.Text = "Please Fill Up This Area";
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = SystemColors.InactiveCaption;
+            textBox2.Location = new Point(588, 264);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(302, 27);
+            textBox2.TabIndex = 11;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = SystemColors.ControlLight;
+            label5.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Firebrick;
+            label5.Location = new Point(666, 294);
+            label5.Name = "label5";
+            label5.Size = new Size(143, 17);
+            label5.TabIndex = 12;
+            label5.Text = "Please Fill Up This Area";
+            // 
             // LOGIN
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -112,6 +159,10 @@
             BackgroundImage = Properties.Resources.LOA;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(953, 629);
+            Controls.Add(label5);
+            Controls.Add(textBox2);
+            Controls.Add(label4);
+            Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(label3);
             Controls.Add(pictureBox4);
@@ -138,5 +189,9 @@
         private PictureBox pictureBox4;
         private Label label3;
         private TextBox textBox1;
+        private Label label2;
+        private Label label4;
+        private TextBox textBox2;
+        private Label label5;
     }
 }
