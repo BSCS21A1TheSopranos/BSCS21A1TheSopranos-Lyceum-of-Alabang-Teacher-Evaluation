@@ -53,6 +53,7 @@
             mainpanel.Size = new Size(735, 666);
             mainpanel.TabIndex = 2;
             mainpanel.Paint += mainpanel_Paint_1;
+            mainpanel.Resize += mainpanel_Resize;
             // 
             // panel2
             // 

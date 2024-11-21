@@ -20,6 +20,7 @@ namespace Teacher_Evaluation
         public TeacherForm()
         {
             InitializeComponent();
+            this.Resize += TeacherForm_Resize;
             LoadForm();
         }
 
@@ -61,6 +62,60 @@ namespace Teacher_Evaluation
         private void TeacherForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void TeacherForm_Resize(object sender, EventArgs e)
+        {
+            panel1.Width = this.ClientSize.Width;
+            panel1.Height = this.ClientSize.Height;
+
+            dataGridView1.Dock = DockStyle.Fill;
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "SELECT * FROM Prof";
+
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    using (OleDbDataReader reader = command.ExecuteReader())
+                    {
+
+                        string outputPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ProfTable.txt");
+
+                        using (StreamWriter writer = new StreamWriter(outputPath))
+                        {
+                            
+                            for (int i = 0; i < reader.FieldCount; i++)
+                            {
+                                writer.Write(reader.GetName(i) + "\t");
+                            }
+                            writer.WriteLine();
+
+                            while (reader.Read())
+                            {
+                                for (int i = 0; i < reader.FieldCount; i++)
+                                {
+                                    writer.Write(reader[i].ToString() + "\t");
+                                }
+                                writer.WriteLine();
+                            }
+                        }
+                    }
+                }
+
+                MessageBox.Show("Data exported successfully to text file.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
         }
     }
 }

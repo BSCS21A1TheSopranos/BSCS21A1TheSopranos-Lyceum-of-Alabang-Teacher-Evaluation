@@ -56,5 +56,50 @@ namespace Teacher_Evaluation
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "SELECT * FROM Students";
+
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    using (OleDbDataReader reader = command.ExecuteReader())
+                    {
+
+                        string outputPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "StudentsTable.txt");
+
+                        using (StreamWriter writer = new StreamWriter(outputPath))
+                        {
+
+                            for (int i = 0; i < reader.FieldCount; i++)
+                            {
+                                writer.Write(reader.GetName(i) + "\t");
+                            }
+                            writer.WriteLine();
+
+                            while (reader.Read())
+                            {
+                                for (int i = 0; i < reader.FieldCount; i++)
+                                {
+                                    writer.Write(reader[i].ToString() + "\t");
+                                }
+                                writer.WriteLine();
+                            }
+                        }
+                    }
+                }
+
+                MessageBox.Show("Data exported successfully to text file.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
     }
 }
