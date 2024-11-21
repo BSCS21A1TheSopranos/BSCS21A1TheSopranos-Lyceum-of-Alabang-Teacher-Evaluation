@@ -156,6 +156,7 @@
             label5.Name = "label5";
             label5.Size = new Size(460, 556);
             label5.TabIndex = 9;
+            label5.Click += label5_Click;
             // 
             // label6
             // 
