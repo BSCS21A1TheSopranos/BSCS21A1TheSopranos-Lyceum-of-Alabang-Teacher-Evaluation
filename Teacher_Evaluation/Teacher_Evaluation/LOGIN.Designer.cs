@@ -39,6 +39,9 @@
             label4 = new Label();
             textBox2 = new TextBox();
             label5 = new Label();
+            label6 = new Label();
+            textBox3 = new TextBox();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -152,6 +155,38 @@
             label5.TabIndex = 12;
             label5.Text = "Please Fill Up This Area";
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = SystemColors.ControlLight;
+            label6.Font = new Font("Book Antiqua", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(588, 344);
+            label6.Name = "label6";
+            label6.Size = new Size(105, 22);
+            label6.TabIndex = 13;
+            label6.Text = "PASSWORD";
+            // 
+            // textBox3
+            // 
+            textBox3.BackColor = SystemColors.InactiveCaption;
+            textBox3.Location = new Point(588, 369);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(302, 27);
+            textBox3.TabIndex = 14;
+            textBox3.TextChanged += textBox3_TextChanged;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = SystemColors.ControlLight;
+            label7.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Firebrick;
+            label7.Location = new Point(666, 399);
+            label7.Name = "label7";
+            label7.Size = new Size(143, 17);
+            label7.TabIndex = 15;
+            label7.Text = "Please Fill Up This Area";
+            // 
             // LOGIN
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -159,6 +194,9 @@
             BackgroundImage = Properties.Resources.LOA;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(953, 629);
+            Controls.Add(label7);
+            Controls.Add(textBox3);
+            Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(textBox2);
             Controls.Add(label4);
@@ -193,5 +231,8 @@
         private Label label4;
         private TextBox textBox2;
         private Label label5;
+        private Label label6;
+        private TextBox textBox3;
+        private Label label7;
     }
 }
