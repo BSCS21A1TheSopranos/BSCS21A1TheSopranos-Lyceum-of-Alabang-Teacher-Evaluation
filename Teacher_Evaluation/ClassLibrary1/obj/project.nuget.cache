@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "OK1c8y/MmUE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\ClassLibrary1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User1\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.1\\system.configuration.configurationmanager.8.0.1.nupkg.sha512",
+    "C:\\Users\\User1\\.nuget\\packages\\system.data.oledb\\8.0.1\\system.data.oledb.8.0.1.nupkg.sha512",
+    "C:\\Users\\User1\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.1\\system.diagnostics.eventlog.8.0.1.nupkg.sha512",
+    "C:\\Users\\User1\\.nuget\\packages\\system.diagnostics.performancecounter\\8.0.1\\system.diagnostics.performancecounter.8.0.1.nupkg.sha512",
+    "C:\\Users\\User1\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\obj\\project.nuget.cache : Found invalid data while decoding."
+    }
+  ]
+}

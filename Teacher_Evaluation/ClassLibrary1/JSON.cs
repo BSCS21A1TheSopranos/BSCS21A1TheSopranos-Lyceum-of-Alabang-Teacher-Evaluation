@@ -10,10 +10,12 @@ namespace ClassLibrary1
     public class JsonDataSaveandRetrieve : IDataSaveandRetrieve
     {
         private readonly string _studentsFilePath;
+        private readonly string _adminFilePath;
 
-        public JsonDataSaveandRetrieve(string studentsFilePath)
+        public JsonDataSaveandRetrieve(string studentsFilePath, string adminFilePath)
         {
             _studentsFilePath = studentsFilePath;
+            _adminFilePath = adminFilePath;
         }
 
         public Dictionary<string, Student> GetAllStudents()
@@ -28,6 +30,17 @@ namespace ClassLibrary1
                    ?? new Dictionary<string, Student>();
         }
 
+        public Dictionary<string, Admin> GetAllAdmin()
+        {
+            if (!File.Exists(_adminFilePath))
+            {
+                return new Dictionary<string, Admin>();
+            }
+
+            var jsonString = File.ReadAllText(_adminFilePath);
+            return JsonSerializer.Deserialize<Dictionary<string, Admin>>(jsonString)
+                   ?? new Dictionary<string, Admin>();
+        }
     }
 
 }
