@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,12 +12,14 @@ namespace ClassLibrary1
         public string StudentID { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
+        public string Role { get; set; }
 
-        public Student(string studentID, string password, string email)
+        public Student(string studentID, string password, string email, string role)
         {
             StudentID = studentID;
             Password = password;
             Email = email;
+            Role = role;
         }
     }
     public static class StudentDataHolder
@@ -29,7 +32,6 @@ namespace ClassLibrary1
             Students = new Dictionary<string, Student>();
         }
 
-        // Method to load data into the holder
         public static void LoadStudents(IDataSaveandRetrieve repository)
         {
             Students = repository.GetAllStudents();

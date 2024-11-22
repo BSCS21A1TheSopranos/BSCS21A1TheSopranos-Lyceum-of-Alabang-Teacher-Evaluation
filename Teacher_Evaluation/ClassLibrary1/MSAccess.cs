@@ -26,7 +26,7 @@ namespace ClassLibrary1
             using (var connection = new OleDbConnection(_connectionString))
             {
                 connection.Open();
-                string query = "SELECT StudentID, Password, Email FROM Students";
+                string query = "SELECT StudentID, Password, Email, Role FROM Students";
 
                 using (var command = new OleDbCommand(query, connection))
                 using (var reader = command.ExecuteReader())
@@ -36,8 +36,9 @@ namespace ClassLibrary1
                         var studentID = reader["StudentID"].ToString();
                         var password = reader["Password"].ToString();
                         var email = reader["Email"].ToString();
+                        var role = reader["Role"].ToString();
 
-                        students[studentID] = new Student(studentID, password, email);
+                        students[studentID] = new Student(studentID, password, email, role);
                     }
                 }
             }

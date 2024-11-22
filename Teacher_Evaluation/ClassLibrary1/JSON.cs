@@ -10,7 +10,6 @@ namespace ClassLibrary1
     public class JsonDataSaveandRetrieve : IDataSaveandRetrieve
     {
         private readonly string _studentsFilePath;
-        private readonly string _studentTeachersFilePath;
 
         public JsonDataSaveandRetrieve(string studentsFilePath)
         {

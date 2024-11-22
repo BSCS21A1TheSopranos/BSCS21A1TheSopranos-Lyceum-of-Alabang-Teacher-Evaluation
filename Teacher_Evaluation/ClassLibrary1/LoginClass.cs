@@ -9,15 +9,12 @@ namespace ClassLibrary1
 {
     public class LoginClass
     {
-        public string testpassword;
-        public string testusername;
-        public string teststudentno;
+   
+        public string studentID;
 
-        public LoginClass(string testpassword, string testusername, string teststudentno)
+        public LoginClass(string studentID)
         {
-            this.testpassword = testpassword;
-            this.testusername = testusername;
-            this.teststudentno = teststudentno;
+            this.studentID = studentID;
         }
 
         public bool checkpassword(string password)
@@ -28,18 +25,19 @@ namespace ClassLibrary1
                 byte[] data = md5.ComputeHash(utf8.GetBytes(password));
                 password = Convert.ToBase64String(data);
             }
-            return testpassword == password;
+            return StudentDataHolder.Students[studentID].Password == password;
         }
 
-        public bool checkusername(string username) 
-        { 
-            return testusername == username;
+        public bool checkStudent()
+        {
+            return StudentDataHolder.Students.ContainsKey(studentID);
         }
 
-        public bool checkstudentno(string studentno) 
-        { 
-            return teststudentno == studentno;
+        public string GetRole()
+        {
+            return StudentDataHolder.Students[studentID].Role;
         }
+
     }
 
 }
