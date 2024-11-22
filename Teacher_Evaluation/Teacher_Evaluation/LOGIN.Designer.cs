@@ -41,6 +41,8 @@
             label7 = new Label();
             button1 = new Button();
             linkLabel1 = new LinkLabel();
+            label2 = new Label();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -178,6 +180,30 @@
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Forgot Password?";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = SystemColors.ControlLight;
+            label2.Font = new Font("Book Antiqua", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(588, 416);
+            label2.Name = "label2";
+            label2.Size = new Size(215, 22);
+            label2.TabIndex = 19;
+            label2.Text = "Doesn't Have An Account?";
+            label2.Click += label2_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(243, 196, 27);
+            button2.Font = new Font("Bookman Old Style", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = SystemColors.ActiveCaptionText;
+            button2.Location = new Point(588, 441);
+            button2.Name = "button2";
+            button2.Size = new Size(302, 38);
+            button2.TabIndex = 20;
+            button2.Text = "REGISTER";
+            button2.UseVisualStyleBackColor = false;
+            // 
             // LOGIN
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -185,6 +211,8 @@
             BackgroundImage = Properties.Resources.LOA;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(953, 629);
+            Controls.Add(button2);
+            Controls.Add(label2);
             Controls.Add(linkLabel1);
             Controls.Add(button1);
             Controls.Add(label7);
@@ -223,5 +251,7 @@
         private Label label7;
         private Button button1;
         private LinkLabel linkLabel1;
+        private Label label2;
+        private Button button2;
     }
 }
