@@ -72,5 +72,32 @@ namespace ClassLibrary1
 
             return admins;
         }
+
+        public Dictionary<string, Teacher> GetAllTeacher()
+        {
+            var teachers = new Dictionary<string, Teacher>();
+
+            using (var connection = new OleDbConnection(_connectionString))
+            {
+                connection.Open();
+                string query = "SELECT ProfID, Password, Email, Role FROM Prof";
+
+                using (var command = new OleDbCommand(query, connection))
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var profID = reader["ProfID"].ToString();
+                        var password = reader["Password"].ToString();
+                        var email = reader["Email"].ToString();
+                        var role = reader["Role"].ToString();
+
+                        teachers[profID] = new Teacher(profID, password, email, role);
+                    }
+                }
+            }
+
+            return teachers;
+        }
     }
 }

@@ -10,5 +10,6 @@ namespace ClassLibrary1
     {
         Dictionary<string, Student> GetAllStudents();
         Dictionary<string, Admin> GetAllAdmin();
+        Dictionary<string, Teacher> GetAllTeacher();
     }
 }
