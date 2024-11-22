@@ -91,7 +91,7 @@ namespace Teacher_Evaluation
 
                         using (StreamWriter writer = new StreamWriter(outputPath))
                         {
-                            
+
                             for (int i = 0; i < reader.FieldCount; i++)
                             {
                                 writer.Write(reader.GetName(i) + "\t");
@@ -115,6 +115,69 @@ namespace Teacher_Evaluation
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0) // Ensure a row is selected
+            {
+                // Get the value of the ProfID column in the selected row
+                var value = dataGridView1.SelectedRows[0].Cells["ProfID"].Value;
+
+                // Validate the value
+                if (value == null || string.IsNullOrWhiteSpace(value.ToString()))
+                {
+                    MessageBox.Show("The selected row does not contain a valid ProfID.", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string selectedId = value.ToString(); // Use the ProfID as a string
+
+                // Confirm deletion
+                var result = MessageBox.Show(
+                    "Are you sure you want to delete this record?",
+                    "Confirm Deletion",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        using (OleDbConnection connection = new OleDbConnection(connectionString))
+                        {
+                            connection.Open();
+
+                            string deleteQuery = "DELETE FROM Prof WHERE ProfID = @ProfID";
+
+                            using (OleDbCommand command = new OleDbCommand(deleteQuery, connection))
+                            {
+                                // Use parameterized query to safely pass the string ProfID
+                                command.Parameters.AddWithValue("@ProfID", selectedId);
+                                int rowsAffected = command.ExecuteNonQuery();
+
+                                if (rowsAffected > 0)
+                                {
+                                    MessageBox.Show("Record deleted successfully.");
+                                    LoadForm(); // Refresh the DataGridView
+                                }
+                                else
+                                {
+                                    MessageBox.Show("The record could not be found or has already been deleted.");
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"An error occurred while deleting the record: {ex.Message}");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.");
             }
         }
     }
