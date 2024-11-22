@@ -65,7 +65,7 @@ namespace Teacher_Evaluation
             }
             else
             {
-                label9.Text = "User Not Found";
+                MessageBox.Show("Error");
             }
         }
 
