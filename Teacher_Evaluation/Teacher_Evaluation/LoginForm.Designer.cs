@@ -31,7 +31,6 @@
             TextBox textBox1;
             TextBox textBox2;
             TextBox textBox3;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -311,7 +310,7 @@
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
+            pictureBox4.BackgroundImage = Properties.Resources.loa_logo;
             pictureBox4.BackgroundImageLayout = ImageLayout.Center;
             pictureBox4.Location = new Point(210, 23);
             pictureBox4.Margin = new Padding(0);
@@ -326,7 +325,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ActiveCaption;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImage = Properties.Resources.loa_building__blur_;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(831, 471);
             Controls.Add(pictureBox4);
