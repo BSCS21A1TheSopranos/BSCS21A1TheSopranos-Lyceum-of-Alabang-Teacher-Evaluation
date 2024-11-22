@@ -1,6 +1,6 @@
 ﻿namespace Teacher_Evaluation
 {
-    partial class Form1
+    partial class MyTestingField
     {
         /// <summary>
         /// Required designer variable.
@@ -29,50 +29,53 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            Subject = new DataGridViewTextBoxColumn();
-            Teacher = new DataGridViewTextBoxColumn();
-            TeachersID = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
             button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Subject, Teacher, TeachersID });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(800, 450);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
-            // Subject
+            // Column1
             // 
-            Subject.HeaderText = "Subject";
-            Subject.MinimumWidth = 6;
-            Subject.Name = "Subject";
-            Subject.ReadOnly = true;
+            Column1.HeaderText = "Column1";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.Width = 125;
             // 
-            // Teacher
+            // Column2
             // 
-            Teacher.HeaderText = "Teacher";
-            Teacher.MinimumWidth = 6;
-            Teacher.Name = "Teacher";
-            Teacher.ReadOnly = true;
+            Column2.HeaderText = "Column2";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.Width = 125;
             // 
-            // TeachersID
+            // Column3
             // 
-            TeachersID.HeaderText = "Column1";
-            TeachersID.MinimumWidth = 6;
-            TeachersID.Name = "TeachersID";
-            TeachersID.ReadOnly = true;
-            TeachersID.Visible = false;
+            Column3.HeaderText = "Column3";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Column4";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.Width = 125;
             // 
             // button1
             // 
@@ -80,19 +83,19 @@
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 1;
-            button1.Text = "Log Out";
+            button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // Form1
+            // MyTestingField
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "MyTestingField";
+            Text = "MyTestingField";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
@@ -100,9 +103,10 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Subject;
-        private DataGridViewTextBoxColumn Teacher;
-        private DataGridViewTextBoxColumn TeachersID;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
         private Button button1;
     }
 }

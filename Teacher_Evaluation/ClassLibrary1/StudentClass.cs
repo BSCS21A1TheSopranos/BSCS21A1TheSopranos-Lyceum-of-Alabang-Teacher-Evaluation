@@ -8,34 +8,32 @@ namespace ClassLibrary1
 {
     public class Student
     {
-        private string name;
-        private string studentNumber;
-        private string password;
+        public string StudentID { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
 
-        public Student(string name, string studentNumber, string password)
+        public Student(string studentID, string password, string email)
         {
-            this.name = name;
-            this.studentNumber = studentNumber.TrimEnd();
-            this.password = password.TrimEnd();
+            StudentID = studentID;
+            Password = password;
+            Email = email;
         }
-
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-
-        public string StudentNumber
-        {
-            get { return studentNumber; }
-            set { studentNumber = value; }
-        }
-
-        public string Password
-        {
-            get { return password; }
-            set { password = value; }
-        }
-
     }
+    public static class StudentDataHolder
+    {
+       
+        public static Dictionary<string, Student> Students { get; private set; }
+
+        static StudentDataHolder()
+        {
+            Students = new Dictionary<string, Student>();
+        }
+
+        // Method to load data into the holder
+        public static void LoadStudents(IDataSaveandRetrieve repository)
+        {
+            Students = repository.GetAllStudents();
+        }
+    }
+
 }

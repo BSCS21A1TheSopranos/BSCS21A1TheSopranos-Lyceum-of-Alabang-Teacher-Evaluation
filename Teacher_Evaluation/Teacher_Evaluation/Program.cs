@@ -12,6 +12,7 @@ namespace Teacher_Evaluation
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Admin());
+
         }
     }
 }

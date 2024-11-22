@@ -1,0 +1,12 @@
+{
+    "1234": {
+        "StudentID": "1234",
+        "Password": "pass123",
+        "Email": "student1@example.com"
+    },
+    "5678": {
+        "StudentID": "5678",
+        "Password": "pass456",
+        "Email": "student2@example.com"
+    }
+}
