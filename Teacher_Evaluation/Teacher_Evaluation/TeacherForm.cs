@@ -120,21 +120,21 @@ namespace Teacher_Evaluation
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0) // Ensure a row is selected
+            if (dataGridView1.SelectedRows.Count > 0) 
             {
-                // Get the value of the ProfID column in the selected row
+                
                 var value = dataGridView1.SelectedRows[0].Cells["ProfID"].Value;
 
-                // Validate the value
+                
                 if (value == null || string.IsNullOrWhiteSpace(value.ToString()))
                 {
                     MessageBox.Show("The selected row does not contain a valid ProfID.", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                string selectedId = value.ToString(); // Use the ProfID as a string
+                string selectedId = value.ToString();
 
-                // Confirm deletion
+                
                 var result = MessageBox.Show(
                     "Are you sure you want to delete this record?",
                     "Confirm Deletion",
@@ -153,14 +153,14 @@ namespace Teacher_Evaluation
 
                             using (OleDbCommand command = new OleDbCommand(deleteQuery, connection))
                             {
-                                // Use parameterized query to safely pass the string ProfID
+                                
                                 command.Parameters.AddWithValue("@ProfID", selectedId);
                                 int rowsAffected = command.ExecuteNonQuery();
 
                                 if (rowsAffected > 0)
                                 {
                                     MessageBox.Show("Record deleted successfully.");
-                                    LoadForm(); // Refresh the DataGridView
+                                    LoadForm();
                                 }
                                 else
                                 {
