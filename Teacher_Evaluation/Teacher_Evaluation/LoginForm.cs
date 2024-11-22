@@ -11,10 +11,17 @@ namespace Teacher_Evaluation
             InitializeComponent();
             IDataSaveandRetrieve repository;
             string jsonStudentsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "students.json");
-            repository = new JsonDataSaveandRetrieve(jsonStudentsFilePath);
+            string jsonAdminsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "admin.json");
+            repository = new JsonDataSaveandRetrieve(jsonStudentsFilePath, jsonAdminsFilePath);
             //string databasePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "Teacher_Evaluation_Database.accdb");
             //repository = new MSAcessDataSaveandRetrieve(databasePath);
             StudentDataHolder.LoadStudents(repository);
+            AdminDataHolder.LoadAdmin(repository);
+            foreach (var admin in AdminDataHolder.Admins)
+            {
+                MessageBox.Show($"{admin.Value.AdminNo} {admin.Value.Password} {admin.Value.Email}");
+            }
+
         }
 
         private void label1_Click(object sender, EventArgs e)

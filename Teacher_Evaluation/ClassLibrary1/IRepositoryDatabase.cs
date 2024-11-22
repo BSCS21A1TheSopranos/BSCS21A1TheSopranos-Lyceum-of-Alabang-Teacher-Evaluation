@@ -9,5 +9,6 @@ namespace ClassLibrary1
     public interface IDataSaveandRetrieve
     {
         Dictionary<string, Student> GetAllStudents();
+        Dictionary<string, Admin> GetAllAdmin();
     }
 }

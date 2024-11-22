@@ -1,0 +1,15 @@
+{
+    "9999-23": {
+        "AdminNo" : "9999-23",
+        "Password": "fFhpRfaANjkLkZlHkjG2Jw==",
+        "Email": "PaulV@example.com",
+        "Role": "Admin"
+    },
+    "8888-18": {
+        "AdminNo" :  "8888-18",
+        "Password": "fFhpRfaANjkLkZlHkjG2Jw==",
+        "Email": "SAlonzo@example.com",
+        "Role": "Admin"
+    }
+}
+
