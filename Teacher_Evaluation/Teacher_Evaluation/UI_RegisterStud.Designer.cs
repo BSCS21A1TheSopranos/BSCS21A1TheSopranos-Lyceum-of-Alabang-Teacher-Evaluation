@@ -239,7 +239,6 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.loa_building__blur_;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(834, 472);
             Controls.Add(button2);

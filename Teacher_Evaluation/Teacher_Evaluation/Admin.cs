@@ -15,7 +15,7 @@ namespace Teacher_Evaluation
         public Admin()
         {
             InitializeComponent();
-            
+
         }
 
         public void LoadForm(object Form)
@@ -129,7 +129,12 @@ namespace Teacher_Evaluation
         private void mainpanel_Resize(object sender, EventArgs e)
         {
             panel1.Width = this.ClientSize.Width;
-        panel1.Height = this.ClientSize.Height;
+            panel1.Height = this.ClientSize.Height;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
