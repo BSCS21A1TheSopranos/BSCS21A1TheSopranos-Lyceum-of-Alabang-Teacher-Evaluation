@@ -33,6 +33,7 @@
             panel2 = new Panel();
             label2 = new Label();
             panel3 = new Panel();
+            panel10 = new Panel();
             button1 = new Button();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel8 = new Panel();
@@ -49,10 +50,10 @@
             label5 = new Label();
             panel7 = new Panel();
             label6 = new Label();
-            panel10 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
+            panel10.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel8.SuspendLayout();
             panel9.SuspendLayout();
@@ -61,7 +62,6 @@
             panel5.SuspendLayout();
             panel6.SuspendLayout();
             panel7.SuspendLayout();
-            panel10.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -116,6 +116,15 @@
             panel3.Padding = new Padding(10);
             panel3.Size = new Size(819, 443);
             panel3.TabIndex = 2;
+            // 
+            // panel10
+            // 
+            panel10.Controls.Add(button1);
+            panel10.Dock = DockStyle.Bottom;
+            panel10.Location = new Point(10, 392);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(799, 41);
+            panel10.TabIndex = 3;
             // 
             // button1
             // 
@@ -310,15 +319,6 @@
             label6.TabIndex = 3;
             label6.Text = "Credit Score:";
             // 
-            // panel10
-            // 
-            panel10.Controls.Add(button1);
-            panel10.Dock = DockStyle.Bottom;
-            panel10.Location = new Point(10, 392);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(799, 41);
-            panel10.TabIndex = 3;
-            // 
             // TeacherDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -334,6 +334,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
+            panel10.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
@@ -348,7 +349,6 @@
             panel6.PerformLayout();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
-            panel10.ResumeLayout(false);
             ResumeLayout(false);
         }
 

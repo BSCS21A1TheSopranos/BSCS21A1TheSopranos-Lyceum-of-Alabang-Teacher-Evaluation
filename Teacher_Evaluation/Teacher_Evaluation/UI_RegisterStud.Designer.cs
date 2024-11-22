@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             TextBox textBox1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UI_RegisterStud));
             button1 = new Button();
             label1 = new Label();
             label3 = new Label();
@@ -163,7 +164,7 @@
             label6.BackColor = SystemColors.ScrollBar;
             label6.Location = new Point(457, 52);
             label6.Name = "label6";
-            label6.Size = new Size(350, 399);
+            label6.Size = new Size(350, 395);
             label6.TabIndex = 10;
             // 
             // label7
@@ -239,7 +240,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.loa_building;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(834, 472);
             Controls.Add(button2);
@@ -258,6 +259,7 @@
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label1);
+            DoubleBuffered = true;
             Margin = new Padding(3, 2, 3, 2);
             Name = "UI_RegisterStud";
             Text = "UI_RegisterStud";
