@@ -309,11 +309,9 @@
             // 
             // pictureBox4
             // 
-            pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.BackgroundImage = Properties.Resources.loa_logo;
-            pictureBox4.BackgroundImageLayout = ImageLayout.Center;
-            pictureBox4.Location = new Point(210, 23);
-            pictureBox4.Margin = new Padding(0);
+            pictureBox4.BackColor = SystemColors.GradientActiveCaption;
+            pictureBox4.Image = Properties.Resources.loa_logo;
+            pictureBox4.Location = new Point(215, 23);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(40, 40);
             pictureBox4.TabIndex = 25;
