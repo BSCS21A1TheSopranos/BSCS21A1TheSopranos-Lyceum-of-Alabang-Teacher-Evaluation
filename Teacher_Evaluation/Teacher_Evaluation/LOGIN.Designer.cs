@@ -35,14 +35,12 @@
             pictureBox4 = new PictureBox();
             label3 = new Label();
             textBox1 = new TextBox();
-            label2 = new Label();
             label4 = new Label();
-            textBox2 = new TextBox();
-            label5 = new Label();
             label6 = new Label();
             textBox3 = new TextBox();
             label7 = new Label();
             button1 = new Button();
+            linkLabel1 = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -113,17 +111,6 @@
             textBox1.Size = new Size(302, 27);
             textBox1.TabIndex = 8;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = SystemColors.ControlLight;
-            label2.Font = new Font("Book Antiqua", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(588, 200);
-            label2.Name = "label2";
-            label2.Size = new Size(167, 22);
-            label2.TabIndex = 9;
-            label2.Text = "STUDENT NUMBER";
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -136,32 +123,12 @@
             label4.TabIndex = 10;
             label4.Text = "Please Fill Up This Area";
             // 
-            // textBox2
-            // 
-            textBox2.BackColor = SystemColors.InactiveCaption;
-            textBox2.Location = new Point(588, 225);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(302, 27);
-            textBox2.TabIndex = 11;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = SystemColors.ControlLight;
-            label5.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Firebrick;
-            label5.Location = new Point(672, 255);
-            label5.Name = "label5";
-            label5.Size = new Size(143, 17);
-            label5.TabIndex = 12;
-            label5.Text = "Please Fill Up This Area";
-            // 
             // label6
             // 
             label6.AutoSize = true;
             label6.BackColor = SystemColors.ControlLight;
             label6.Font = new Font("Book Antiqua", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(588, 299);
+            label6.Location = new Point(588, 195);
             label6.Name = "label6";
             label6.Size = new Size(105, 22);
             label6.TabIndex = 13;
@@ -170,7 +137,7 @@
             // textBox3
             // 
             textBox3.BackColor = SystemColors.InactiveCaption;
-            textBox3.Location = new Point(588, 324);
+            textBox3.Location = new Point(588, 220);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(302, 27);
             textBox3.TabIndex = 14;
@@ -182,7 +149,7 @@
             label7.BackColor = SystemColors.ControlLight;
             label7.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Firebrick;
-            label7.Location = new Point(672, 354);
+            label7.Location = new Point(672, 250);
             label7.Name = "label7";
             label7.Size = new Size(143, 17);
             label7.TabIndex = 15;
@@ -193,12 +160,23 @@
             button1.BackColor = Color.FromArgb(243, 196, 27);
             button1.Font = new Font("Bookman Old Style", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(588, 396);
+            button1.Location = new Point(588, 292);
             button1.Name = "button1";
             button1.Size = new Size(302, 38);
             button1.TabIndex = 16;
             button1.Text = "LOGIN";
             button1.UseVisualStyleBackColor = false;
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.BackColor = SystemColors.ControlLight;
+            linkLabel1.Location = new Point(677, 346);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(125, 20);
+            linkLabel1.TabIndex = 18;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Forgot Password?";
             // 
             // LOGIN
             // 
@@ -207,14 +185,12 @@
             BackgroundImage = Properties.Resources.LOA;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(953, 629);
+            Controls.Add(linkLabel1);
             Controls.Add(button1);
             Controls.Add(label7);
             Controls.Add(textBox3);
             Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(textBox2);
             Controls.Add(label4);
-            Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(label3);
             Controls.Add(pictureBox4);
@@ -241,13 +217,11 @@
         private PictureBox pictureBox4;
         private Label label3;
         private TextBox textBox1;
-        private Label label2;
         private Label label4;
-        private TextBox textBox2;
-        private Label label5;
         private Label label6;
         private TextBox textBox3;
         private Label label7;
         private Button button1;
+        private LinkLabel linkLabel1;
     }
 }
