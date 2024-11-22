@@ -12,14 +12,16 @@ namespace Teacher_Evaluation
             IDataSaveandRetrieve repository;
             string jsonStudentsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "students.json");
             string jsonAdminsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "admin.json");
-            repository = new JsonDataSaveandRetrieve(jsonStudentsFilePath, jsonAdminsFilePath);
+            string jsonTeachersFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "teachers.json");
+            repository = new JsonDataSaveandRetrieve(jsonStudentsFilePath, jsonAdminsFilePath, jsonTeachersFilePath);
             //string databasePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "Teacher_Evaluation_Database.accdb");
             //repository = new MSAcessDataSaveandRetrieve(databasePath);
             StudentDataHolder.LoadStudents(repository);
             AdminDataHolder.LoadAdmin(repository);
-            foreach (var admin in AdminDataHolder.Admins)
+            TeacherDataHolder.LoadTeacher(repository);
+            foreach (var teacher in TeacherDataHolder.Teachers)
             {
-                MessageBox.Show($"{admin.Value.AdminNo} {admin.Value.Password} {admin.Value.Email}");
+                MessageBox.Show($"{teacher.Value.ProfID} {teacher.Value.Password} {teacher.Value.Email}");
             }
 
         }
