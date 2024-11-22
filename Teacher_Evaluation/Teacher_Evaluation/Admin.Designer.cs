@@ -76,6 +76,7 @@
             button5.TabIndex = 1;
             button5.Text = "Log Out";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // panel1
             // 
