@@ -8,7 +8,7 @@ namespace ClassLibrary1
     {
         public bool validstudentNo(Student student)
         {
-            string studentnum = student.StudentNumber;
+            string studentnum = student.StudentID;
             string pattern = @"^[0-9]{4}-[0-9]{2}$";
             return Regex.IsMatch(studentnum, pattern); 
         }
