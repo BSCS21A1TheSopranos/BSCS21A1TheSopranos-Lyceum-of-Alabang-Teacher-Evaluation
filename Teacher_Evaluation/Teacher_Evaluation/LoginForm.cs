@@ -1,5 +1,6 @@
 using ClassLibrary1;
 using Microsoft.VisualBasic.ApplicationServices;
+using System.Windows.Forms;
 
 namespace Teacher_Evaluation
 {
@@ -8,6 +9,12 @@ namespace Teacher_Evaluation
         public LoginForm()
         {
             InitializeComponent();
+            IDataSaveandRetrieve repository;
+            string jsonStudentsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "students.json");
+            repository = new JsonDataSaveandRetrieve(jsonStudentsFilePath);
+            //string databasePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "Teacher_Evaluation_Database.accdb");
+            //repository = new MSAcessDataSaveandRetrieve(databasePath);
+            StudentDataHolder.LoadStudents(repository);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,38 +41,33 @@ namespace Teacher_Evaluation
 
         private void button2_Click(object sender, EventArgs e)
         {
-            UserInfo user = DatabaseConnection.UserData(textBox3.Text);
+            LoginClass login = new LoginClass(textBox5.Text);
 
-            if (user != null)
+            if (login.checkStudent())
             {
-                LoginClass login = new LoginClass(user.Password, user.Role, user.ID);
-                if (login.checkpassword(textBox2.Text) && login.checkstudentno(textBox3.Text))
+                if (login.checkpassword(textBox6.Text))
                 {
-                    if (user.Role == "Admin")
+                    if (login.GetRole() == "Admin")
                     {
                         Admin admin = new Admin();
                         admin.Show();
                         this.Hide();
                     }
-                    else if (user.Role == "Student")
+                    else if (login.GetRole() == "Student")
                     {
-                        Form1 form = new Form1(user.ID);
+                        Form1 form = new Form1(textBox5.Text);
                         form.Show();
                         this.Hide();
                     }
                 }
-                if (!login.checkstudentno(textBox3.Text))
+                if (!login.checkpassword(textBox6.Text))
                 {
-                    textBox3.Text = "maliw";
-                }
-                if (!login.checkpassword(textBox2.Text))
-                {
-                    textBox2.Text = "malie";
+                    MessageBox.Show("Mali Password");
                 }
             }
             else
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Wala");
             }
         }
 
@@ -79,5 +81,9 @@ namespace Teacher_Evaluation
 
         }
 
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
