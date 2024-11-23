@@ -1,19 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\",
+  "WorkspaceRootPath": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\",
   "Documents": [
     {
 <<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\teacherform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\teacherform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\teacherclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\teacherclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\msaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\msaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
 =======
       "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\teacherform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\teacherform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -32,35 +35,31 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+>>>>>>> Stashed changes
       "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\teacherdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\teacherdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\loginclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\loginclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> Stashed changes
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\json.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\json.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\teacherdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\teacherdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\irepositorydatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\irepositorydatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
 <<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\ui_registerstud.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\ui_registerstud.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\adminclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\adminclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\teacherform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\teacherform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\teacherdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\studentclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\studentclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
 =======
       "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\teacher_evaluation\\teacherdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
->>>>>>> Stashed changes
       "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\teacherdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -80,11 +79,7 @@
       "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\studentform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-<<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\studentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-=======
       "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\teacher_evaluation\\studentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
->>>>>>> Stashed changes
       "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\studentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -126,6 +121,7 @@
     {
       "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\admin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\admin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -143,22 +139,76 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs",
+              "DocumentIndex": 0,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs",
               "RelativeDocumentMoniker": "Teacher_Evaluation\\LoginForm.cs",
+<<<<<<< Updated upstream
+              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs",
+              "RelativeToolTip": "Teacher_Evaluation\\LoginForm.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:47:49.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Teacher_Evaluation\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs [Design]",
+              "RelativeToolTip": "Teacher_Evaluation\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:47:44.727Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginClass.cs",
+              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\LoginClass.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\LoginClass.cs",
+              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\LoginClass.cs",
+              "RelativeToolTip": "ClassLibrary1\\LoginClass.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:44:28.778Z",
+              "EditorCaption": ""
+=======
               "ToolTip": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs [Design]",
               "RelativeToolTip": "Teacher_Evaluation\\LoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
               "WhenOpened": "2024-11-22T05:00:08.844Z",
               "IsPinned": true
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 1,
-=======
               "DocumentIndex": 5,
+<<<<<<< Updated upstream
+              "Title": "JSON.cs",
+              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\JSON.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\JSON.cs",
+              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\JSON.cs",
+              "RelativeToolTip": "ClassLibrary1\\JSON.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAA5wDwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:43:16.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MSAccess.cs",
+              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\MSAccess.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\MSAccess.cs",
+              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\MSAccess.cs",
+              "RelativeToolTip": "ClassLibrary1\\MSAccess.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAiwEsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:40:36.483Z",
+=======
               "Title": "TeacherDashboard.cs",
               "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\TeacherDashboard.cs",
               "RelativeDocumentMoniker": "Teacher_Evaluation\\TeacherDashboard.cs",
@@ -172,27 +222,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
->>>>>>> Stashed changes
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs",
               "RelativeDocumentMoniker": "Teacher_Evaluation\\LoginForm.cs",
               "ToolTip": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs",
               "RelativeToolTip": "Teacher_Evaluation\\LoginForm.cs",
-<<<<<<< Updated upstream
-              "ViewState": "AgIAACQAAAAAAAAAAAAmwD4AAAAoAAAAAAAAAA==",
-=======
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAoAAAAAAAAAA==",
->>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T05:01:21.239Z"
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 2,
-=======
               "DocumentIndex": 0,
->>>>>>> Stashed changes
               "Title": "TeacherForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\TeacherForm.Designer.cs",
               "RelativeDocumentMoniker": "Teacher_Evaluation\\TeacherForm.Designer.cs",
@@ -201,11 +242,36 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T05:00:31.31Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< Updated upstream
+              "Title": "TeacherClass.cs",
+              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\TeacherClass.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\TeacherClass.cs",
+              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\TeacherClass.cs",
+              "RelativeToolTip": "ClassLibrary1\\TeacherClass.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAowCEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:38:23.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IRepositoryDatabase.cs",
+              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\IRepositoryDatabase.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\IRepositoryDatabase.cs",
+              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\IRepositoryDatabase.cs",
+              "RelativeToolTip": "ClassLibrary1\\IRepositoryDatabase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T10:57:41.77Z",
+              "EditorCaption": ""
+=======
               "Title": "TeacherForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\TeacherForm.cs",
               "RelativeDocumentMoniker": "Teacher_Evaluation\\TeacherForm.cs",
@@ -216,11 +282,7 @@
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 4,
-=======
               "DocumentIndex": 2,
->>>>>>> Stashed changes
               "Title": "UI_RegisterStud.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\UI_RegisterStud.Designer.cs",
               "RelativeDocumentMoniker": "Teacher_Evaluation\\UI_RegisterStud.Designer.cs",
@@ -228,12 +290,7 @@
               "RelativeToolTip": "Teacher_Evaluation\\UI_RegisterStud.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< Updated upstream
-              "WhenOpened": "2024-11-22T05:00:33.367Z",
-              "EditorCaption": ""
-=======
               "WhenOpened": "2024-11-22T05:00:33.367Z"
->>>>>>> Stashed changes
             },
             {
               "$type": "Document",
@@ -257,10 +314,35 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T05:00:27.436Z"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+<<<<<<< Updated upstream
+              "Title": "StudentClass.cs",
+              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\StudentClass.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\StudentClass.cs",
+              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\StudentClass.cs",
+              "RelativeToolTip": "ClassLibrary1\\StudentClass.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAYwB0AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T10:54:58.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdminClass.cs",
+              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\AdminClass.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\AdminClass.cs",
+              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\AdminClass.cs",
+              "RelativeToolTip": "ClassLibrary1\\AdminClass.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAADwvx0AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T10:54:52.555Z",
+              "EditorCaption": ""
+=======
               "Title": "TeacherDashboard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\TeacherDashboard.cs",
               "RelativeDocumentMoniker": "Teacher_Evaluation\\TeacherDashboard.cs",
@@ -313,37 +395,22 @@
               "RelativeToolTip": "Teacher_Evaluation\\StudentForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< Updated upstream
-              "WhenOpened": "2024-11-22T05:00:20.926Z",
-              "EditorCaption": ""
-=======
               "WhenOpened": "2024-11-22T05:00:20.926Z"
->>>>>>> Stashed changes
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "StudentForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\StudentForm.cs",
               "RelativeDocumentMoniker": "Teacher_Evaluation\\StudentForm.cs",
               "ToolTip": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\StudentForm.cs [Design]",
               "RelativeToolTip": "Teacher_Evaluation\\StudentForm.cs [Design]",
-<<<<<<< Updated upstream
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T05:00:17.94Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-=======
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
               "WhenOpened": "2024-11-22T05:00:17.94Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
->>>>>>> Stashed changes
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\Program.cs",
               "RelativeDocumentMoniker": "Teacher_Evaluation\\Program.cs",
@@ -351,12 +418,7 @@
               "RelativeToolTip": "Teacher_Evaluation\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< Updated upstream
-              "WhenOpened": "2024-11-22T05:00:16.101Z",
-              "EditorCaption": ""
-=======
               "WhenOpened": "2024-11-22T05:00:16.101Z"
->>>>>>> Stashed changes
             },
             {
               "$type": "Document",
@@ -383,11 +445,7 @@
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 15,
-=======
               "DocumentIndex": 17,
->>>>>>> Stashed changes
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Teacher_Evaluation\\Form1.Designer.cs",
@@ -395,12 +453,7 @@
               "RelativeToolTip": "Teacher_Evaluation\\Form1.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< Updated upstream
-              "WhenOpened": "2024-11-22T04:59:46.739Z",
-              "EditorCaption": ""
-=======
               "WhenOpened": "2024-11-22T04:59:46.739Z"
->>>>>>> Stashed changes
             },
             {
               "$type": "Document",
@@ -470,6 +523,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T04:59:18.884Z"
+>>>>>>> Stashed changes
             }
           ]
         }
