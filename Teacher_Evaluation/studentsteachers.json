@@ -1,0 +1,28 @@
+{
+  "student1": [
+    {
+      "ProfID": "profA",
+      "Subject": "Math"
+    },
+    {
+      "ProfID": "profB",
+      "Subject": "Physics"
+    }
+  ],
+  "student2": [
+    {
+      "ProfID": "profA",
+      "Subject": "History"
+    },
+    {
+      "ProfID": "profC",
+      "Subject": "Biology"
+    }
+  ],
+  "student3": [
+    {
+      "ProfID": "profB",
+      "Subject": "Chemistry"
+    }
+  ]
+}
