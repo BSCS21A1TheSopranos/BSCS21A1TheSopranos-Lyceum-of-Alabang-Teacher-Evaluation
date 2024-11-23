@@ -99,5 +99,37 @@ namespace ClassLibrary1
 
             return teachers;
         }
+
+        public Dictionary<string, List<(string ProfID, string Subject)>> GetStudentsTeachers()
+        {
+            var studentTeacherData = new Dictionary<string, List<(string ProfID, string Subject)>>();
+
+            using (OleDbConnection connection = new OleDbConnection(_connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT StudentID, ProfID, Subject FROM StudentsTeachers";
+
+                using (OleDbCommand command = new OleDbCommand(query, connection))
+                {
+                    using (OleDbDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string studentId = reader["StudentID"].ToString();
+                            string profId = reader["ProfID"].ToString();
+                            string subject = reader["Subject"].ToString();
+                            if (!studentTeacherData.ContainsKey(studentId))
+                            {
+                                studentTeacherData[studentId] = new List<(string, string)>();
+                            }
+                            studentTeacherData[studentId].Add((profId, subject));
+                        }
+                    }
+                }
+            }
+            return studentTeacherData;
+        }
+
     }
 }
