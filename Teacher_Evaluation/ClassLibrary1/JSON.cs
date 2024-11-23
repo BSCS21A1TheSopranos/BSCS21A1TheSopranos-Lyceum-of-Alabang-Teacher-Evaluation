@@ -12,12 +12,14 @@ namespace ClassLibrary1
         private readonly string _studentsFilePath;
         private readonly string _adminFilePath;
         private readonly string _teacherFilePath;
+        private readonly string _studentsteachersFilePath;
 
-        public JsonDataSaveandRetrieve(string studentsFilePath, string adminFilePath, string teacherFilePath)
+        public JsonDataSaveandRetrieve(string studentsFilePath, string adminFilePath, string teacherFilePath, string studentsteachersFilePath)
         {
             _studentsFilePath = studentsFilePath;
             _adminFilePath = adminFilePath;
             _teacherFilePath = teacherFilePath;
+            _studentsteachersFilePath = studentsteachersFilePath;
         }
 
         public Dictionary<string, Student> GetAllStudents()
@@ -55,6 +57,37 @@ namespace ClassLibrary1
             return JsonSerializer.Deserialize<Dictionary<string, Teacher>>(jsonString)
                    ?? new Dictionary<string, Teacher>();
         }
+
+        public Dictionary<string, List<(string ProfID, string Subject)>> GetStudentsTeachers()
+        {
+            var studentTeacherData = new Dictionary<string, List<(string ProfID, string Subject)>>();
+            if (File.Exists(_studentsteachersFilePath))
+            {
+                string jsonData = File.ReadAllText(_studentsteachersFilePath);
+                var data = JsonSerializer.Deserialize<Dictionary<string, List<Dictionary<string, string>>>>(jsonData);
+
+                if (data != null)
+                {
+                    foreach (var entry in data)
+                    {
+                        string studentId = entry.Key;
+                        foreach (var teacherSubject in entry.Value)
+                        {
+                            string profId = teacherSubject["ProfID"];
+                            string subject = teacherSubject["Subject"];
+                            if (!studentTeacherData.ContainsKey(studentId))
+                            {
+                                studentTeacherData[studentId] = new List<(string, string)>();
+                            }
+                            studentTeacherData[studentId].Add((profId, subject));
+                        }
+                    }
+                }
+            }
+
+            return studentTeacherData;
+        }
+
     }
 
 }

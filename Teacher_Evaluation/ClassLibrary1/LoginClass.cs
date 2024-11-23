@@ -63,4 +63,3 @@ namespace ClassLibrary1
     }
 
 }
-this.id
