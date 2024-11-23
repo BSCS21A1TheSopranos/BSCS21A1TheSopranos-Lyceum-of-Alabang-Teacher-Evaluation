@@ -13,18 +13,33 @@ namespace Teacher_Evaluation
             string jsonStudentsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "students.json");
             string jsonAdminsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "admin.json");
             string jsonTeachersFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "teachers.json");
-            repository = new JsonDataSaveandRetrieve(jsonStudentsFilePath, jsonAdminsFilePath, jsonTeachersFilePath);
-            //string databasePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "Teacher_Evaluation_Database.accdb");
-            //repository = new MSAcessDataSaveandRetrieve(databasePath);
+            string jsonStudentsTeachersFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "studentsteachers.json");
+
+            //repository = new JsonDataSaveandRetrieve(jsonStudentsFilePath, jsonAdminsFilePath, jsonTeachersFilePath, jsonStudentsTeachersFilePath);
+            string databasePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "Teacher_Evaluation_Database.accdb");
+            repository = new MSAcessDataSaveandRetrieve(databasePath);
             StudentDataHolder.LoadStudents(repository);
             AdminDataHolder.LoadAdmin(repository);
             TeacherDataHolder.LoadTeacher(repository);
+            StudentTeacherData.LoadStudentsTeachers(repository);
+
+
+
+            foreach (var student in StudentTeacherData.studentTeacherData)
+            {
+                MessageBox.Show(student.Key);
+                foreach (var profSubject in student.Value)
+                {
+                    MessageBox.Show($"ProfID: {profSubject.ProfID}, Subject: {profSubject.Subject}");
+                }
+            }
             foreach (var teacher in TeacherDataHolder.Teachers)
             {
                 MessageBox.Show($"{teacher.Value.ProfID} {teacher.Value.Password} {teacher.Value.Email}");
             }
 
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
