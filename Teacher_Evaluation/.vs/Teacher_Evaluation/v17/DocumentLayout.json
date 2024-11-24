@@ -1,49 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\",
+  "WorkspaceRootPath": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\registrationclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\registrationclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\ui_registerstud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\ui_registerstud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\studentsteachersclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\studentsteachersclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\studentsteachersclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\loginclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\registrationclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\registrationclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}|Teacher_Evaluation\\Teacher_Evaluation.csproj|solutionrelative:teacher_evaluation\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\loginclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\loginclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\msaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\msaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\msaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\json.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\json.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\json.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\irepositorydatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\irepositorydatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\irepositorydatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\teacherclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\teacherclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\teacherclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\adminclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\adminclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\adminclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\user1\\desktop\\season 2\\arc 3\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\studentclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\paul\\documents\\github\\bscs21a1thesopranos-lyceum-of-alabang-teacher-evaluation\\teacher_evaluation\\classlibrary1\\studentclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45150E60-BCAA-4237-AF51-C6B71AAD2C35}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\studentclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -54,41 +58,53 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "RegistrationClass.cs",
-              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\RegistrationClass.cs",
+              "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\RegistrationClass.cs",
               "RelativeDocumentMoniker": "ClassLibrary1\\RegistrationClass.cs",
-              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\RegistrationClass.cs",
+              "ToolTip": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\RegistrationClass.cs",
               "RelativeToolTip": "ClassLibrary1\\RegistrationClass.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAzAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T01:37:45.936Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "StudentsTeachersClass.cs",
-              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\StudentsTeachersClass.cs",
+              "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\StudentsTeachersClass.cs",
               "RelativeDocumentMoniker": "ClassLibrary1\\StudentsTeachersClass.cs",
-              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\StudentsTeachersClass.cs",
+              "ToolTip": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\StudentsTeachersClass.cs",
               "RelativeToolTip": "ClassLibrary1\\StudentsTeachersClass.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T00:12:00.479Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "UI_RegisterStud.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\UI_RegisterStud.cs",
+              "RelativeDocumentMoniker": "Teacher_Evaluation\\UI_RegisterStud.cs",
+              "ToolTip": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\UI_RegisterStud.cs [Design]",
+              "RelativeToolTip": "Teacher_Evaluation\\UI_RegisterStud.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T02:02:30.563Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs",
               "RelativeDocumentMoniker": "Teacher_Evaluation\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs [Design]",
+              "ToolTip": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs [Design]",
               "RelativeToolTip": "Teacher_Evaluation\\LoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T00:10:30.58Z",
@@ -96,63 +112,62 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "LoginClass.cs",
-              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\LoginClass.cs",
+              "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\LoginClass.cs",
               "RelativeDocumentMoniker": "ClassLibrary1\\LoginClass.cs",
-              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\LoginClass.cs",
+              "ToolTip": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\LoginClass.cs",
               "RelativeToolTip": "ClassLibrary1\\LoginClass.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAMwEAAAAABAAAA",
+              "ViewState": "AgIAABkAAAAAAAAAAAAMwEAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T00:10:30.594Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "JSON.cs",
+              "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\JSON.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\JSON.cs",
+              "ToolTip": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\JSON.cs",
+              "RelativeToolTip": "ClassLibrary1\\JSON.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAuwBMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T00:10:30.594Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "JSON.cs",
-              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\JSON.cs",
-              "RelativeDocumentMoniker": "ClassLibrary1\\JSON.cs",
-              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\JSON.cs",
-              "RelativeToolTip": "ClassLibrary1\\JSON.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAuwBMAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T00:10:30.594Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "MSAccess.cs",
-              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\MSAccess.cs",
+              "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\MSAccess.cs",
               "RelativeDocumentMoniker": "ClassLibrary1\\MSAccess.cs",
-              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\MSAccess.cs",
+              "ToolTip": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\MSAccess.cs",
               "RelativeToolTip": "ClassLibrary1\\MSAccess.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAqwHgAAABKAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T00:10:30.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "LoginForm.cs",
-              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs",
               "RelativeDocumentMoniker": "Teacher_Evaluation\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\Teacher_Evaluation\\LoginForm.cs",
               "RelativeToolTip": "Teacher_Evaluation\\LoginForm.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAgwBkAAAAAAAAA",
+              "ViewState": "AgIAACMAAAAAAAAAAAASwD0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T00:10:30.261Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "TeacherClass.cs",
-              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\TeacherClass.cs",
+              "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\TeacherClass.cs",
               "RelativeDocumentMoniker": "ClassLibrary1\\TeacherClass.cs",
-              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\TeacherClass.cs",
+              "ToolTip": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\TeacherClass.cs",
               "RelativeToolTip": "ClassLibrary1\\TeacherClass.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAowCEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -160,11 +175,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IRepositoryDatabase.cs",
-              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\IRepositoryDatabase.cs",
+              "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\IRepositoryDatabase.cs",
               "RelativeDocumentMoniker": "ClassLibrary1\\IRepositoryDatabase.cs",
-              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\IRepositoryDatabase.cs",
+              "ToolTip": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\IRepositoryDatabase.cs",
               "RelativeToolTip": "ClassLibrary1\\IRepositoryDatabase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -172,11 +187,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "StudentClass.cs",
-              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\StudentClass.cs",
+              "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\StudentClass.cs",
               "RelativeDocumentMoniker": "ClassLibrary1\\StudentClass.cs",
-              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\StudentClass.cs",
+              "ToolTip": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\StudentClass.cs",
               "RelativeToolTip": "ClassLibrary1\\StudentClass.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAYwB0AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -184,11 +199,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AdminClass.cs",
-              "DocumentMoniker": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\AdminClass.cs",
+              "DocumentMoniker": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\AdminClass.cs",
               "RelativeDocumentMoniker": "ClassLibrary1\\AdminClass.cs",
-              "ToolTip": "C:\\Users\\User1\\Desktop\\Season 2\\Arc 3\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\AdminClass.cs",
+              "ToolTip": "C:\\Users\\Paul\\Documents\\GitHub\\BSCS21A1TheSopranos-Lyceum-of-Alabang-Teacher-Evaluation\\Teacher_Evaluation\\ClassLibrary1\\AdminClass.cs",
               "RelativeToolTip": "ClassLibrary1\\AdminClass.cs",
               "ViewState": "AQIAABMAAAAAAAAAAADwvx0AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
