@@ -93,6 +93,7 @@
             Controls.Add(textBox1);
             Name = "Feedback";
             Text = "Feedback";
+            Load += Feedback_Load;
             ResumeLayout(false);
             PerformLayout();
         }
