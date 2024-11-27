@@ -27,7 +27,15 @@ namespace Teacher_Evaluation
         {
             string inputText = textBox1.Text;
             string sentiment = AnalyzeSentiment(inputText);
-            label3.Text = sentiment;
+
+            if (sentiment == "Unable to determine sentiment due to meaningless input")
+            {
+                MessageBox.Show("The input text is meaningless. Please try again with valid input.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                label3.Text = sentiment;
+            }
         }
 
         private string AnalyzeSentiment(string text)
@@ -64,6 +72,11 @@ namespace Teacher_Evaluation
                 MessageBox.Show($"Error: {ex.Message}");
                 return "Error: " + ex.Message;
             }
+        }
+
+        private void Feedback_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
