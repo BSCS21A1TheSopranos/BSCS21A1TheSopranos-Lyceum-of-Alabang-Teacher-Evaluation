@@ -5,7 +5,7 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teacher_Evaluation", "Teacher_Evaluation\Teacher_Evaluation.csproj", "{E03D590D-E62D-4A0B-BC39-D6F9002ACB8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{45150E60-BCAA-4237-AF51-C6B71AAD2C35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "ClassLibrary1\Services.csproj", "{45150E60-BCAA-4237-AF51-C6B71AAD2C35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

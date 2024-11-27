@@ -36,7 +36,6 @@ namespace Teacher_Evaluation
             if (registration.validstudentNo(student) && (registration.validpaassword(student)))
             {
                 registration.encryptpassword(student);
-                DatabaseConnection.RegisterPassword(student.StudentID, student.Password);
                 loginForm.Show();
                 this.Close();
             }

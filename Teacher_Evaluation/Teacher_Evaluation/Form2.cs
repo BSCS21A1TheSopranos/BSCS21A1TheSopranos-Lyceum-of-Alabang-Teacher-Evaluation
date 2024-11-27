@@ -31,10 +31,14 @@ namespace Teacher_Evaluation
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DatabaseConnection.InsertEvaluation(teacherid, teachername, textBox1.Text);
-            Form1 form1 = new Form1(studentid);
+            StudentTeachers form1 = new StudentTeachers(studentid);
             form1.Show();
             this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

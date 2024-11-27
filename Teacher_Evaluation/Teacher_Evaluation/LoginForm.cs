@@ -10,34 +10,12 @@ namespace Teacher_Evaluation
         {
             InitializeComponent();
             IDataSaveandRetrieve repository;
-            string jsonStudentsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "students.json");
-            string jsonAdminsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "admin.json");
-            string jsonTeachersFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "teachers.json");
-            string jsonStudentsTeachersFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "studentsteachers.json");
-
             //repository = new JsonDataSaveandRetrieve(jsonStudentsFilePath, jsonAdminsFilePath, jsonTeachersFilePath, jsonStudentsTeachersFilePath);
-            string databasePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "Teacher_Evaluation_Database.accdb");
-            repository = new MSAcessDataSaveandRetrieve(databasePath);
+            repository = new MSAcessDataSaveandRetrieve();
             StudentDataHolder.LoadStudents(repository);
             AdminDataHolder.LoadAdmin(repository);
             TeacherDataHolder.LoadTeacher(repository);
             StudentTeacherData.LoadStudentsTeachers(repository);
-
-
-
-            foreach (var student in StudentTeacherData.studentTeacherData)
-            {
-                MessageBox.Show(student.Key);
-                foreach (var profSubject in student.Value)
-                {
-                    MessageBox.Show($"ProfID: {profSubject.ProfID}, Subject: {profSubject.Subject}");
-                }
-            }
-            foreach (var teacher in TeacherDataHolder.Teachers)
-            {
-                MessageBox.Show($"{teacher.Value.ProfID} {teacher.Value.Password} {teacher.Value.Email}");
-            }
-
         }
 
 
@@ -71,18 +49,8 @@ namespace Teacher_Evaluation
             {
                 if (login.checkpassword(textBox6.Text))
                 {
-                    if (login.GetRole() == "Admin")
-                    {
-                        Admin admin = new Admin();
-                        admin.Show();
-                        this.Hide();
-                    }
-                    else if (login.GetRole() == "Student")
-                    {
-                        Form1 form = new Form1(textBox5.Text);
-                        form.Show();
-                        this.Hide();
-                    }
+                    NavigationService navigationService = new NavigationService();
+                    navigationService.NavigateToForm(login.GetRole(), textBox5.Text);
                 }
                 if (!login.checkpassword(textBox6.Text))
                 {
@@ -95,19 +63,22 @@ namespace Teacher_Evaluation
             }
         }
 
-        private void label9_Click(object sender, EventArgs e)
+    }
+    public class NavigationService
+    {
+        public void NavigateToForm(string role, string username)
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
+            if (role == "Admin")
+            {
+                Admin admin = new Admin();
+                admin.Show();
+            }
+            else if (role == "Student")
+            {
+                StudentTeachers form = new StudentTeachers(username);
+                form.Show();
+            }
         }
     }
+
 }
