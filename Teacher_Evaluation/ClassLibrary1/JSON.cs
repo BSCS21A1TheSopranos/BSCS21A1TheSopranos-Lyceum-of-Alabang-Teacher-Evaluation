@@ -8,19 +8,11 @@ using System.Text.Json;
 namespace ClassLibrary1
 {
     public class JsonDataSaveandRetrieve : IDataSaveandRetrieve
-    {
-        private readonly string _studentsFilePath;
-        private readonly string _adminFilePath;
-        private readonly string _teacherFilePath;
-        private readonly string _studentsteachersFilePath;
-
-        public JsonDataSaveandRetrieve(string studentsFilePath, string adminFilePath, string teacherFilePath, string studentsteachersFilePath)
-        {
-            _studentsFilePath = studentsFilePath;
-            _adminFilePath = adminFilePath;
-            _teacherFilePath = teacherFilePath;
-            _studentsteachersFilePath = studentsteachersFilePath;
-        }
+    { 
+        private readonly string _studentsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "students.json");
+        private readonly string _adminFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "admin.json");
+        private readonly string _teacherFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "teachers.json");
+        private readonly string _studentsteachersFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "studentsteachers.json");
 
         public Dictionary<string, Student> GetAllStudents()
         {

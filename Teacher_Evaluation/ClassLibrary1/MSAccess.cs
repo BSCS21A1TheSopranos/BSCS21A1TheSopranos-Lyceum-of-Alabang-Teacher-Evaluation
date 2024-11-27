@@ -12,12 +12,7 @@ namespace ClassLibrary1
 
     public class MSAcessDataSaveandRetrieve : IDataSaveandRetrieve
     {
-        private readonly string _connectionString;
-
-        public MSAcessDataSaveandRetrieve(string databasePath)
-        {
-            _connectionString = $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={databasePath}";
-        }
+        private readonly string _connectionString = $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "Teacher_Evaluation_Database.accdb")}";
 
         public Dictionary<string, Student> GetAllStudents()
         {
@@ -80,7 +75,7 @@ namespace ClassLibrary1
             using (var connection = new OleDbConnection(_connectionString))
             {
                 connection.Open();
-                string query = "SELECT ProfID, Password, Email, Role FROM Prof";
+                string query = "SELECT ProfID, Password, Email, Role, Name FROM Prof";
 
                 using (var command = new OleDbCommand(query, connection))
                 using (var reader = command.ExecuteReader())
@@ -91,8 +86,9 @@ namespace ClassLibrary1
                         var password = reader["Password"].ToString();
                         var email = reader["Email"].ToString();
                         var role = reader["Role"].ToString();
+                        var name = reader["Name"].ToString();
 
-                        teachers[profID] = new Teacher(profID, password, email, role);
+                        teachers[profID] = new Teacher(profID, password, email, role, name);
                     }
                 }
             }

@@ -10,16 +10,18 @@ namespace ClassLibrary1
     public class Teacher
     {
         public string ProfID { get; set; }
+        public string Name { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
         public string Role { get; set; }
 
-        public Teacher(string profId, string password, string email, string role)
+        public Teacher(string profId, string password, string email, string role, string name )
         {
             ProfID = profId;
             Password = password;
             Email = email;
             Role = role;
+            Name = name;
         }
     }
     public static class TeacherDataHolder

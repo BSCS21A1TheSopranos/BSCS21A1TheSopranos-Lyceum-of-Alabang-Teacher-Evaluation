@@ -20,7 +20,7 @@ namespace Teacher_Evaluation
             //string jsonStudentsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "students.json");
             //repository = new JsonDataSaveandRetrieve(jsonStudentsFilePath);
             string databasePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "Teacher_Evaluation_Database.accdb");
-            repository = new MSAcessDataSaveandRetrieve(databasePath);
+            repository = new MSAcessDataSaveandRetrieve();
             StudentDataHolder.LoadStudents(repository);
             foreach (var student in StudentDataHolder.Students)
             {
