@@ -20,22 +20,25 @@ namespace Teacher_Evaluation
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Student student = new Student(textBox1.Text, textBox3.Text, textBox2.Text, "Student");
+            Student student = new Student(textBox6.Text, textBox7.Text, textBox8.Text, "Student");
             RegistrationClass registration = new RegistrationClass();
             LoginForm loginForm = new LoginForm();
 
             if (!registration.validstudentNo(student))
             {
-                textBox3.Text = "Invalid Format. It must be ####-##";
-
+                textBox6.Text = "Invalid Format. It must be ####-##";
             }
-            if (!registration.validpaassword(student))
-            {
-                textBox2.Text = "Minimum of 8 characters with at least one uppercase, lowercase, number, and special character (@, $, !, %, *, ?, &).";
+            if (!registration.checkpassword(student)) {
+                textBox7.Text = "Wrong Password";
             }
-            if (registration.validstudentNo(student) && (registration.validpaassword(student)))
+            if (!registration.validpaassword(textBox8.Text))
             {
-                registration.encryptpassword(student);
+                textBox8.Text = "Minimum of 8 characters with at least one uppercase, lowercase, number, and special character (@, $, !, %, *, ?, &).";
+            }
+            if (registration.validstudentNo(student) && (registration.validpaassword(textBox8.Text)))
+            {
+                registration.encryptpassword(textBox8.Text, student);
+                RegistrationClass.Update(student);
                 loginForm.Show();
                 this.Close();
             }
@@ -55,6 +58,11 @@ namespace Teacher_Evaluation
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }
