@@ -127,5 +127,46 @@ namespace ClassLibrary1
             return studentTeacherData;
         }
 
+        public void SaveStudents(Dictionary<string, Student> students)
+        {
+            using (var connection = new OleDbConnection(_connectionString))
+            {
+                connection.Open();
+
+                foreach (var student in students.Values)
+                {
+                    string checkQuery = "SELECT COUNT(*) FROM Students WHERE [StudentID] = ?";
+                    using (var checkCommand = new OleDbCommand(checkQuery, connection))
+                    {
+                        checkCommand.Parameters.AddWithValue("?", student.StudentID);
+                        int count = Convert.ToInt32(checkCommand.ExecuteScalar());
+                        if (count > 0)
+                        {
+                            string updateQuery = "UPDATE Students SET [Password] = ?, [Email] = ?, [Role] = ? WHERE [StudentID] = ?";
+                            using (var updateCommand = new OleDbCommand(updateQuery, connection))
+                            {
+                                updateCommand.Parameters.AddWithValue("?", student.Password);
+                                updateCommand.Parameters.AddWithValue("?", student.Email);
+                                updateCommand.Parameters.AddWithValue("?", student.Role);
+                                updateCommand.Parameters.AddWithValue("?", student.StudentID);
+                                updateCommand.ExecuteNonQuery();
+                            }
+                        }
+                        else
+                        {
+                            string insertQuery = "INSERT INTO Students ([StudentID], [Password], [Email], [Role]) VALUES (?, ?, ?, ?)";
+                            using (var insertCommand = new OleDbCommand(insertQuery, connection))
+                            {
+                                insertCommand.Parameters.AddWithValue("?", student.StudentID);
+                                insertCommand.Parameters.AddWithValue("?", student.Password);
+                                insertCommand.Parameters.AddWithValue("?", student.Email);
+                                insertCommand.Parameters.AddWithValue("?", student.Role);
+                                insertCommand.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
