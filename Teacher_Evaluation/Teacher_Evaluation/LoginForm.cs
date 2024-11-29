@@ -10,7 +10,7 @@ namespace Teacher_Evaluation
         {
             InitializeComponent();
             IDataSaveandRetrieve repository;
-            //repository = new JsonDataSaveandRetrieve(jsonStudentsFilePath, jsonAdminsFilePath, jsonTeachersFilePath, jsonStudentsTeachersFilePath);
+            //repository = new JsonDataSaveandRetrieve();
             repository = new MSAcessDataSaveandRetrieve();
             StudentDataHolder.LoadStudents(repository);
             AdminDataHolder.LoadAdmin(repository);
@@ -43,14 +43,26 @@ namespace Teacher_Evaluation
 
         private void button2_Click(object sender, EventArgs e)
         {
+            MSAcessDataSaveandRetrieve mSAcessDataSaveandRetrieve = new MSAcessDataSaveandRetrieve();
+            mSAcessDataSaveandRetrieve.SaveStudents(StudentDataHolder.Students);
             LoginClass login = new LoginClass(textBox5.Text);
 
             if (login.checkStudent())
             {
                 if (login.checkpassword(textBox6.Text))
                 {
-                    NavigationService navigationService = new NavigationService();
-                    navigationService.NavigateToForm(login.GetRole(), textBox5.Text);
+                    login.GetRoles();
+                    if (login.isStudent){
+                        StudentTeachers studentTeachers = new StudentTeachers(textBox5.Text);
+                        studentTeachers.Show();
+                        this.Hide();
+                    }
+                    if (login.isAdmin)
+                    {
+                        Admin admin = new Admin();
+                        admin.Show();
+                        this.Hide();
+                    }
                 }
                 if (!login.checkpassword(textBox6.Text))
                 {
@@ -64,21 +76,4 @@ namespace Teacher_Evaluation
         }
 
     }
-    public class NavigationService
-    {
-        public void NavigateToForm(string role, string username)
-        {
-            if (role == "Admin")
-            {
-                Admin admin = new Admin();
-                admin.Show();
-            }
-            else if (role == "Student")
-            {
-                StudentTeachers form = new StudentTeachers(username);
-                form.Show();
-            }
-        }
-    }
-
 }

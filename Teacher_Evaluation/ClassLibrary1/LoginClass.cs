@@ -11,6 +11,10 @@ namespace ClassLibrary1
     {
 
         public string id;
+        public bool isAdmin;
+        public bool isTeacher;
+        public bool isStudent;
+
 
         public LoginClass(string id)
         {
@@ -45,18 +49,26 @@ namespace ClassLibrary1
                 || AdminDataHolder.Admins.ContainsKey(id);
         }
 
-        public string GetRole()
+        public bool HasRole(string roleType)
         {
-            if (StudentDataHolder.Students.ContainsKey(id))
-                return StudentDataHolder.Students[id].Role;
+            switch (roleType)
+            {
+                case "Admin":
+                    return AdminDataHolder.Admins.ContainsKey(id);
+                case "Teacher":
+                    return TeacherDataHolder.Teachers.ContainsKey(id);
+                case "Student":
+                    return StudentDataHolder.Students.ContainsKey(id);
+                default:
+                    return false;
+            }
+        }
 
-            if (TeacherDataHolder.Teachers.ContainsKey(id))
-                return TeacherDataHolder.Teachers[id].Role;
-
-            if (AdminDataHolder.Admins.ContainsKey(id))
-                return AdminDataHolder.Admins[id].Role;
-
-            return "Wala Boi";
+        public void GetRoles()
+        {
+            isAdmin = HasRole("Admin");
+            isTeacher = HasRole("Teacher");
+            isStudent = HasRole("Student");
         }
 
     }
