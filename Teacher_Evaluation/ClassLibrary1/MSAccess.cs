@@ -127,13 +127,13 @@ namespace ClassLibrary1
             return studentTeacherData;
         }
 
-        public void SaveStudents(Dictionary<string, Student> students)
+        public void SaveStudents()
         {
             using (var connection = new OleDbConnection(_connectionString))
             {
                 connection.Open();
 
-                foreach (var student in students.Values)
+                foreach (var student in StudentDataHolder.Students.Values)
                 {
                     string checkQuery = "SELECT COUNT(*) FROM Students WHERE [StudentID] = ?";
                     using (var checkCommand = new OleDbCommand(checkQuery, connection))

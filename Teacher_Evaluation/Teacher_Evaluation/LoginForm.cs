@@ -44,7 +44,7 @@ namespace Teacher_Evaluation
         private void button2_Click(object sender, EventArgs e)
         {
             MSAcessDataSaveandRetrieve mSAcessDataSaveandRetrieve = new MSAcessDataSaveandRetrieve();
-            mSAcessDataSaveandRetrieve.SaveStudents(StudentDataHolder.Students);
+            mSAcessDataSaveandRetrieve.SaveStudents();
             LoginClass login = new LoginClass(textBox5.Text);
 
             if (login.checkStudent())
