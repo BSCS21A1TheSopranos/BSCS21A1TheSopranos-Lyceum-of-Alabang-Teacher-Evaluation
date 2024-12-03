@@ -28,7 +28,8 @@ namespace Teacher_Evaluation
             {
                 textBox6.Text = "Invalid Format. It must be ####-##";
             }
-            if (!registration.checkpassword(student)) {
+            if (!registration.checkpassword(student))
+            {
                 textBox7.Text = "Wrong Password";
             }
             if (!registration.validpaassword(textBox8.Text))
@@ -65,6 +66,20 @@ namespace Teacher_Evaluation
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox2.UseSystemPasswordChar = false;
+                textBox4.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = true;
+                textBox4.UseSystemPasswordChar = true;
+            }
         }
     }
 }
