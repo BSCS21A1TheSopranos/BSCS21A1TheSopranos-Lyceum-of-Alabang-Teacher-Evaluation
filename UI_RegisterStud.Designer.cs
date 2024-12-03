@@ -49,6 +49,9 @@
             textBox7 = new TextBox();
             textBox8 = new TextBox();
             checkBox1 = new CheckBox();
+            notif3 = new Label();
+            notif1 = new Label();
+            notif2 = new Label();
             textBox1 = new TextBox();
             SuspendLayout();
             // 
@@ -254,6 +257,7 @@
             textBox5.PlaceholderText = "Enter Name";
             textBox5.Size = new Size(288, 24);
             textBox5.TabIndex = 18;
+            textBox5.Visible = false;
             textBox5.TextChanged += textBox5_TextChanged;
             // 
             // textBox6
@@ -268,6 +272,7 @@
             textBox6.PlaceholderText = "Enter Name";
             textBox6.Size = new Size(288, 24);
             textBox6.TabIndex = 19;
+            textBox6.Visible = false;
             // 
             // textBox7
             // 
@@ -281,6 +286,7 @@
             textBox7.PlaceholderText = "Enter Name";
             textBox7.Size = new Size(288, 24);
             textBox7.TabIndex = 20;
+            textBox7.Visible = false;
             // 
             // textBox8
             // 
@@ -294,6 +300,7 @@
             textBox8.PlaceholderText = "Enter Name";
             textBox8.Size = new Size(288, 24);
             textBox8.TabIndex = 21;
+            textBox8.Visible = false;
             // 
             // checkBox1
             // 
@@ -305,6 +312,46 @@
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
+            // notif3
+            // 
+            notif3.AutoSize = true;
+            notif3.BackColor = SystemColors.ControlLight;
+            notif3.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            notif3.ForeColor = Color.Firebrick;
+            notif3.Location = new Point(557, 306);
+            notif3.Name = "notif3";
+            notif3.Size = new Size(68, 13);
+            notif3.TabIndex = 28;
+            notif3.Text = "pogi si paul";
+            notif3.Visible = false;
+            notif3.Click += notif_Click;
+            // 
+            // notif1
+            // 
+            notif1.AutoSize = true;
+            notif1.BackColor = SystemColors.ControlLight;
+            notif1.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            notif1.ForeColor = Color.Firebrick;
+            notif1.Location = new Point(540, 195);
+            notif1.Name = "notif1";
+            notif1.Size = new Size(68, 13);
+            notif1.TabIndex = 29;
+            notif1.Text = "pogi si paul";
+            notif1.Visible = false;
+            // 
+            // notif2
+            // 
+            notif2.AutoSize = true;
+            notif2.BackColor = SystemColors.ControlLight;
+            notif2.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            notif2.ForeColor = Color.Firebrick;
+            notif2.Location = new Point(597, 251);
+            notif2.Name = "notif2";
+            notif2.Size = new Size(68, 13);
+            notif2.TabIndex = 31;
+            notif2.Text = "pogi si paul";
+            notif2.Visible = false;
+            // 
             // UI_RegisterStud
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -312,6 +359,9 @@
             BackgroundImage = Properties.Resources.load_blurred;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(834, 472);
+            Controls.Add(notif2);
+            Controls.Add(notif1);
+            Controls.Add(notif3);
             Controls.Add(checkBox1);
             Controls.Add(textBox8);
             Controls.Add(textBox7);
@@ -364,5 +414,8 @@
         private TextBox textBox7;
         private TextBox textBox8;
         private CheckBox checkBox1;
+        private Label notif3;
+        private Label notif1;
+        private Label notif2;
     }
 }
