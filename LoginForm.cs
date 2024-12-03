@@ -67,12 +67,20 @@ namespace Teacher_Evaluation
                 }
                 if (!login.checkpassword(textBox6.Text))
                 {
-                    MessageBox.Show("Mali Password");
+                    notif.Visible = true;
+                    notif.Text = "Password or Student ID mismatch";
+                    textBox4.Clear();
+                    textBox5.Clear();
+                    textBox6.Clear();
                 }
             }
             else
             {
-                MessageBox.Show("Wala");
+                notif.Visible = true;
+                notif.Text = "Invalid account";
+                textBox4.Clear();
+                textBox5.Clear();
+                textBox6.Clear();
             }
         }
 

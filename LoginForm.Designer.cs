@@ -51,6 +51,7 @@
             textBox5 = new TextBox();
             textBox6 = new TextBox();
             checkBox1 = new CheckBox();
+            notif = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -299,7 +300,7 @@
             textBox5.Name = "textBox5";
             textBox5.PlaceholderText = "Enter Student ID";
             textBox5.Size = new Size(288, 25);
-            textBox5.TabIndex = 1;
+            textBox5.TabIndex = 2;
             // 
             // textBox6
             // 
@@ -311,7 +312,7 @@
             textBox6.Name = "textBox6";
             textBox6.PlaceholderText = "Enter Password";
             textBox6.Size = new Size(288, 25);
-            textBox6.TabIndex = 1;
+            textBox6.TabIndex = 3;
             textBox6.UseSystemPasswordChar = true;
             // 
             // checkBox1
@@ -324,6 +325,19 @@
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
+            // notif
+            // 
+            notif.AutoSize = true;
+            notif.BackColor = SystemColors.ControlLight;
+            notif.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            notif.ForeColor = Color.Firebrick;
+            notif.Location = new Point(363, 252);
+            notif.Name = "notif";
+            notif.Size = new Size(68, 13);
+            notif.TabIndex = 27;
+            notif.Text = "pogi si paul";
+            notif.Visible = false;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -333,6 +347,7 @@
             BackgroundImage = Properties.Resources.load_blurred;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(831, 471);
+            Controls.Add(notif);
             Controls.Add(checkBox1);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
@@ -395,5 +410,6 @@
         private TextBox textBox5;
         private TextBox textBox6;
         private CheckBox checkBox1;
+        private Label notif;
     }
 }
