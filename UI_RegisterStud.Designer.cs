@@ -117,6 +117,7 @@
             textBox2.Size = new Size(281, 24);
             textBox2.TabIndex = 6;
             textBox2.Tag = "";
+            textBox2.UseSystemPasswordChar = true;
             // 
             // textBox3
             // 
@@ -222,6 +223,7 @@
             textBox4.Size = new Size(281, 24);
             textBox4.TabIndex = 16;
             textBox4.Tag = "";
+            textBox4.UseSystemPasswordChar = true;
             // 
             // button2
             // 
@@ -301,6 +303,7 @@
             checkBox1.Size = new Size(15, 14);
             checkBox1.TabIndex = 22;
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // UI_RegisterStud
             // 
