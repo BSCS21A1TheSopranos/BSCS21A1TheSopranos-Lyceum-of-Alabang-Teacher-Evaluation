@@ -312,6 +312,7 @@
             textBox6.PlaceholderText = "Enter Password";
             textBox6.Size = new Size(288, 25);
             textBox6.TabIndex = 1;
+            textBox6.UseSystemPasswordChar = true;
             // 
             // checkBox1
             // 
@@ -321,6 +322,7 @@
             checkBox1.Size = new Size(15, 14);
             checkBox1.TabIndex = 26;
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // LoginForm
             // 
