@@ -52,7 +52,8 @@ namespace Teacher_Evaluation
                 if (login.checkpassword(textBox6.Text))
                 {
                     login.GetRoles();
-                    if (login.isStudent){
+                    if (login.isStudent)
+                    {
                         StudentTeachers studentTeachers = new StudentTeachers(textBox5.Text);
                         studentTeachers.Show();
                         this.Hide();
@@ -75,5 +76,16 @@ namespace Teacher_Evaluation
             }
         }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox6.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBox6.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
