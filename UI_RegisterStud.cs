@@ -26,15 +26,16 @@ namespace Teacher_Evaluation
 
             if (!registration.validstudentNo(student))
             {
-                textBox6.Text = "Invalid Format. It must be ####-##";
+                notif3.Visible = true;
+                notif1.Text = "Invalid Format. It must be ####-##";
             }
             if (!registration.checkpassword(student))
             {
-                textBox7.Text = "Wrong Password";
+                notif2.Text = "Wrong Password";
             }
             if (!registration.validpaassword(textBox8.Text))
             {
-                textBox8.Text = "Minimum of 8 characters with at least one uppercase, lowercase, number, and special character (@, $, !, %, *, ?, &).";
+                notif3.Text = "Minimum of 8 characters";
             }
             if (registration.validstudentNo(student) && (registration.validpaassword(textBox8.Text)))
             {
@@ -80,6 +81,11 @@ namespace Teacher_Evaluation
                 textBox2.UseSystemPasswordChar = true;
                 textBox4.UseSystemPasswordChar = true;
             }
+        }
+
+        private void notif_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
