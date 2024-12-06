@@ -240,5 +240,66 @@ namespace ClassLibrary1
             }
         }
 
+        public void SaveAllTeachers()
+        {
+            var teachers = TeacherDataHolder.Teachers;
+
+            using (var connection = new OleDbConnection(_connectionString))
+            {
+                connection.Open();
+
+                foreach (var entry in teachers)
+                {
+                    var teacher = entry.Value;
+
+                    // Check if the record exists
+                    string checkQuery = "SELECT COUNT(*) FROM Prof WHERE ProfID = ?";
+                    using (var checkCommand = new OleDbCommand(checkQuery, connection))
+                    {
+                        checkCommand.Parameters.AddWithValue("?", teacher.ProfID);
+                        int count = (int)checkCommand.ExecuteScalar();
+
+                        if (count > 0)
+                        {
+                            // Update existing record
+                            string updateQuery = @"
+                    UPDATE Prof
+                    SET [Password] = ?, Email = ?, [Role] = ?, Name = ?
+                    WHERE ProfID = ?";
+                            using (var updateCommand = new OleDbCommand(updateQuery, connection))
+                            {
+                                updateCommand.Parameters.AddWithValue("?", teacher.Password);
+                                updateCommand.Parameters.AddWithValue("?", teacher.Email);
+                                updateCommand.Parameters.AddWithValue("?", teacher.Role);
+                                updateCommand.Parameters.AddWithValue("?", teacher.Name);
+                                updateCommand.Parameters.AddWithValue("?", teacher.ProfID);
+
+                                updateCommand.ExecuteNonQuery();
+                            }
+                        }
+                        else
+                        {
+                            // Insert new record
+                            string insertQuery = @"
+                    INSERT INTO Prof (ProfID, [Password], Email, [Role], Name)
+                    VALUES (?, ?, ?, ?, ?)";
+                            using (var insertCommand = new OleDbCommand(insertQuery, connection))
+                            {
+                                insertCommand.Parameters.AddWithValue("?", teacher.ProfID);
+                                insertCommand.Parameters.AddWithValue("?", teacher.Password);
+                                insertCommand.Parameters.AddWithValue("?", teacher.Email);
+                                insertCommand.Parameters.AddWithValue("?", teacher.Role);
+                                insertCommand.Parameters.AddWithValue("?", teacher.Name);
+
+                                insertCommand.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
     }
 }

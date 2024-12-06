@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
@@ -15,7 +11,7 @@ namespace ClassLibrary1
         public string Email { get; set; }
         public string Role { get; set; }
 
-        public Teacher(string profId, string password, string email, string role, string name )
+        public Teacher(string profId, string password, string email, string role, string name)
         {
             ProfID = profId;
             Password = password;
@@ -24,9 +20,9 @@ namespace ClassLibrary1
             Name = name;
         }
     }
+
     public static class TeacherDataHolder
     {
-
         public static Dictionary<string, Teacher> Teachers { get; private set; }
 
         static TeacherDataHolder()
@@ -38,6 +34,11 @@ namespace ClassLibrary1
         {
             Teachers = repository.GetAllTeacher();
         }
-    }
 
+        public static void AddTeacherToDictionary(string profID, string name, string email, string password)
+        {
+            var newTeacher = new Teacher(profID, password, email, "Teacher", name);
+            Teachers.Add(profID, newTeacher);
+        }
+    }
 }
