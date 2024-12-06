@@ -17,8 +17,6 @@ namespace Teacher_Evaluation
             TeacherDataHolder.LoadTeacher(repository);
             StudentTeacherData.LoadStudentsTeachers(repository);
         }
-
-
         private void label1_Click(object sender, EventArgs e)
         {
 

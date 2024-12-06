@@ -50,9 +50,9 @@ namespace ClassLibrary1
                    ?? new Dictionary<string, Teacher>();
         }
 
-        public Dictionary<string, List<(string ProfID, string Subject)>> GetStudentsTeachers()
+        public Dictionary<string, List<(string ProfID, string Subject, string Status)>> GetStudentsTeachers()
         {
-            var studentTeacherData = new Dictionary<string, List<(string ProfID, string Subject)>>();
+            var studentTeacherData = new Dictionary<string, List<(string ProfID, string Subject, string Status)>>();
             if (File.Exists(_studentsteachersFilePath))
             {
                 string jsonData = File.ReadAllText(_studentsteachersFilePath);
@@ -67,11 +67,12 @@ namespace ClassLibrary1
                         {
                             string profId = teacherSubject["ProfID"];
                             string subject = teacherSubject["Subject"];
+                            string status = teacherSubject["Status"];
                             if (!studentTeacherData.ContainsKey(studentId))
                             {
-                                studentTeacherData[studentId] = new List<(string, string)>();
+                                studentTeacherData[studentId] = new List<(string, string, string)>();
                             }
-                            studentTeacherData[studentId].Add((profId, subject));
+                            studentTeacherData[studentId].Add((profId, subject, status));
                         }
                     }
                 }
