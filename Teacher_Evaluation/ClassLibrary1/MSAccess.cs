@@ -1,18 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.OleDb;
+using System.IO;
 
 namespace ClassLibrary1
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data.OleDb;
-
     public class MSAcessDataSaveandRetrieve : IDataSaveandRetrieve
     {
-        private readonly string _connectionString = $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "Teacher_Evaluation_Database.accdb")}";
+        private readonly string _connectionString;
+
+        public MSAcessDataSaveandRetrieve()
+        {
+            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "Teacher_Evaluation_Database.accdb");
+            string absolutePath = Path.GetFullPath(databasePath);
+            Console.WriteLine($"Resolved database path: {absolutePath}");
+            if (!File.Exists(absolutePath))
+            {
+                throw new FileNotFoundException("Database file not found", absolutePath);
+            }
+            _connectionString = $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={absolutePath}";
+        }
 
         public Dictionary<string, Student> GetAllStudents()
         {
@@ -96,15 +103,15 @@ namespace ClassLibrary1
             return teachers;
         }
 
-        public Dictionary<string, List<(string ProfID, string Subject)>> GetStudentsTeachers()
+        public Dictionary<string, List<(string ProfID, string Subject, string Status)>> GetStudentsTeachers()
         {
-            var studentTeacherData = new Dictionary<string, List<(string ProfID, string Subject)>>();
+            var studentTeacherData = new Dictionary<string, List<(string ProfID, string Subject, string Status)>>();
 
             using (OleDbConnection connection = new OleDbConnection(_connectionString))
             {
                 connection.Open();
 
-                string query = "SELECT StudentID, ProfID, Subject FROM StudentsTeachers";
+                string query = "SELECT StudentID, ProfID, Subject, Status FROM StudentsTeachers";
 
                 using (OleDbCommand command = new OleDbCommand(query, connection))
                 {
@@ -115,11 +122,12 @@ namespace ClassLibrary1
                             string studentId = reader["StudentID"].ToString();
                             string profId = reader["ProfID"].ToString();
                             string subject = reader["Subject"].ToString();
+                            string status = reader["Status"].ToString();
                             if (!studentTeacherData.ContainsKey(studentId))
                             {
-                                studentTeacherData[studentId] = new List<(string, string)>();
+                                studentTeacherData[studentId] = new List<(string, string, string)>();
                             }
-                            studentTeacherData[studentId].Add((profId, subject));
+                            studentTeacherData[studentId].Add((profId, subject, status));
                         }
                     }
                 }
@@ -168,5 +176,69 @@ namespace ClassLibrary1
                 }
             }
         }
+
+        public void SaveStudentsTeachers()
+        {
+            var studentTeacherData = StudentTeacherData.studentTeacherData;
+            using (OleDbConnection connection = new OleDbConnection(_connectionString))
+            {
+                connection.Open();
+
+                foreach (var studentEntry in studentTeacherData)
+                {
+                    string studentId = studentEntry.Key;
+
+                    foreach (var record in studentEntry.Value)
+                    {
+                        string profId = record.ProfID;
+                        string subject = record.Subject;
+                        string status = record.Status;
+                        string checkQuery = @"
+                    SELECT COUNT(*) 
+                    FROM StudentsTeachers 
+                    WHERE StudentID = ? AND ProfID = ? AND Subject = ?";
+                        using (OleDbCommand checkCommand = new OleDbCommand(checkQuery, connection))
+                        {
+                            checkCommand.Parameters.AddWithValue("?", studentId);
+                            checkCommand.Parameters.AddWithValue("?", profId);
+                            checkCommand.Parameters.AddWithValue("?", subject);
+
+                            int count = (int)checkCommand.ExecuteScalar();
+
+                            if (count > 0)
+                            {
+                                string updateQuery = @"
+                            UPDATE StudentsTeachers 
+                            SET Status = ? 
+                            WHERE StudentID = ? AND ProfID = ? AND Subject = ?";
+                                using (OleDbCommand updateCommand = new OleDbCommand(updateQuery, connection))
+                                {
+                                    updateCommand.Parameters.AddWithValue("?", status);
+                                    updateCommand.Parameters.AddWithValue("?", studentId);
+                                    updateCommand.Parameters.AddWithValue("?", profId);
+                                    updateCommand.Parameters.AddWithValue("?", subject);
+                                    updateCommand.ExecuteNonQuery();
+                                }
+                            }
+                            else
+                            {
+                                string insertQuery = @"
+                            INSERT INTO StudentsTeachers (StudentID, ProfID, Subject, Status) 
+                            VALUES (?, ?, ?, ?)";
+                                using (OleDbCommand insertCommand = new OleDbCommand(insertQuery, connection))
+                                {
+                                    insertCommand.Parameters.AddWithValue("?", studentId);
+                                    insertCommand.Parameters.AddWithValue("?", profId);
+                                    insertCommand.Parameters.AddWithValue("?", subject);
+                                    insertCommand.Parameters.AddWithValue("?", status);
+                                    insertCommand.ExecuteNonQuery();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }

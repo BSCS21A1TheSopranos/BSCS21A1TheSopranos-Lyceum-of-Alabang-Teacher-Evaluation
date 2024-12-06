@@ -8,7 +8,7 @@ namespace ClassLibrary1
 {
     public static class StudentTeacherData
     {
-        public static Dictionary<string, List<(string ProfID, string Subject)>> studentTeacherData = new Dictionary<string, List<(string, string)>>();
+        public static Dictionary<string, List<(string ProfID, string Subject, string Status)>> studentTeacherData = new Dictionary<string, List<(string, string, string)>>();
         public static void LoadStudentsTeachers(IDataSaveandRetrieve repository)
         {
             studentTeacherData = repository.GetStudentsTeachers();
