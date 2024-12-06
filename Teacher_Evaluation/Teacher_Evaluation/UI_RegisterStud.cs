@@ -26,18 +26,20 @@ namespace Teacher_Evaluation
 
             if (!registration.validstudentNo(student))
             {
-                notif3.Visible = true;
-                notif1.Text = "Invalid Format. It must be ####-##";
+                notif1.Visible = true;
+                notif1.Text = "Account Not Found";
             }
             if (!registration.checkpassword(student))
             {
+                notif2.Visible = true;
                 notif2.Text = "Wrong Password";
             }
             if (!registration.validpaassword(textBox8.Text))
             {
+                notif3.Visible = true;
                 notif3.Text = "Minimum of 8 characters";
             }
-            if (registration.validstudentNo(student) && (registration.validpaassword(textBox8.Text)))
+            if (registration.validstudentNo(student) && (registration.validpaassword(textBox8.Text)) && (registration.checkpassword(student)))
             {
                 registration.encryptpassword(textBox8.Text, student);
                 RegistrationClass.Update(student);
@@ -73,17 +75,22 @@ namespace Teacher_Evaluation
         {
             if (checkBox1.Checked)
             {
-                textBox2.UseSystemPasswordChar = false;
-                textBox4.UseSystemPasswordChar = false;
+                textBox7.UseSystemPasswordChar = false;
+                textBox8.UseSystemPasswordChar = false;
             }
             else
             {
-                textBox2.UseSystemPasswordChar = true;
-                textBox4.UseSystemPasswordChar = true;
+                textBox7.UseSystemPasswordChar = true;
+                textBox8.UseSystemPasswordChar = true;
             }
         }
 
         private void notif_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
         {
 
         }
