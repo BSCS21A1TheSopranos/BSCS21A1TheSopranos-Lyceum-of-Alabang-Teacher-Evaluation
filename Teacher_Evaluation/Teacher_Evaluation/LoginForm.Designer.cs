@@ -50,6 +50,8 @@
             textBox4 = new TextBox();
             textBox5 = new TextBox();
             textBox6 = new TextBox();
+            checkBox1 = new CheckBox();
+            notif = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -293,24 +295,48 @@
             textBox5.BorderStyle = BorderStyle.FixedSingle;
             textBox5.Font = new Font("Arial Narrow", 11.25F);
             textBox5.ForeColor = Color.DimGray;
-            textBox5.Location = new Point(271, 193);
+            textBox5.Location = new Point(271, 181);
             textBox5.Margin = new Padding(3, 2, 3, 2);
             textBox5.Name = "textBox5";
             textBox5.PlaceholderText = "Enter Student ID";
             textBox5.Size = new Size(288, 25);
-            textBox5.TabIndex = 1;
+            textBox5.TabIndex = 2;
             // 
             // textBox6
             // 
             textBox6.BorderStyle = BorderStyle.FixedSingle;
             textBox6.Font = new Font("Arial Narrow", 11.25F);
             textBox6.ForeColor = Color.DimGray;
-            textBox6.Location = new Point(271, 236);
+            textBox6.Location = new Point(271, 221);
             textBox6.Margin = new Padding(3, 2, 3, 2);
             textBox6.Name = "textBox6";
             textBox6.PlaceholderText = "Enter Password";
             textBox6.Size = new Size(288, 25);
-            textBox6.TabIndex = 1;
+            textBox6.TabIndex = 3;
+            textBox6.UseSystemPasswordChar = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(544, 251);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(15, 14);
+            checkBox1.TabIndex = 26;
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
+            // notif
+            // 
+            notif.AutoSize = true;
+            notif.BackColor = SystemColors.ControlLight;
+            notif.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            notif.ForeColor = Color.Firebrick;
+            notif.Location = new Point(363, 252);
+            notif.Name = "notif";
+            notif.Size = new Size(68, 13);
+            notif.TabIndex = 27;
+            notif.Text = "pogi si paul";
+            notif.Visible = false;
             // 
             // LoginForm
             // 
@@ -321,6 +347,8 @@
             BackgroundImage = Properties.Resources.load_blurred;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(831, 471);
+            Controls.Add(notif);
+            Controls.Add(checkBox1);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
@@ -381,5 +409,7 @@
         private TextBox textBox4;
         private TextBox textBox5;
         private TextBox textBox6;
+        private CheckBox checkBox1;
+        private Label notif;
     }
 }
