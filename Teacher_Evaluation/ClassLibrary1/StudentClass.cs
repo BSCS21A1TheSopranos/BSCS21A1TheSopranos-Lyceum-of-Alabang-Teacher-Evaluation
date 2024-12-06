@@ -36,6 +36,11 @@ namespace ClassLibrary1
         {
             Students = repository.GetAllStudents();
         }
+
+        public static void AddStudent(Student newStudent)
+        {
+            Students.Add(newStudent.StudentID, newStudent);
+        }
     }
 
 }
