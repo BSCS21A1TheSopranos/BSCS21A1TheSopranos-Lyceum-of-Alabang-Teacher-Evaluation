@@ -49,6 +49,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(96, 27);
             textBox1.TabIndex = 2;
+            textBox1.TextChanged += textBox1_TextChanged_1;
             // 
             // button1
             // 
@@ -58,6 +59,7 @@
             button1.TabIndex = 3;
             button1.Text = "DELETE";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -79,6 +81,7 @@
             Controls.Add(label1);
             Name = "Delete";
             Text = "Delete";
+            Load += Delete_Load;
             ResumeLayout(false);
             PerformLayout();
         }
