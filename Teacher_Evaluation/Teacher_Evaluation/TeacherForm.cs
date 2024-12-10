@@ -68,10 +68,15 @@ namespace Teacher_Evaluation
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            TeacherDataHolder.DeleteTeacherFromDictionary(string profID);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

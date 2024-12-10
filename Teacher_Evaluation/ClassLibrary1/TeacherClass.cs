@@ -20,7 +20,6 @@ namespace ClassLibrary1
             Name = name;
         }
     }
-
     public static class TeacherDataHolder
     {
         public static Dictionary<string, Teacher> Teachers { get; private set; }
@@ -40,5 +39,18 @@ namespace ClassLibrary1
             var newTeacher = new Teacher(profID, password, email, "Teacher", name);
             Teachers.Add(profID, newTeacher);
         }
+
+        public static bool DeleteTeacherFromDictionary(string profID)
+        {
+            if (Teachers.ContainsKey(profID))
+            {
+                Teachers.Remove(profID);
+                return true; // Successfully deleted
+            }
+            return false; // Teacher not found
+        }
     }
+
+
+
 }
