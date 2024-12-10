@@ -24,11 +24,12 @@ namespace Teacher_Evaluation
             }
         }
 
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             AddTeacher add = new AddTeacher();
+            add.TeacherAdded += OnTeacherAdded;
             add.Show();
         }
 
@@ -46,12 +47,31 @@ namespace Teacher_Evaluation
 
         }
 
+        private void OnTeacherAdded()
+        {
+            LoadTeacherData(); // Reload the data grid
+        }
+
+        private void LoadTeacherData()
+        {
+            dataGridView1.Rows.Clear(); // Clear existing rows
+            foreach (var teacher in TeacherDataHolder.Teachers)
+            {
+                dataGridView1.Rows.Add(teacher.Value.ProfID, teacher.Value.Name, teacher.Value.Email);
+            }
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
