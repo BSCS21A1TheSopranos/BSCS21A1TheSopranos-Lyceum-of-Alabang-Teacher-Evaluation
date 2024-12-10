@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,21 @@ namespace Teacher_Evaluation
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Delete_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TeacherDataHolder.DeleteTeacherFromDictionary(textBox1.Text);
         }
     }
 }
