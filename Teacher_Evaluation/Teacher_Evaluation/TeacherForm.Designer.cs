@@ -31,12 +31,12 @@
             label1 = new Label();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
             button1 = new Button();
             button2 = new Button();
             panel1 = new Panel();
             button3 = new Button();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -63,12 +63,25 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(818, 723);
             dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
             // Column1
             // 
             Column1.HeaderText = "ProfID";
             Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Name";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Email";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
             // 
             // button1
             // 
@@ -121,18 +134,6 @@
             button3.Text = "Convert";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Name";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Email";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
             // 
             // TeacherForm
             // 
