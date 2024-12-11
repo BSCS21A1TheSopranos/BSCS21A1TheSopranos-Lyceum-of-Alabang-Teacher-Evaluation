@@ -12,5 +12,6 @@ namespace ClassLibrary1
         Dictionary<string, Admin> GetAllAdmin();
         Dictionary<string, Teacher> GetAllTeacher();
         Dictionary<string, List<(string ProfID, string Subject, string Status)>> GetStudentsTeachers();
+        Dictionary<string, List<(string Feedback, string Sentiment)>> GetFeedback();
     }
 }

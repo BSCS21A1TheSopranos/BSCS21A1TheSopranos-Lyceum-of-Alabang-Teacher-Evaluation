@@ -1,5 +1,6 @@
 using ClassLibrary1;
 using Microsoft.VisualBasic.ApplicationServices;
+using Services;
 using System.Windows.Forms;
 
 namespace Teacher_Evaluation
@@ -16,6 +17,7 @@ namespace Teacher_Evaluation
             AdminDataHolder.LoadAdmin(repository);
             TeacherDataHolder.LoadTeacher(repository);
             StudentTeacherData.LoadStudentsTeachers(repository);
+            TeacherFeedbackService.LoadStudentsTeachers(repository);
         }
         private void label1_Click(object sender, EventArgs e)
         {

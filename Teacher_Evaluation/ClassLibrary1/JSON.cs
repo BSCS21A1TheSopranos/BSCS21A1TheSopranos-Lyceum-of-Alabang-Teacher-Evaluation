@@ -81,6 +81,10 @@ namespace ClassLibrary1
             return studentTeacherData;
         }
 
+        public Dictionary<string, List<(string Feedback, string Sentiment)>> GetFeedback()
+        {
+            return GetFeedback();
+        }
     }
 
 }
