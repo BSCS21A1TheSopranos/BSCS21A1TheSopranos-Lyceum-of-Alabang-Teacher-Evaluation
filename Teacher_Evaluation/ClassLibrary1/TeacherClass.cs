@@ -34,11 +34,17 @@ namespace ClassLibrary1
             Teachers = repository.GetAllTeacher();
         }
 
-        public static void AddTeacherToDictionary(string profID, string name, string email, string password)
+        public static bool AddTeacherToDictionary(string profID, string name, string email, string password)
         {
-            var newTeacher = new Teacher(profID, password, email, "Teacher", name);
-            Teachers.Add(profID, newTeacher);
+            if (!Teachers.ContainsKey(profID))
+            {
+                var newTeacher = new Teacher(profID, password, email, "Teacher", name);
+                Teachers.Add(profID, newTeacher);
+                return true;
+            }
+            return false;
         }
+
 
         public static bool DeleteTeacherFromDictionary(string profID)
         {
