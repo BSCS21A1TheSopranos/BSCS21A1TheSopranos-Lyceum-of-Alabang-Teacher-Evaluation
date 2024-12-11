@@ -18,10 +18,8 @@ namespace Teacher_Evaluation
         public TeacherForm()
         {
             InitializeComponent();
-            foreach (var teacher in TeacherDataHolder.Teachers)
-            {
-                dataGridView1.Rows.Add(teacher.Value.ProfID, teacher.Value.Name, teacher.Value.Email);
-            }
+            LoadTeacherData();
+
         }
 
 

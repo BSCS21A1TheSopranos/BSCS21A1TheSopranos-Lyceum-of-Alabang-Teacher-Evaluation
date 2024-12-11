@@ -31,9 +31,6 @@ namespace Teacher_Evaluation
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(textBox1.Text);
-            MessageBox.Show(textBox2.Text);
-            MessageBox.Show(textBox3.Text);
             TeacherDataHolder.AddTeacherToDictionary(textBox2.Text, textBox3.Text, textBox1.Text, textBox2.Text);
             MSAcessDataSaveandRetrieve mS = new MSAcessDataSaveandRetrieve();
             mS.SaveAllTeachers();

@@ -247,12 +247,19 @@ namespace ClassLibrary1
             using (var connection = new OleDbConnection(_connectionString))
             {
                 connection.Open();
+                var teacherIds = teachers.Keys.Select(id => id.ToString()).ToList();
+                string idsToKeep = string.Join(",", teacherIds.Select(id => $"'{id}'"));
+
+                string deleteQuery = $"DELETE FROM Prof WHERE ProfID NOT IN ({idsToKeep})";
+                using (var deleteCommand = new OleDbCommand(deleteQuery, connection))
+                {
+                    deleteCommand.ExecuteNonQuery();
+                }
 
                 foreach (var entry in teachers)
                 {
                     var teacher = entry.Value;
 
-                    // Check if the record exists
                     string checkQuery = "SELECT COUNT(*) FROM Prof WHERE ProfID = ?";
                     using (var checkCommand = new OleDbCommand(checkQuery, connection))
                     {
@@ -261,7 +268,6 @@ namespace ClassLibrary1
 
                         if (count > 0)
                         {
-                            // Update existing record
                             string updateQuery = @"
                     UPDATE Prof
                     SET [Password] = ?, Email = ?, [Role] = ?, Name = ?
@@ -279,7 +285,6 @@ namespace ClassLibrary1
                         }
                         else
                         {
-                            // Insert new record
                             string insertQuery = @"
                     INSERT INTO Prof (ProfID, [Password], Email, [Role], Name)
                     VALUES (?, ?, ?, ?, ?)";
@@ -298,8 +303,5 @@ namespace ClassLibrary1
                 }
             }
         }
-
-
-
     }
 }
