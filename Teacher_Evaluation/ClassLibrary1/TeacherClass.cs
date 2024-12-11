@@ -51,9 +51,10 @@ namespace ClassLibrary1
             if (Teachers.ContainsKey(profID))
             {
                 Teachers.Remove(profID);
-                return true; // Successfully deleted
+                StudentTeacherData.RemoveTeacherFromStudentTeacherData(profID);
+                return true;
             }
-            return false; // Teacher not found
+            return false;
         }
     }
 
