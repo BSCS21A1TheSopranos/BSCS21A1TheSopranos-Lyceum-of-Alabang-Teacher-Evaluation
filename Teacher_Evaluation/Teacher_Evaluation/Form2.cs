@@ -1,4 +1,5 @@
 ﻿using ClassLibrary1;
+using Services;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -26,6 +27,7 @@ namespace Teacher_Evaluation
         private void button1_Click(object sender, EventArgs e)
         {
             StudentTeacherData.UpdateStatusInDictionary(studentid, teacherid);
+            TeacherFeedbackService.AddFeedback(teacherid, textBox1.Text, studentid);
             StudentTeachers form1 = new StudentTeachers(studentid);
             form1.Show();
             this.Close();

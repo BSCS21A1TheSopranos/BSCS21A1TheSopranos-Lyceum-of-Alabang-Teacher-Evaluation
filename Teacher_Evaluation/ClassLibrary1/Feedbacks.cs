@@ -12,6 +12,15 @@ namespace Services
         {
             feedbacksdata = repository.GetFeedback();
         }
+
+        public static void AddFeedback(string profId, string feedback, string sentiment)
+        {
+            if (!feedbacksdata.ContainsKey(profId))
+            {
+                feedbacksdata[profId] = new List<(string, string)>();
+            }
+            feedbacksdata[profId].Add((feedback, sentiment));
+        }
     }
 }
         
