@@ -24,10 +24,6 @@ namespace ClassLibrary1
     {
         public static Dictionary<string, Teacher> Teachers { get; private set; }
 
-        static TeacherDataHolder()
-        {
-            Teachers = new Dictionary<string, Teacher>();
-        }
 
         public static void LoadTeacher(IDataSaveandRetrieve repository)
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services;
+using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.IO;
@@ -134,6 +135,39 @@ namespace ClassLibrary1
             }
             return studentTeacherData;
         }
+
+        public Dictionary<string, List<(string Feedback, string Sentiment)>> GetFeedback()
+        {
+            var teacherFeedbackData = new Dictionary<string, List<(string Feedback, string Sentiment)>>();
+
+            using (OleDbConnection connection = new OleDbConnection(_connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT ProfID, Feedback, Sentiment FROM FeedBack";
+
+                using (OleDbCommand command = new OleDbCommand(query, connection))
+                {
+                    using (OleDbDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string profId = reader["ProfID"].ToString();
+                            string feedback = reader["Feedback"].ToString();
+                            string sentiment = reader["Sentiment"].ToString();
+
+                            if (!teacherFeedbackData.ContainsKey(profId))
+                            {
+                                teacherFeedbackData[profId] = new List<(string, string)>();
+                            }
+                            teacherFeedbackData[profId].Add((feedback, sentiment));
+                        }
+                    }
+                }
+            }
+            return teacherFeedbackData;
+        }
+
 
         public void SaveStudents()
         {
@@ -283,13 +317,6 @@ namespace ClassLibrary1
                 }
             }
         }
-
-
-
-
-
-
-
 
         public void SaveAllTeachers()
         {
