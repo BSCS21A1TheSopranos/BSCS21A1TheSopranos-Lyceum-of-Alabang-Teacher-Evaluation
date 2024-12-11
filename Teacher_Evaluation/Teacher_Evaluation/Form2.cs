@@ -25,31 +25,15 @@ namespace Teacher_Evaluation
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UpdateStatusInDictionary(studentid, teacherid);
+            StudentTeacherData.UpdateStatusInDictionary(studentid, teacherid);
             StudentTeachers form1 = new StudentTeachers(studentid);
-            MSAcessDataSaveandRetrieve mSAcessDataSaveandRetrieve = new MSAcessDataSaveandRetrieve();
-            mSAcessDataSaveandRetrieve.SaveStudentsTeachers();
             form1.Show();
             this.Close();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-        }
-        void UpdateStatusInDictionary(string studentId, string teacherId)
-        {
-            if (StudentTeacherData.studentTeacherData.ContainsKey(studentId))
-            {
-                var teacherRecords = StudentTeacherData.studentTeacherData[studentId];
-                for (int i = 0; i < teacherRecords.Count; i++)
-                {
-                    if (teacherRecords[i].ProfID == teacherId)
-                    {
-                        teacherRecords[i] = (teacherRecords[i].ProfID, teacherRecords[i].Subject, "Done");
-                        break;
-                    }
-                }
-            }
+
         }
     }
 }

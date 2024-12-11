@@ -179,66 +179,117 @@ namespace ClassLibrary1
 
         public void SaveStudentsTeachers()
         {
-            var studentTeacherData = StudentTeacherData.studentTeacherData;
+            var studentTeacherData = StudentTeacherData.studentTeacherData; // Dictionary<string, List<(string ProfID, string Subject, string Status)>>
             using (OleDbConnection connection = new OleDbConnection(_connectionString))
             {
                 connection.Open();
 
-                foreach (var studentEntry in studentTeacherData)
+                // Start a transaction to handle all operations atomically
+                using (var transaction = connection.BeginTransaction())
                 {
-                    string studentId = studentEntry.Key;
-
-                    foreach (var record in studentEntry.Value)
+                    try
                     {
-                        string profId = record.ProfID;
-                        string subject = record.Subject;
-                        string status = record.Status;
-                        string checkQuery = @"
-                    SELECT COUNT(*) 
-                    FROM StudentsTeachers 
-                    WHERE StudentID = ? AND ProfID = ? AND Subject = ?";
-                        using (OleDbCommand checkCommand = new OleDbCommand(checkQuery, connection))
+                        // Step 1: Fetch existing records from the database
+                        string selectExistingQuery = "SELECT StudentID, ProfID FROM StudentsTeachers";
+                        var existingRecords = new HashSet<(string StudentID, string ProfID)>();
+
+                        using (OleDbCommand selectExistingCommand = new OleDbCommand(selectExistingQuery, connection, transaction))
                         {
-                            checkCommand.Parameters.AddWithValue("?", studentId);
-                            checkCommand.Parameters.AddWithValue("?", profId);
-                            checkCommand.Parameters.AddWithValue("?", subject);
-
-                            int count = (int)checkCommand.ExecuteScalar();
-
-                            if (count > 0)
+                            using (var reader = selectExistingCommand.ExecuteReader())
                             {
-                                string updateQuery = @"
-                            UPDATE StudentsTeachers 
-                            SET Status = ? 
-                            WHERE StudentID = ? AND ProfID = ? AND Subject = ?";
-                                using (OleDbCommand updateCommand = new OleDbCommand(updateQuery, connection))
+                                while (reader.Read())
                                 {
-                                    updateCommand.Parameters.AddWithValue("?", status);
-                                    updateCommand.Parameters.AddWithValue("?", studentId);
-                                    updateCommand.Parameters.AddWithValue("?", profId);
-                                    updateCommand.Parameters.AddWithValue("?", subject);
-                                    updateCommand.ExecuteNonQuery();
-                                }
-                            }
-                            else
-                            {
-                                string insertQuery = @"
-                            INSERT INTO StudentsTeachers (StudentID, ProfID, Subject, Status) 
-                            VALUES (?, ?, ?, ?)";
-                                using (OleDbCommand insertCommand = new OleDbCommand(insertQuery, connection))
-                                {
-                                    insertCommand.Parameters.AddWithValue("?", studentId);
-                                    insertCommand.Parameters.AddWithValue("?", profId);
-                                    insertCommand.Parameters.AddWithValue("?", subject);
-                                    insertCommand.Parameters.AddWithValue("?", status);
-                                    insertCommand.ExecuteNonQuery();
+                                    string studentId = reader["StudentID"].ToString();
+                                    string profId = reader["ProfID"].ToString();
+                                    existingRecords.Add((studentId, profId));
                                 }
                             }
                         }
+
+                        // Step 2: Collect current records from the dictionary
+                        var currentRecords = new HashSet<(string StudentID, string ProfID)>();
+                        foreach (var studentId in studentTeacherData.Keys)
+                        {
+                            foreach (var teacherInfo in studentTeacherData[studentId])
+                            {
+                                currentRecords.Add((studentId, teacherInfo.ProfID));
+                            }
+                        }
+
+                        // Step 3: Find records to delete (existing in DB but not in the dictionary)
+                        var recordsToDelete = existingRecords.Except(currentRecords);
+
+                        foreach (var record in recordsToDelete)
+                        {
+                            string deleteQuery = "DELETE FROM StudentsTeachers WHERE StudentID = ? AND ProfID = ?";
+                            using (OleDbCommand deleteCommand = new OleDbCommand(deleteQuery, connection, transaction))
+                            {
+                                deleteCommand.Parameters.AddWithValue("?", record.StudentID);
+                                deleteCommand.Parameters.AddWithValue("?", record.ProfID);
+                                deleteCommand.ExecuteNonQuery();
+                            }
+                        }
+
+                        // Step 4: Insert or update records from the dictionary
+                        foreach (var studentId in studentTeacherData.Keys)
+                        {
+                            foreach (var teacherInfo in studentTeacherData[studentId])
+                            {
+                                // Check if this record already exists in the database
+                                string selectQuery = "SELECT COUNT(*) FROM StudentsTeachers WHERE StudentID = ? AND ProfID = ?";
+                                using (OleDbCommand selectCommand = new OleDbCommand(selectQuery, connection, transaction))
+                                {
+                                    selectCommand.Parameters.AddWithValue("?", studentId);
+                                    selectCommand.Parameters.AddWithValue("?", teacherInfo.ProfID);
+
+                                    int count = (int)selectCommand.ExecuteScalar();
+                                    if (count == 0)
+                                    {
+                                        // Insert new record if it doesn't exist
+                                        string insertQuery = "INSERT INTO StudentsTeachers (StudentID, ProfID, Subject, Status) VALUES (?, ?, ?, ?)";
+                                        using (OleDbCommand insertCommand = new OleDbCommand(insertQuery, connection, transaction))
+                                        {
+                                            insertCommand.Parameters.AddWithValue("?", studentId);
+                                            insertCommand.Parameters.AddWithValue("?", teacherInfo.ProfID);
+                                            insertCommand.Parameters.AddWithValue("?", teacherInfo.Subject);
+                                            insertCommand.Parameters.AddWithValue("?", teacherInfo.Status);
+                                            insertCommand.ExecuteNonQuery();
+                                        }
+                                    }
+                                    else
+                                    {
+                                        // Update existing record if it exists
+                                        string updateQuery = "UPDATE StudentsTeachers SET Subject = ?, Status = ? WHERE StudentID = ? AND ProfID = ?";
+                                        using (OleDbCommand updateCommand = new OleDbCommand(updateQuery, connection, transaction))
+                                        {
+                                            updateCommand.Parameters.AddWithValue("?", teacherInfo.Subject);
+                                            updateCommand.Parameters.AddWithValue("?", teacherInfo.Status);
+                                            updateCommand.Parameters.AddWithValue("?", studentId);
+                                            updateCommand.Parameters.AddWithValue("?", teacherInfo.ProfID);
+                                            updateCommand.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw new Exception("Error saving student-teacher data.", ex);
                     }
                 }
             }
         }
+
+
+
+
+
+
+
 
         public void SaveAllTeachers()
         {
