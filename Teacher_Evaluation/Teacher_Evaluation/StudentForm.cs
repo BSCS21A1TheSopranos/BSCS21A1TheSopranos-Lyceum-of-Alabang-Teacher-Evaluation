@@ -20,7 +20,7 @@ namespace Teacher_Evaluation
             InitializeComponent();
             foreach (var student in StudentDataHolder.Students)
             {
-                dataGridView1.Rows.Add(student.Value.StudentID, student.Value.Email);
+                dataGridView1.Rows.Add(student.Value.StudentID, student.Value.Email, "Cute");
             }
         }
 
@@ -47,8 +47,17 @@ namespace Teacher_Evaluation
         private void button1_Click(object sender, EventArgs e)
         {
             Addstudent addstudent = new Addstudent();
-            addstudent.Show();
+            addstudent.ShowDialog();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+            string profID = selectedRow.Cells["StudentID"].Value.ToString();
+            MapStudentsTeachers mapStudentsTeachers = new MapStudentsTeachers(profID);
+            mapStudentsTeachers.Show();
             this.Hide();
+
         }
     }
 }

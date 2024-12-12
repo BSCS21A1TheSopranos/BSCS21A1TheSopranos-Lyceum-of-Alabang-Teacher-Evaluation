@@ -31,9 +31,9 @@
             button2 = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
             label1 = new Label();
+            StudentID = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -69,7 +69,7 @@
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { StudentID, Column2 });
             dataGridView1.Location = new Point(14, 79);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
@@ -77,18 +77,7 @@
             dataGridView1.Size = new Size(813, 716);
             dataGridView1.TabIndex = 5;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "StudentID";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Email";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
             // label1
             // 
@@ -99,6 +88,18 @@
             label1.Size = new Size(252, 32);
             label1.TabIndex = 4;
             label1.Text = "Student's  Masterlist";
+            // 
+            // StudentID
+            // 
+            StudentID.HeaderText = "StudentID";
+            StudentID.MinimumWidth = 6;
+            StudentID.Name = "StudentID";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Email";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
             // 
             // StudentForm
             // 
@@ -125,7 +126,7 @@
         private Button button1;
         private DataGridView dataGridView1;
         private Label label1;
-        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn StudentID;
         private DataGridViewTextBoxColumn Column2;
     }
 }

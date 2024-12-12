@@ -42,13 +42,17 @@
             label9 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel4 = new Panel();
+            label10 = new Label();
             label7 = new Label();
             label3 = new Label();
             panel5 = new Panel();
+            label11 = new Label();
             label4 = new Label();
             panel6 = new Panel();
+            label12 = new Label();
             label5 = new Label();
             panel7 = new Panel();
+            label13 = new Label();
             label6 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -227,6 +231,7 @@
             // panel4
             // 
             panel4.BackColor = Color.LightCoral;
+            panel4.Controls.Add(label10);
             panel4.Controls.Add(label7);
             panel4.Controls.Add(label3);
             panel4.Dock = DockStyle.Top;
@@ -236,6 +241,15 @@
             panel4.Padding = new Padding(6, 7, 6, 7);
             panel4.Size = new Size(222, 161);
             panel4.TabIndex = 0;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(79, 77);
+            label10.Name = "label10";
+            label10.Size = new Size(58, 20);
+            label10.TabIndex = 2;
+            label10.Text = "label10";
             // 
             // label7
             // 
@@ -264,6 +278,7 @@
             // panel5
             // 
             panel5.BackColor = Color.Orchid;
+            panel5.Controls.Add(label11);
             panel5.Controls.Add(label4);
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(231, 4);
@@ -272,6 +287,15 @@
             panel5.Padding = new Padding(6, 7, 6, 7);
             panel5.Size = new Size(222, 161);
             panel5.TabIndex = 1;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(95, 74);
+            label11.Name = "label11";
+            label11.Size = new Size(58, 20);
+            label11.TabIndex = 2;
+            label11.Text = "label11";
             // 
             // label4
             // 
@@ -288,6 +312,7 @@
             // panel6
             // 
             panel6.BackColor = Color.SkyBlue;
+            panel6.Controls.Add(label12);
             panel6.Controls.Add(label5);
             panel6.Dock = DockStyle.Top;
             panel6.Location = new Point(459, 4);
@@ -296,6 +321,15 @@
             panel6.Padding = new Padding(6, 7, 6, 7);
             panel6.Size = new Size(222, 161);
             panel6.TabIndex = 2;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(92, 77);
+            label12.Name = "label12";
+            label12.Size = new Size(58, 20);
+            label12.TabIndex = 3;
+            label12.Text = "label12";
             // 
             // label5
             // 
@@ -312,6 +346,7 @@
             // panel7
             // 
             panel7.BackColor = Color.Khaki;
+            panel7.Controls.Add(label13);
             panel7.Controls.Add(label6);
             panel7.Dock = DockStyle.Top;
             panel7.Location = new Point(687, 4);
@@ -320,6 +355,15 @@
             panel7.Padding = new Padding(6, 7, 6, 7);
             panel7.Size = new Size(224, 161);
             panel7.TabIndex = 3;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(116, 78);
+            label13.Name = "label13";
+            label13.Size = new Size(58, 20);
+            label13.TabIndex = 4;
+            label13.Text = "label13";
             // 
             // label6
             // 
@@ -344,6 +388,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "TeacherDashboard";
             Text = "TeacherDashboard";
+            Load += TeacherDashboard_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -391,5 +436,9 @@
         private Label label9;
         private Button button1;
         private Panel panel10;
+        private Label label10;
+        private Label label11;
+        private Label label12;
+        private Label label13;
     }
 }
