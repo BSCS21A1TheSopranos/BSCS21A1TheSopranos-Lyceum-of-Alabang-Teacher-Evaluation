@@ -31,7 +31,7 @@ namespace Teacher_Evaluation
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,6 +43,66 @@ namespace Teacher_Evaluation
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox4.Text) && string.IsNullOrWhiteSpace(textBox5.Text) && string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                fillAreaUsername.Visible = true;
+                fillAreaStudentID.Visible = true;
+                fillAreaPass.Visible = true;
+                return;
+            }
+
+            else
+            {
+                fillAreaUsername.Visible = false;
+                fillAreaStudentID.Visible = false;
+                fillAreaPass.Visible = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox4.Text) && string.IsNullOrWhiteSpace(textBox5.Text))
+            {
+                fillAreaUsername.Visible = true;
+                fillAreaStudentID.Visible = true;
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox5.Text) && string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                fillAreaStudentID.Visible = true;
+                fillAreaPass.Visible = true;
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox6.Text) && string.IsNullOrWhiteSpace(textBox4.Text))
+            {
+                fillAreaPass.Visible = true;
+                fillAreaUsername.Visible = true;
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox4.Text))
+            {
+                fillAreaUsername.Visible = true;
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox5.Text))
+            {
+                fillAreaStudentID.Visible = true;
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                fillAreaPass.Visible = true;
+                return;
+            }
+
+            else
+            {
+                fillAreaUsername.Visible = false;
+                fillAreaStudentID.Visible = false;
+                fillAreaPass.Visible = false;
+            }
             MSAcessDataSaveandRetrieve mSAcessDataSaveandRetrieve = new MSAcessDataSaveandRetrieve();
             mSAcessDataSaveandRetrieve.SaveStudents();
             LoginClass login = new LoginClass(textBox5.Text);
@@ -90,6 +150,8 @@ namespace Teacher_Evaluation
             }
         }
 
+
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -100,6 +162,49 @@ namespace Teacher_Evaluation
             {
                 textBox6.UseSystemPasswordChar = true;
             }
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void notif_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fillAreaStudentID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fillAreaPass_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            fillAreaUsername.Visible = false;
+            
+           
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            fillAreaStudentID.Visible = false;
+        }
+
+        private void textBox6_TextChanged_1(object sender, EventArgs e)
+        {
+            fillAreaPass.Visible = false;
+            
         }
     }
 }
