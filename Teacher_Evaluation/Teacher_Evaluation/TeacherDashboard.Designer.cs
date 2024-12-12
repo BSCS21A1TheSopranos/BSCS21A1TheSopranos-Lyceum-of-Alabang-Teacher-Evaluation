@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label14 = new Label();
             label1 = new Label();
             panel2 = new Panel();
             label2 = new Label();
@@ -37,6 +38,8 @@
             button1 = new Button();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel8 = new Panel();
+            dataGridView1 = new DataGridView();
+            FeedBack = new DataGridViewTextBoxColumn();
             label8 = new Label();
             panel9 = new Panel();
             label9 = new Label();
@@ -60,6 +63,7 @@
             panel10.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel9.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel4.SuspendLayout();
@@ -71,6 +75,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.Highlight;
+            panel1.Controls.Add(label14);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -78,6 +83,15 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(936, 101);
             panel1.TabIndex = 0;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(337, 45);
+            label14.Name = "label14";
+            label14.Size = new Size(58, 20);
+            label14.TabIndex = 1;
+            label14.Text = "label14";
             // 
             // label1
             // 
@@ -168,6 +182,7 @@
             // panel8
             // 
             panel8.BackColor = SystemColors.ControlDark;
+            panel8.Controls.Add(dataGridView1);
             panel8.Controls.Add(label8);
             panel8.Dock = DockStyle.Fill;
             panel8.Location = new Point(3, 4);
@@ -175,6 +190,24 @@
             panel8.Name = "panel8";
             panel8.Size = new Size(451, 299);
             panel8.TabIndex = 0;
+            panel8.Paint += panel8_Paint;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { FeedBack });
+            dataGridView1.Location = new Point(20, 38);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(415, 244);
+            dataGridView1.TabIndex = 1;
+            // 
+            // FeedBack
+            // 
+            FeedBack.HeaderText = "Feedbacks";
+            FeedBack.MinimumWidth = 6;
+            FeedBack.Name = "FeedBack";
             // 
             // label8
             // 
@@ -398,6 +431,7 @@
             tableLayoutPanel2.ResumeLayout(false);
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel9.ResumeLayout(false);
             panel9.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
@@ -440,5 +474,8 @@
         private Label label11;
         private Label label12;
         private Label label13;
+        private Label label14;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn FeedBack;
     }
 }

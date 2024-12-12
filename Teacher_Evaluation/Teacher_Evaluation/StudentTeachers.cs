@@ -15,7 +15,7 @@ namespace Teacher_Evaluation
             foreach (var teacher in StudentTeacherData.studentTeacherData[studentID])
             {
                 string status = teacher.Status;
-                var row = dataGridView1.Rows[dataGridView1.Rows.Add(teacher.Subject, teacher.ProfID)];
+                var row = dataGridView1.Rows[dataGridView1.Rows.Add(teacher.Subject, teacher.ProfID, TeacherDataHolder.GetTeacherNameByProfID(teacher.ProfID))];
                 if (status == "Done")
                 {
                     row.DefaultCellStyle.BackColor = System.Drawing.Color.Green;

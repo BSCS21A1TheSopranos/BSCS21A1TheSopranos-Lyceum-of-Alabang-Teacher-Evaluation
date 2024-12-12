@@ -23,6 +23,34 @@ namespace Services
             MSAcessDataSaveandRetrieve ms = new MSAcessDataSaveandRetrieve();
             ms.SaveFeedback();
         }
+
+        public static string CalculateCreditPoints(string profId)
+        {
+            
+            var totalStudents = int.Parse(StudentTeacherData.CountStatusDoneForProfessor(profId));
+            if (!feedbacksdata.ContainsKey(profId))
+            {
+                return "100%";
+            }
+            int positiveFeedbackCount = 0;
+            int negativeFeedbackCount = 0;
+            foreach (var feedbackEntry in feedbacksdata[profId])
+            {
+                if (feedbackEntry.Sentiment.ToLower() == "positive")
+                {
+                    positiveFeedbackCount++;
+                }
+                else if (feedbackEntry.Sentiment.ToLower() == "negative")
+                {
+                    negativeFeedbackCount++;
+                }
+            }
+            double positiveImpact = positiveFeedbackCount * (100.0 / totalStudents);
+            double negativeImpact = negativeFeedbackCount * (100.0 / totalStudents);
+            double creditPoints = 100.0 + (positiveImpact - negativeImpact);
+            return creditPoints.ToString() + "%";
+        }
+
     }
 }
         
