@@ -64,6 +64,12 @@ namespace Teacher_Evaluation
                         admin.Show();
                         this.Hide();
                     }
+                    if (login.isTeacher)
+                    {
+                        TeacherDashboard teacherDashboard = new TeacherDashboard(textBox5.Text);
+                        teacherDashboard.Show();
+                        this.Hide();
+                    }
                 }
                 if (!login.checkpassword(textBox6.Text))
                 {

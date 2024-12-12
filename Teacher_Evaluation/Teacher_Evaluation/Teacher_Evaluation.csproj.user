@@ -20,6 +20,9 @@
     <Compile Update="Addstudent.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MapStudentsTeachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MyTestingField.cs">
       <SubType>Form</SubType>
     </Compile>

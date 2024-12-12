@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +13,29 @@ namespace Teacher_Evaluation
 {
     public partial class TeacherDashboard : Form
     {
-        public TeacherDashboard()
+        private string profId;
+        public TeacherDashboard(string profId)
         {
             InitializeComponent();
+            this.profId = profId;
+            label10.Text = StudentTeacherData.CountStudentsByProfessor(profId);
+            label11.Text = StudentTeacherData.CountStatusDoneForProfessor(profId);
+            label12.Text = StudentTeacherData.CountUniqueSubjectsForProfessor(profId);
+
         }
 
+        
         private void panel9_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TeacherDashboard_Load(object sender, EventArgs e)
         {
 
         }

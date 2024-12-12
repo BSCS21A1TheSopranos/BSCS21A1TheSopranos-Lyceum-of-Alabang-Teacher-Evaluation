@@ -32,6 +32,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Resources\sentiment.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Teacher_Evaluation_Database.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
