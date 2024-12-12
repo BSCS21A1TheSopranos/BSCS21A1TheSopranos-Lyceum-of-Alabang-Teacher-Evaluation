@@ -136,15 +136,15 @@ namespace ClassLibrary1
             return studentTeacherData;
         }
 
-        public Dictionary<string, List<(string Feedback, string Sentiment)>> GetFeedback()
+        public Dictionary<string, List<(string Feedback, string Sentiment, string Date)>> GetFeedback()
         {
-            var teacherFeedbackData = new Dictionary<string, List<(string Feedback, string Sentiment)>>();
+            var teacherFeedbackData = new Dictionary<string, List<(string Feedback, string Sentiment, string Date)>>();
 
             using (OleDbConnection connection = new OleDbConnection(_connectionString))
             {
                 connection.Open();
 
-                string query = "SELECT ProfID, Feedback, Sentiment FROM FeedBack";
+                string query = "SELECT ProfID, Feedback, Sentiment, Date FROM FeedBack";
 
                 using (OleDbCommand command = new OleDbCommand(query, connection))
                 {
@@ -155,12 +155,13 @@ namespace ClassLibrary1
                             string profId = reader["ProfID"].ToString();
                             string feedback = reader["Feedback"].ToString();
                             string sentiment = reader["Sentiment"].ToString();
+                            string date = reader["Date"].ToString();
 
                             if (!teacherFeedbackData.ContainsKey(profId))
                             {
-                                teacherFeedbackData[profId] = new List<(string, string)>();
+                                teacherFeedbackData[profId] = new List<(string, string, string)>();
                             }
-                            teacherFeedbackData[profId].Add((feedback, sentiment));
+                            teacherFeedbackData[profId].Add((feedback, sentiment, date));
                         }
                     }
                 }
@@ -210,6 +211,69 @@ namespace ClassLibrary1
                 }
             }
         }
+
+        public void SaveFeedback()
+        {
+            var feedbackData = TeacherFeedbackService.feedbacksdata;
+            using (OleDbConnection connection = new OleDbConnection(_connectionString))
+            {
+                connection.Open();
+
+                foreach (var profEntry in feedbackData)
+                {
+                    string profId = profEntry.Key;
+                    foreach (var feedbackEntry in profEntry.Value)
+                    {
+                        string feedbackDate = feedbackEntry.Date;
+
+                        // Ensure that feedback data is not empty or null
+                        if (string.IsNullOrWhiteSpace(profId) || string.IsNullOrWhiteSpace(feedbackEntry.Feedback) ||
+                            string.IsNullOrWhiteSpace(feedbackEntry.Sentiment) || string.IsNullOrWhiteSpace(feedbackDate))
+                        {
+                            Console.WriteLine("Skipping empty data: ProfID = " + profId + ", Feedback = " + feedbackEntry.Feedback + ", Sentiment = " + feedbackEntry.Sentiment + ", Date = " + feedbackDate);
+                            continue;  // Skip this iteration if any value is empty
+                        }
+
+                        // Check if the feedback already exists in the database
+                        string checkQuery = "SELECT COUNT(*) FROM FeedBack WHERE [ProfID] = ? AND [Feedback] = ? AND [Sentiment] = ? AND [Date] = ?";
+                        using (OleDbCommand checkCommand = new OleDbCommand(checkQuery, connection))
+                        {
+                            checkCommand.Parameters.Add("?", OleDbType.VarWChar).Value = profId;
+                            checkCommand.Parameters.Add("?", OleDbType.VarWChar).Value = feedbackEntry.Feedback;
+                            checkCommand.Parameters.Add("?", OleDbType.VarWChar).Value = feedbackEntry.Sentiment;
+                            checkCommand.Parameters.Add("?", OleDbType.VarWChar).Value = feedbackDate;  // Date as string (ShortText)
+
+                            int count = (int)checkCommand.ExecuteScalar();
+                            if (count == 0)
+                            {
+                                // Prepare the insert query with square brackets for column names
+                                string insertQuery = "INSERT INTO FeedBack ([ProfID], [Feedback], [Sentiment], [Date]) VALUES (?, ?, ?, ?)";
+
+                                // Ensure that parameters are being added in the correct order
+                                using (OleDbCommand insertCommand = new OleDbCommand(insertQuery, connection))
+                                {
+                                    insertCommand.Parameters.Add("?", OleDbType.VarWChar).Value = profId;
+                                    insertCommand.Parameters.Add("?", OleDbType.VarWChar).Value = feedbackEntry.Feedback;
+                                    insertCommand.Parameters.Add("?", OleDbType.VarWChar).Value = feedbackEntry.Sentiment;
+                                    insertCommand.Parameters.Add("?", OleDbType.VarWChar).Value = feedbackDate;  // Insert Date as string
+
+                                    Console.WriteLine("Executing query: " + insertQuery);  // Log the query for debugging
+
+                                    insertCommand.ExecuteNonQuery();  // Execute the insert command
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
 
         public void SaveStudentsTeachers()
         {
