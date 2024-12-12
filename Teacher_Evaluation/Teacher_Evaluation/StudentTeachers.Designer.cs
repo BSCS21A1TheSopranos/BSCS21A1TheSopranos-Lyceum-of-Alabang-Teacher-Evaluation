@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
+            button1 = new Button();
             Subject = new DataGridViewTextBoxColumn();
             Teacher = new DataGridViewTextBoxColumn();
+            TeacherName = new DataGridViewTextBoxColumn();
             TeachersID = new DataGridViewTextBoxColumn();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -40,7 +41,7 @@
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Subject, Teacher, TeachersID });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Subject, Teacher, TeacherName, TeachersID });
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
@@ -51,6 +52,16 @@
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(706, 421);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 1;
+            button1.Text = "Log Out";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Subject
             // 
@@ -65,6 +76,14 @@
             Teacher.MinimumWidth = 6;
             Teacher.Name = "Teacher";
             Teacher.ReadOnly = true;
+            Teacher.Visible = false;
+            // 
+            // TeacherName
+            // 
+            TeacherName.HeaderText = "Teachers";
+            TeacherName.MinimumWidth = 6;
+            TeacherName.Name = "TeacherName";
+            TeacherName.ReadOnly = true;
             // 
             // TeachersID
             // 
@@ -73,16 +92,6 @@
             TeachersID.Name = "TeachersID";
             TeachersID.ReadOnly = true;
             TeachersID.Visible = false;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(706, 421);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "Log Out";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // StudentTeachers
             // 
@@ -100,9 +109,10 @@
         #endregion
 
         private DataGridView dataGridView1;
+        private Button button1;
         private DataGridViewTextBoxColumn Subject;
         private DataGridViewTextBoxColumn Teacher;
+        private DataGridViewTextBoxColumn TeacherName;
         private DataGridViewTextBoxColumn TeachersID;
-        private Button button1;
     }
 }

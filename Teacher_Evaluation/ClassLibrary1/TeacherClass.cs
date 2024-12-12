@@ -52,8 +52,13 @@ namespace ClassLibrary1
             }
             return false;
         }
+        public static string GetTeacherNameByProfID(string profID)
+        {
+            if (Teachers.ContainsKey(profID))
+            {
+                return Teachers[profID].Name;
+            }
+            return null;
+        }
     }
-
-
-
 }
