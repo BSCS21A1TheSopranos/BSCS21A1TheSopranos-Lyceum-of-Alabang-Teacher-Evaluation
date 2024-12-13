@@ -38,6 +38,16 @@ namespace Services
             return newpassword;
         }
 
+        public bool checkpassword(string password, string id)
+        {
+            if (StudentDataHolder.Students.ContainsKey(id))
+            {
+                string encryptedInput = encryptpassword(password);
+                return encryptedInput == StudentDataHolder.Students[id].Password;
+            }
+            return false;
+        }
+
     }
     
 }
