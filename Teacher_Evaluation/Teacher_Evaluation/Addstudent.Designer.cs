@@ -198,6 +198,7 @@
             button1.TabIndex = 32;
             button1.Text = "Cancel";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Addstudent
             // 
@@ -220,6 +221,7 @@
             Controls.Add(textBox2);
             Margin = new Padding(3, 2, 3, 2);
             Name = "Addstudent";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Addstudent_Load;
             panel2.ResumeLayout(false);
