@@ -40,11 +40,16 @@ namespace Services
 
         public bool checkpassword(string password, string id)
         {
+            string encryptedInput = encryptpassword(password);
             if (StudentDataHolder.Students.ContainsKey(id))
-            {
-                string encryptedInput = encryptpassword(password);
                 return encryptedInput == StudentDataHolder.Students[id].Password;
-            }
+
+            if (TeacherDataHolder.Teachers.ContainsKey(id))
+                return encryptedInput == TeacherDataHolder.Teachers[id].Password;
+
+            if (AdminDataHolder.Admins.ContainsKey(id))
+                return encryptedInput == AdminDataHolder.Admins[id].Password;
+
             return false;
         }
 

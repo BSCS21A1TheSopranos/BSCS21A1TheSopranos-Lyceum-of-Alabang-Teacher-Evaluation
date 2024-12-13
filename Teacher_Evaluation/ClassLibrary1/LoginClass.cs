@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using Services;
 
 namespace ClassLibrary1
 {
-    public class LoginClass
+    public class LoginClass : Validation
     {
 
         public string id;
@@ -19,27 +20,6 @@ namespace ClassLibrary1
         public LoginClass(string id)
         {
             this.id = id;
-        }
-
-        public bool checkpassword(string password)
-        {
-            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
-            {
-                UTF8Encoding utf8 = new UTF8Encoding();
-                byte[] data = md5.ComputeHash(utf8.GetBytes(password));
-                password = Convert.ToBase64String(data);
-            }
-
-            if (StudentDataHolder.Students.ContainsKey(id))
-                return StudentDataHolder.Students[id].Password == password;
-
-            if (TeacherDataHolder.Teachers.ContainsKey(id))
-                return TeacherDataHolder.Teachers[id].Password == password;
-
-            if (AdminDataHolder.Admins.ContainsKey(id))
-                return AdminDataHolder.Admins[id].Password == password;
-
-            return false;
         }
 
         public bool checkStudent()
