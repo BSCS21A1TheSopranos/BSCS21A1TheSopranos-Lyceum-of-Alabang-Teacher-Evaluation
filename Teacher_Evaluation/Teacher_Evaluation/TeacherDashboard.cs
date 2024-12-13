@@ -29,7 +29,7 @@ namespace Teacher_Evaluation
             {
                 foreach (var feedbackEntry in TeacherFeedbackService.feedbacksdata[profId])
                 {
-                    dataGridView1.Rows.Add(feedbackEntry);
+                    dataGridView1.Rows.Add(feedbackEntry.Feedback);
                 }
             }
 
@@ -75,6 +75,11 @@ namespace Teacher_Evaluation
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
