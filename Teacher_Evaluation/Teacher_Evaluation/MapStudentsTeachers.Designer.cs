@@ -40,10 +40,10 @@
             label1 = new Label();
             label2 = new Label();
             panel1 = new Panel();
+            label3 = new Label();
             panel2 = new Panel();
             panel3 = new Panel();
             button2 = new Button();
-            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -136,6 +136,17 @@
             panel1.Size = new Size(700, 75);
             panel1.TabIndex = 7;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ButtonHighlight;
+            label3.Location = new Point(182, 18);
+            label3.Name = "label3";
+            label3.Size = new Size(344, 40);
+            label3.TabIndex = 0;
+            label3.Text = "Map Student to Teacher";
+            // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(243, 196, 27);
@@ -164,17 +175,7 @@
             button2.TabIndex = 10;
             button2.Text = "Cancel";
             button2.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(182, 18);
-            label3.Name = "label3";
-            label3.Size = new Size(344, 40);
-            label3.TabIndex = 0;
-            label3.Text = "Map Student to Teacher";
+            button2.Click += button2_Click;
             // 
             // MapStudentsTeachers
             // 
