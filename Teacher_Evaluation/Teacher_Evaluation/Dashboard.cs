@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,42 +26,8 @@ namespace Teacher_Evaluation
 
         private void LoadDashboardData()
         {
-            try
-            {
-                // SQL query to count all students and done students
-                string query = "SELECT COUNT(*) AS TotalStudents, " +
-                               "SUM(IIF(Done=True, 1, 0)) AS DoneStudents " +
-                               "FROM Students"; // Assuming the table is 'Students' and the column 'Done' is a boolean
-
-                using (OleDbConnection connection = new OleDbConnection(connectionString))
-                {
-                    OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    // If there's data in the result
-                    if (dataTable.Rows.Count > 0)
-                    {
-                        // Get total student count
-                        int totalStudents = Convert.ToInt32(dataTable.Rows[0]["TotalStudents"]);
-                        // Get count of done students
-                        int doneStudents = Convert.ToInt32(dataTable.Rows[0]["DoneStudents"]);
-
-                        // Update the labels with the retrieved values
-                        stdCount.Text = $"{totalStudents}";  // Label for total students
-                        doneStd.Text = $"{doneStudents}";      // Label for done students
-                    }
-                    else
-                    {
-                        MessageBox.Show("No data available in the database.");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                // Show any errors that occur
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            
+            stdCount.Text = StudentDataHolder.CountAllStudents();
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -71,6 +38,11 @@ namespace Teacher_Evaluation
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }
