@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace Services
 {
@@ -22,6 +23,19 @@ namespace Services
             string password = newpassword;
             string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[A-Za-z0-9@$!%*?&]{8,}$";
             return Regex.IsMatch(password, pattern);
+        }
+
+        public string encryptpassword(string newpassword)
+        {
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                UTF8Encoding utf8 = new UTF8Encoding();
+                byte[] data = md5.ComputeHash(utf8.GetBytes(newpassword));
+                newpassword = Convert.ToBase64String(data);
+
+            }
+
+            return newpassword;
         }
 
     }
