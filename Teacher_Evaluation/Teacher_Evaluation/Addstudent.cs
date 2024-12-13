@@ -23,7 +23,20 @@ namespace Teacher_Evaluation
             var newstudent = new Student(textBox1.Text, textBox3.Text, textBox2.Text, "Student");
             StudentDataHolder.AddStudent(newstudent);
             MSAcessDataSaveandRetrieve ms = new MSAcessDataSaveandRetrieve();
-            ms.SaveStudents();
+
+            if (textBox3.Text != textBox4.Text)
+            {
+                notif.Text = ("Password and Confirm Password Mismatch");
+            }
+            else
+            {
+                ms.SaveStudents();
+            }
+        }
+
+        private void Addstudent_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
