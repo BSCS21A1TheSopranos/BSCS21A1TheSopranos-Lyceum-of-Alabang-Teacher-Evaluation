@@ -36,10 +36,9 @@ namespace Teacher_Evaluation
             Validation valid = new Validation();
             if (!string.IsNullOrWhiteSpace(textBox2.Text) && !string.IsNullOrWhiteSpace(textBox3.Text) && !string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace(SetPword.Text))
             {
-
                 if (valid.validID(textBox2.Text))
                 {
-                    if (!TeacherDataHolder.AddTeacherToDictionary(textBox2.Text, textBox3.Text, textBox1.Text, textBox2.Text)) { 
+                    if (TeacherDataHolder.AddTeacherToDictionary(textBox2.Text, textBox3.Text, textBox1.Text, valid.encryptpassword(SetPword.Text))) { 
 
                         MSAcessDataSaveandRetrieve mS = new MSAcessDataSaveandRetrieve();
                         mS.SaveAllTeachers();
@@ -47,35 +46,35 @@ namespace Teacher_Evaluation
                         TeacherAdded?.Invoke();
                         this.Close();
                     }
+                    else
+                    {
+                        MessageBox.Show("Already Exist");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Id ####-##");
                 }
             }
 
             
 
-            if (string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(textBox3.Text) && string.IsNullOrWhiteSpace(SetPword.Text))
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
             {
                 EmailWarning.Visible = true;
-                IDwarning.Visible = true;
+                return;
+            }
+
+            if(string.IsNullOrWhiteSpace(textBox3.Text))
+            {
                 NameWarning.Visible = true;
-                setPass.Visible = true;
 
                 return;
             }
 
-            if(string.IsNullOrWhiteSpace(textBox3.Text) && string.IsNullOrWhiteSpace(textBox1.Text) && string.IsNullOrWhiteSpace(SetPword.Text))
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
             {
                 EmailWarning.Visible = true;
-                NameWarning.Visible = true;
-                setPass.Visible = true;
-
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(textBox1.Text) && string.IsNullOrWhiteSpace(SetPword.Text))
-            {
-                EmailWarning.Visible = true;
-                setPass.Visible = true;
-
                 return;
             }
 
@@ -85,58 +84,15 @@ namespace Teacher_Evaluation
                 return;
             }
 
-
-            if (string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(textBox3.Text) && string.IsNullOrWhiteSpace(SetPword.Text))
-            {
-                EmailWarning.Visible = true;
-                IDwarning.Visible = true;
-                setPass.Visible = true;
-
-                return;
-            }
-
-
-            if (string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(textBox3.Text))
-            {
-                EmailWarning.Visible = true;
-                IDwarning.Visible = true;
-
-                return;
-            }
-
-
-           
-
-            if (string.IsNullOrWhiteSpace(textBox3.Text))
-            {
-                NameWarning.Visible = true;
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(textBox2.Text))
-            {
-                EmailWarning.Visible = true;
-                return;
-            }
 
             if (string.IsNullOrWhiteSpace(SetPword.Text))
             {
                 setPass.Visible = true;
+
                 return;
             }
 
-
-
-
-
-
         }
-
-        private void AddTeacher_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             IDwarning.Visible = false;
@@ -153,26 +109,6 @@ namespace Teacher_Evaluation
         {
             EmailWarning.Visible = false;
             return;
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void IDwarning_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NameWarning_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EmailWarning_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)

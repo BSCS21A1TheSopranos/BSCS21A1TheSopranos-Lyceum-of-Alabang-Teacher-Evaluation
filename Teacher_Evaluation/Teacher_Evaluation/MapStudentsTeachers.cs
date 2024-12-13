@@ -26,8 +26,20 @@ namespace Teacher_Evaluation
         {
             if (TeacherDataHolder.Teachers.ContainsKey(textBox1.Text))
             {
-                StudentTeacherData.AddStudentTeacherRecord(studentID, textBox1.Text, textBox3.Text);
-                LoadDataGridview();
+                if (textBox3.Text == null)
+                {
+                    MessageBox.Show("Subject is Empty");
+                }
+                else
+                {
+                    StudentTeacherData.AddStudentTeacherRecord(studentID, textBox1.Text, textBox3.Text);
+                    LoadDataGridview();
+                }
+  
+            }
+            else
+            {
+                MessageBox.Show("Teacher Not Found");
             }
         }
 

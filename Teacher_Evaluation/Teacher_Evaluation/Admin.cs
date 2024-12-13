@@ -15,7 +15,7 @@ namespace Teacher_Evaluation
         public Admin()
         {
             InitializeComponent();
-
+            LoadForm(new Dashboard());
         }
 
         public void LoadForm(object Form)

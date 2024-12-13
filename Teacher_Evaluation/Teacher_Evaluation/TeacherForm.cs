@@ -30,7 +30,7 @@ namespace Teacher_Evaluation
         {
             AddTeacher add = new AddTeacher();
             add.TeacherAdded += OnTeacherAdded;
-            add.Show();
+            add.ShowDialog();
         }
 
         private void TeacherForm_Load(object sender, EventArgs e)
