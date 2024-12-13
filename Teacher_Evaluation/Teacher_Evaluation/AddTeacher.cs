@@ -34,16 +34,20 @@ namespace Teacher_Evaluation
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             Validation valid = new Validation();
-            if (valid.validID(textBox2.Text))
+            if (!string.IsNullOrWhiteSpace(textBox2.Text) && !string.IsNullOrWhiteSpace(textBox3.Text) && !string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace(SetPword.Text))
             {
-                if (!TeacherDataHolder.AddTeacherToDictionary(textBox2.Text, textBox3.Text, textBox1.Text, textBox2.Text))
+
+                if (valid.validID(textBox2.Text))
                 {
-                    label5.Visible = true;
+                    if (!TeacherDataHolder.AddTeacherToDictionary(textBox2.Text, textBox3.Text, textBox1.Text, textBox2.Text)) { 
+
+                        MSAcessDataSaveandRetrieve mS = new MSAcessDataSaveandRetrieve();
+                        mS.SaveAllTeachers();
+                        label5.Visible = true;
+                        TeacherAdded?.Invoke();
+                        this.Close();
+                    }
                 }
-
-
-               
-
             }
 
             
@@ -58,33 +62,67 @@ namespace Teacher_Evaluation
                 return;
             }
 
-          
-            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            if(string.IsNullOrWhiteSpace(textBox3.Text) && string.IsNullOrWhiteSpace(textBox1.Text) && string.IsNullOrWhiteSpace(SetPword.Text))
             {
-                IDwarning.Visible = false;
+                EmailWarning.Visible = true;
+                NameWarning.Visible = true;
+                setPass.Visible = true;
+
                 return;
             }
+
+            if (string.IsNullOrWhiteSpace(textBox1.Text) && string.IsNullOrWhiteSpace(SetPword.Text))
+            {
+                EmailWarning.Visible = true;
+                setPass.Visible = true;
+
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                IDwarning.Visible = true;
+                return;
+            }
+
+
+            if (string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(textBox3.Text) && string.IsNullOrWhiteSpace(SetPword.Text))
+            {
+                EmailWarning.Visible = true;
+                IDwarning.Visible = true;
+                setPass.Visible = true;
+
+                return;
+            }
+
+
+            if (string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                EmailWarning.Visible = true;
+                IDwarning.Visible = true;
+
+                return;
+            }
+
+
+           
 
             if (string.IsNullOrWhiteSpace(textBox3.Text))
             {
-                NameWarning.Visible = false;
+                NameWarning.Visible = true;
                 return;
             }
 
             if (string.IsNullOrWhiteSpace(textBox2.Text))
             {
-                EmailWarning.Visible = false;
+                EmailWarning.Visible = true;
                 return;
             }
 
-            if(!string.IsNullOrWhiteSpace(textBox2.Text) && !string.IsNullOrWhiteSpace(textBox3.Text) && !string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace (SetPword.Text))
+            if (string.IsNullOrWhiteSpace(SetPword.Text))
             {
-                MSAcessDataSaveandRetrieve mS = new MSAcessDataSaveandRetrieve();
-                mS.SaveAllTeachers();
-
-
-                TeacherAdded?.Invoke();
-                this.Close();
+                setPass.Visible = true;
+                return;
             }
 
 
