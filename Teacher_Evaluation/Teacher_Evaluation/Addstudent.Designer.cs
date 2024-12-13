@@ -40,8 +40,8 @@
             notif = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
-            panel3 = new Panel();
             label5 = new Label();
+            panel3 = new Panel();
             button1 = new Button();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -164,15 +164,6 @@
             panel2.Size = new Size(582, 58);
             panel2.TabIndex = 30;
             // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(243, 196, 27);
-            panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 58);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(582, 16);
-            panel3.TabIndex = 31;
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -183,6 +174,15 @@
             label5.Size = new Size(167, 32);
             label5.TabIndex = 0;
             label5.Text = "Add Students";
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(243, 196, 27);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 58);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(582, 16);
+            panel3.TabIndex = 31;
             // 
             // button1
             // 

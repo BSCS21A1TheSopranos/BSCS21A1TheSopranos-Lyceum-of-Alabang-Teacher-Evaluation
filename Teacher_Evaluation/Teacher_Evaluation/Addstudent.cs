@@ -1,4 +1,5 @@
 ﻿using ClassLibrary1;
+using Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,9 +21,9 @@ namespace Teacher_Evaluation
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            var newstudent = new Student(textBox1.Text, textBox3.Text, textBox2.Text, "Student");
-            StudentDataHolder.AddStudent(newstudent);
-            MSAcessDataSaveandRetrieve ms = new MSAcessDataSaveandRetrieve();
+            Validation validationClass = new Validation();
+            
+            
 
             if (textBox3.Text != textBox4.Text)
             {
@@ -30,11 +31,19 @@ namespace Teacher_Evaluation
             }
             else
             {
+                var newstudent = new Student(textBox1.Text, validationClass.encryptpassword(textBox3.Text), textBox2.Text, "Student");
+                StudentDataHolder.AddStudent(newstudent);
+                MSAcessDataSaveandRetrieve ms = new MSAcessDataSaveandRetrieve();
                 ms.SaveStudents();
             }
         }
 
         private void Addstudent_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void notif_Click(object sender, EventArgs e)
         {
 
         }
