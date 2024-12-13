@@ -19,7 +19,7 @@ namespace Teacher_Evaluation
             InitializeComponent();
             this.studentID = studentID;
             LoadDataGridview();
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,6 +48,12 @@ namespace Teacher_Evaluation
             {
                 dataGridView1.Rows.Add(teacher.Subject, teacher.ProfID);
             }
+        }
+
+        private void MapStudentsTeachers_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(31, 51, 92);
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.White;
         }
     }
 }
