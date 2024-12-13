@@ -79,17 +79,16 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(936, 101);
+            panel1.Size = new Size(819, 76);
             panel1.TabIndex = 0;
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(337, 45);
+            label14.Location = new Point(295, 34);
             label14.Name = "label14";
-            label14.Size = new Size(58, 20);
+            label14.Size = new Size(44, 15);
             label14.TabIndex = 1;
             label14.Text = "label14";
             // 
@@ -98,9 +97,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(14, 24);
+            label1.Location = new Point(12, 18);
             label1.Name = "label1";
-            label1.Size = new Size(306, 46);
+            label1.Size = new Size(249, 37);
             label1.TabIndex = 0;
             label1.Text = "Welcome, Teacher";
             // 
@@ -108,10 +107,9 @@
             // 
             panel2.Controls.Add(label2);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 101);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Location = new Point(0, 76);
             panel2.Name = "panel2";
-            panel2.Size = new Size(936, 45);
+            panel2.Size = new Size(819, 34);
             panel2.TabIndex = 1;
             // 
             // label2
@@ -119,9 +117,9 @@
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(421, 9);
+            label2.Location = new Point(368, 7);
             label2.Name = "label2";
-            label2.Size = new Size(130, 25);
+            label2.Size = new Size(103, 20);
             label2.TabIndex = 0;
             label2.Text = "DASHBOARD";
             // 
@@ -131,21 +129,19 @@
             panel3.Controls.Add(tableLayoutPanel2);
             panel3.Controls.Add(tableLayoutPanel1);
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(0, 146);
-            panel3.Margin = new Padding(3, 4, 3, 4);
+            panel3.Location = new Point(0, 110);
             panel3.Name = "panel3";
-            panel3.Padding = new Padding(11, 13, 11, 13);
-            panel3.Size = new Size(936, 591);
+            panel3.Padding = new Padding(10);
+            panel3.Size = new Size(819, 443);
             panel3.TabIndex = 2;
             // 
             // panel10
             // 
             panel10.Controls.Add(button1);
             panel10.Dock = DockStyle.Bottom;
-            panel10.Location = new Point(11, 523);
-            panel10.Margin = new Padding(3, 4, 3, 4);
+            panel10.Location = new Point(10, 392);
             panel10.Name = "panel10";
-            panel10.Size = new Size(914, 55);
+            panel10.Size = new Size(799, 41);
             panel10.TabIndex = 3;
             // 
             // button1
@@ -154,10 +150,9 @@
             button1.FlatAppearance.BorderSize = 2;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(403, 4);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(352, 3);
             button1.Name = "button1";
-            button1.Size = new Size(125, 47);
+            button1.Size = new Size(109, 35);
             button1.TabIndex = 2;
             button1.Text = "Log Out";
             button1.UseVisualStyleBackColor = true;
@@ -171,12 +166,11 @@
             tableLayoutPanel2.Controls.Add(panel8, 0, 0);
             tableLayoutPanel2.Controls.Add(panel9, 1, 0);
             tableLayoutPanel2.Dock = DockStyle.Top;
-            tableLayoutPanel2.Location = new Point(11, 212);
-            tableLayoutPanel2.Margin = new Padding(3, 4, 3, 4);
+            tableLayoutPanel2.Location = new Point(10, 159);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(914, 307);
+            tableLayoutPanel2.Size = new Size(799, 230);
             tableLayoutPanel2.TabIndex = 1;
             // 
             // panel8
@@ -185,10 +179,9 @@
             panel8.Controls.Add(dataGridView1);
             panel8.Controls.Add(label8);
             panel8.Dock = DockStyle.Fill;
-            panel8.Location = new Point(3, 4);
-            panel8.Margin = new Padding(3, 4, 3, 4);
+            panel8.Location = new Point(3, 3);
             panel8.Name = "panel8";
-            panel8.Size = new Size(451, 299);
+            panel8.Size = new Size(393, 224);
             panel8.TabIndex = 0;
             panel8.Paint += panel8_Paint;
             // 
@@ -197,10 +190,11 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { FeedBack });
-            dataGridView1.Location = new Point(20, 38);
+            dataGridView1.Location = new Point(18, 28);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(415, 244);
+            dataGridView1.Size = new Size(363, 183);
             dataGridView1.TabIndex = 1;
             // 
             // FeedBack
@@ -214,9 +208,9 @@
             label8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(123, 3);
+            label8.Location = new Point(108, 2);
             label8.Name = "label8";
-            label8.Size = new Size(229, 32);
+            label8.Size = new Size(179, 25);
             label8.TabIndex = 0;
             label8.Text = "General Evaluation";
             // 
@@ -224,10 +218,9 @@
             // 
             panel9.Controls.Add(label9);
             panel9.Dock = DockStyle.Fill;
-            panel9.Location = new Point(460, 4);
-            panel9.Margin = new Padding(3, 4, 3, 4);
+            panel9.Location = new Point(402, 3);
             panel9.Name = "panel9";
-            panel9.Size = new Size(451, 299);
+            panel9.Size = new Size(394, 224);
             panel9.TabIndex = 1;
             // 
             // label9
@@ -235,9 +228,9 @@
             label9.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(119, 0);
+            label9.Location = new Point(104, 0);
             label9.Name = "label9";
-            label9.Size = new Size(234, 32);
+            label9.Size = new Size(181, 25);
             label9.TabIndex = 0;
             label9.Text = "Itimized Evaluation";
             // 
@@ -253,12 +246,11 @@
             tableLayoutPanel1.Controls.Add(panel6, 2, 0);
             tableLayoutPanel1.Controls.Add(panel7, 3, 0);
             tableLayoutPanel1.Dock = DockStyle.Top;
-            tableLayoutPanel1.Location = new Point(11, 13);
-            tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
+            tableLayoutPanel1.Location = new Point(10, 10);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(914, 199);
+            tableLayoutPanel1.Size = new Size(799, 149);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // panel4
@@ -268,19 +260,18 @@
             panel4.Controls.Add(label7);
             panel4.Controls.Add(label3);
             panel4.Dock = DockStyle.Top;
-            panel4.Location = new Point(3, 4);
-            panel4.Margin = new Padding(3, 4, 3, 4);
+            panel4.Location = new Point(3, 3);
             panel4.Name = "panel4";
-            panel4.Padding = new Padding(6, 7, 6, 7);
-            panel4.Size = new Size(222, 161);
+            panel4.Padding = new Padding(5);
+            panel4.Size = new Size(193, 121);
             panel4.TabIndex = 0;
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(79, 77);
+            label10.Location = new Point(69, 58);
             label10.Name = "label10";
-            label10.Size = new Size(58, 20);
+            label10.Size = new Size(44, 15);
             label10.TabIndex = 2;
             label10.Text = "label10";
             // 
@@ -290,9 +281,9 @@
             label7.Dock = DockStyle.Fill;
             label7.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ButtonHighlight;
-            label7.Location = new Point(6, 7);
+            label7.Location = new Point(5, 5);
             label7.Name = "label7";
-            label7.Size = new Size(208, 37);
+            label7.Size = new Size(159, 30);
             label7.TabIndex = 1;
             label7.Text = "Total Students:";
             // 
@@ -302,9 +293,9 @@
             label3.Dock = DockStyle.Fill;
             label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(6, 7);
+            label3.Location = new Point(5, 5);
             label3.Name = "label3";
-            label3.Size = new Size(208, 37);
+            label3.Size = new Size(159, 30);
             label3.TabIndex = 0;
             label3.Text = "Total Students:";
             // 
@@ -314,19 +305,18 @@
             panel5.Controls.Add(label11);
             panel5.Controls.Add(label4);
             panel5.Dock = DockStyle.Top;
-            panel5.Location = new Point(231, 4);
-            panel5.Margin = new Padding(3, 4, 3, 4);
+            panel5.Location = new Point(202, 3);
             panel5.Name = "panel5";
-            panel5.Padding = new Padding(6, 7, 6, 7);
-            panel5.Size = new Size(222, 161);
+            panel5.Padding = new Padding(5);
+            panel5.Size = new Size(193, 121);
             panel5.TabIndex = 1;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(95, 74);
+            label11.Location = new Point(83, 56);
             label11.Name = "label11";
-            label11.Size = new Size(58, 20);
+            label11.Size = new Size(44, 15);
             label11.TabIndex = 2;
             label11.Text = "label11";
             // 
@@ -336,9 +326,9 @@
             label4.Dock = DockStyle.Fill;
             label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(6, 7);
+            label4.Location = new Point(5, 5);
             label4.Name = "label4";
-            label4.Size = new Size(211, 37);
+            label4.Size = new Size(163, 30);
             label4.TabIndex = 1;
             label4.Text = "Done Students:";
             // 
@@ -348,19 +338,18 @@
             panel6.Controls.Add(label12);
             panel6.Controls.Add(label5);
             panel6.Dock = DockStyle.Top;
-            panel6.Location = new Point(459, 4);
-            panel6.Margin = new Padding(3, 4, 3, 4);
+            panel6.Location = new Point(401, 3);
             panel6.Name = "panel6";
-            panel6.Padding = new Padding(6, 7, 6, 7);
-            panel6.Size = new Size(222, 161);
+            panel6.Padding = new Padding(5);
+            panel6.Size = new Size(193, 121);
             panel6.TabIndex = 2;
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(92, 77);
+            label12.Location = new Point(80, 58);
             label12.Name = "label12";
-            label12.Size = new Size(58, 20);
+            label12.Size = new Size(44, 15);
             label12.TabIndex = 3;
             label12.Text = "label12";
             // 
@@ -370,9 +359,9 @@
             label5.Dock = DockStyle.Fill;
             label5.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(6, 7);
+            label5.Location = new Point(5, 5);
             label5.Name = "label5";
-            label5.Size = new Size(203, 37);
+            label5.Size = new Size(155, 30);
             label5.TabIndex = 2;
             label5.Text = "Total Subjects:";
             // 
@@ -382,19 +371,18 @@
             panel7.Controls.Add(label13);
             panel7.Controls.Add(label6);
             panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(687, 4);
-            panel7.Margin = new Padding(3, 4, 3, 4);
+            panel7.Location = new Point(600, 3);
             panel7.Name = "panel7";
-            panel7.Padding = new Padding(6, 7, 6, 7);
-            panel7.Size = new Size(224, 161);
+            panel7.Padding = new Padding(5);
+            panel7.Size = new Size(196, 121);
             panel7.TabIndex = 3;
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(116, 78);
+            label13.Location = new Point(102, 58);
             label13.Name = "label13";
-            label13.Size = new Size(58, 20);
+            label13.Size = new Size(44, 15);
             label13.TabIndex = 4;
             label13.Text = "label13";
             // 
@@ -404,21 +392,20 @@
             label6.Dock = DockStyle.Fill;
             label6.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(6, 7);
+            label6.Location = new Point(5, 5);
             label6.Name = "label6";
-            label6.Size = new Size(181, 37);
+            label6.Size = new Size(138, 30);
             label6.TabIndex = 3;
             label6.Text = "Credit Score:";
             // 
             // TeacherDashboard
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(936, 737);
+            ClientSize = new Size(819, 553);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "TeacherDashboard";
             Text = "TeacherDashboard";
             Load += TeacherDashboard_Load;
