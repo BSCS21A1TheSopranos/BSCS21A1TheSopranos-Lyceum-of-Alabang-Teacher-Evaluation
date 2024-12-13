@@ -38,7 +38,9 @@ namespace Teacher_Evaluation
             TeacherDataHolder.DeleteTeacherFromDictionary(textBox1.Text);
             MSAcessDataSaveandRetrieve ms = new MSAcessDataSaveandRetrieve();
             ms.SaveAllTeachers();
-
+            notif.Visible = true;
+            notif.Text = ("Account has been successfully deleted ");
+            textBox1.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
