@@ -61,7 +61,8 @@ namespace Teacher_Evaluation
 
         private void TeacherDashboard_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(31, 51, 92);
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.White;
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)
@@ -80,6 +81,21 @@ namespace Teacher_Evaluation
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

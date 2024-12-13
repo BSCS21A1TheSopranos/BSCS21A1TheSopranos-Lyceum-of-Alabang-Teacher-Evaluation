@@ -71,7 +71,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.Highlight;
+            panel1.BackColor = Color.FromArgb(31, 51, 92);
             panel1.Controls.Add(label14);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
@@ -86,7 +86,7 @@
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label14.ForeColor = SystemColors.ButtonHighlight;
-            label14.Location = new Point(228, 18);
+            label14.Location = new Point(212, 22);
             label14.Name = "label14";
             label14.Size = new Size(112, 37);
             label14.TabIndex = 1;
@@ -98,7 +98,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(12, 18);
+            label1.Location = new Point(12, 22);
             label1.Name = "label1";
             label1.Size = new Size(211, 37);
             label1.TabIndex = 0;
@@ -106,6 +106,7 @@
             // 
             // panel2
             // 
+            panel2.BackColor = Color.FromArgb(232, 188, 27);
             panel2.Controls.Add(label2);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 76);
@@ -124,40 +125,44 @@
             label2.Size = new Size(103, 20);
             label2.TabIndex = 0;
             label2.Text = "DASHBOARD";
+            label2.Click += label2_Click;
             // 
             // panel3
             // 
-            panel3.Controls.Add(panel10);
             panel3.Controls.Add(tableLayoutPanel2);
             panel3.Controls.Add(tableLayoutPanel1);
-            panel3.Dock = DockStyle.Fill;
+            panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 110);
             panel3.Name = "panel3";
             panel3.Padding = new Padding(10);
-            panel3.Size = new Size(819, 443);
+            panel3.Size = new Size(819, 399);
             panel3.TabIndex = 2;
+            panel3.Paint += panel3_Paint;
             // 
             // panel10
             // 
+            panel10.BackColor = Color.FromArgb(232, 188, 27);
             panel10.Controls.Add(button1);
             panel10.Dock = DockStyle.Bottom;
-            panel10.Location = new Point(10, 392);
+            panel10.Location = new Point(0, 512);
             panel10.Name = "panel10";
-            panel10.Size = new Size(799, 41);
+            panel10.Size = new Size(819, 41);
             panel10.TabIndex = 3;
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            button1.BackColor = Color.Transparent;
             button1.FlatAppearance.BorderSize = 2;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(352, 3);
+            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Black;
+            button1.Location = new Point(362, 3);
             button1.Name = "button1";
             button1.Size = new Size(109, 35);
             button1.TabIndex = 2;
             button1.Text = "Log Out";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // tableLayoutPanel2
@@ -176,10 +181,10 @@
             // 
             // panel8
             // 
-            panel8.BackColor = SystemColors.ControlDark;
+            panel8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel8.BackColor = SystemColors.ButtonHighlight;
             panel8.Controls.Add(dataGridView1);
             panel8.Controls.Add(label8);
-            panel8.Dock = DockStyle.Fill;
             panel8.Location = new Point(3, 3);
             panel8.Name = "panel8";
             panel8.Size = new Size(793, 224);
@@ -188,15 +193,17 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { FeedBack });
-            dataGridView1.Location = new Point(18, 28);
+            dataGridView1.Location = new Point(8, 29);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(774, 183);
+            dataGridView1.Size = new Size(772, 183);
             dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // FeedBack
             // 
@@ -206,10 +213,10 @@
             // 
             // label8
             // 
-            label8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label8.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(296, 2);
+            label8.Location = new Point(302, 2);
             label8.Name = "label8";
             label8.Size = new Size(179, 25);
             label8.TabIndex = 0;
@@ -236,7 +243,7 @@
             // 
             // panel4
             // 
-            panel4.BackColor = Color.LightCoral;
+            panel4.BackColor = Color.FromArgb(31, 51, 92);
             panel4.Controls.Add(label10);
             panel4.Controls.Add(label7);
             panel4.Controls.Add(label3);
@@ -284,7 +291,7 @@
             // 
             // panel5
             // 
-            panel5.BackColor = Color.Orchid;
+            panel5.BackColor = Color.FromArgb(31, 51, 92);
             panel5.Controls.Add(label11);
             panel5.Controls.Add(label4);
             panel5.Dock = DockStyle.Top;
@@ -319,7 +326,7 @@
             // 
             // panel6
             // 
-            panel6.BackColor = Color.SkyBlue;
+            panel6.BackColor = Color.FromArgb(31, 51, 92);
             panel6.Controls.Add(label12);
             panel6.Controls.Add(label5);
             panel6.Dock = DockStyle.Top;
@@ -354,7 +361,7 @@
             // 
             // panel7
             // 
-            panel7.BackColor = Color.Khaki;
+            panel7.BackColor = Color.FromArgb(31, 51, 92);
             panel7.Controls.Add(label13);
             panel7.Controls.Add(label6);
             panel7.Dock = DockStyle.Top;
@@ -392,6 +399,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(819, 553);
+            Controls.Add(panel10);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
