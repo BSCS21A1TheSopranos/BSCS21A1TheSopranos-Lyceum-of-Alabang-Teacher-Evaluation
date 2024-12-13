@@ -140,7 +140,7 @@
             notif.BackColor = SystemColors.ControlLight;
             notif.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             notif.ForeColor = Color.Firebrick;
-            notif.Location = new Point(357, 100);
+            notif.Location = new Point(305, 103);
             notif.Name = "notif";
             notif.Size = new Size(68, 13);
             notif.TabIndex = 28;

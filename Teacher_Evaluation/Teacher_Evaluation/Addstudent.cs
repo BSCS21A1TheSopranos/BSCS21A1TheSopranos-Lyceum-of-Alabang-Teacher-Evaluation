@@ -25,9 +25,15 @@ namespace Teacher_Evaluation
             Validation validationClass = new Validation();
             if (validationClass.validID(textBox1.Text))
             {
-                if (textBox3.Text != textBox4.Text)
+                if (textBox2.TextLength == 0 )
                 {
-                    notif.Text = ("Password and Confirm Password Mismatch");
+                    notif.Visible = true;
+                    notif.Text = ("Please fill the blank");
+                }
+                else if (textBox3.Text != textBox4.Text)
+                {
+                    notif.Visible = true;
+                    notif.Text = ("Password and Confirm password mismatch");
                 }
                 else
                 {
@@ -35,6 +41,8 @@ namespace Teacher_Evaluation
                     StudentDataHolder.AddStudent(newstudent);
                     MSAcessDataSaveandRetrieve ms = new MSAcessDataSaveandRetrieve();
                     ms.SaveStudents();
+                    notif.Visible = true;
+                    notif.Text = ("Account has been Saved");
                 }
             }
         }
