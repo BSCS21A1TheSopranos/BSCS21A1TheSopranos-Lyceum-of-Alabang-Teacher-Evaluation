@@ -39,7 +39,10 @@ namespace ClassLibrary1
 
         public static void AddStudent(Student newStudent)
         {
-            Students.Add(newStudent.StudentID, newStudent);
+            if (!StudentDataHolder.Students.ContainsKey(newStudent.StudentID))
+            {
+                Students.Add(newStudent.StudentID, newStudent);
+            }
         }
 
         public static string CountAllStudents()
