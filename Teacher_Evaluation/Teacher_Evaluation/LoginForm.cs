@@ -100,10 +100,9 @@ namespace Teacher_Evaluation
             }
 
             LoginClass login = new LoginClass(textBox5.Text);
-
             if (login.checkStudent())
             {
-                if (login.checkpassword(textBox6.Text))
+                if (login.checkpassword(textBox6.Text, textBox5.Text))
                 {
                     login.GetRoles();
                     if (login.isStudent)
@@ -125,7 +124,7 @@ namespace Teacher_Evaluation
                         this.Hide();
                     }
                 }
-                if (!login.checkpassword(textBox6.Text))
+                if (login.checkpassword(textBox6.Text, textBox5.Text))
                 {
                     notif.Visible = true;
                     notif.Text = "Password or Student ID mismatch";
