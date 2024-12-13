@@ -43,9 +43,8 @@ namespace Teacher_Evaluation
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox4.Text) && string.IsNullOrWhiteSpace(textBox5.Text) && string.IsNullOrWhiteSpace(textBox6.Text))
+            if (string.IsNullOrWhiteSpace(textBox5.Text) && string.IsNullOrWhiteSpace(textBox6.Text))
             {
-                fillAreaUsername.Visible = true;
                 fillAreaStudentID.Visible = true;
                 fillAreaPass.Visible = true;
                 return;
@@ -53,14 +52,12 @@ namespace Teacher_Evaluation
 
             else
             {
-                fillAreaUsername.Visible = false;
                 fillAreaStudentID.Visible = false;
                 fillAreaPass.Visible = false;
             }
 
-            if (string.IsNullOrWhiteSpace(textBox4.Text) && string.IsNullOrWhiteSpace(textBox5.Text))
+            if (string.IsNullOrWhiteSpace(textBox5.Text))
             {
-                fillAreaUsername.Visible = true;
                 fillAreaStudentID.Visible = true;
                 return;
             }
@@ -72,18 +69,12 @@ namespace Teacher_Evaluation
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(textBox6.Text) && string.IsNullOrWhiteSpace(textBox4.Text))
+            if (string.IsNullOrWhiteSpace(textBox6.Text))
             {
                 fillAreaPass.Visible = true;
-                fillAreaUsername.Visible = true;
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(textBox4.Text))
-            {
-                fillAreaUsername.Visible = true;
-                return;
-            }
 
             if (string.IsNullOrWhiteSpace(textBox5.Text))
             {
@@ -99,7 +90,6 @@ namespace Teacher_Evaluation
 
             else
             {
-                fillAreaUsername.Visible = false;
                 fillAreaStudentID.Visible = false;
                 fillAreaPass.Visible = false;
             }
@@ -135,7 +125,6 @@ namespace Teacher_Evaluation
                 {
                     notif.Visible = true;
                     notif.Text = "Password or Student ID mismatch";
-                    textBox4.Clear();
                     textBox5.Clear();
                     textBox6.Clear();
                 }
@@ -144,7 +133,6 @@ namespace Teacher_Evaluation
             {
                 notif.Visible = true;
                 notif.Text = "Invalid account";
-                textBox4.Clear();
                 textBox5.Clear();
                 textBox6.Clear();
             }
@@ -191,7 +179,6 @@ namespace Teacher_Evaluation
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            fillAreaUsername.Visible = false;
             
            
         }
