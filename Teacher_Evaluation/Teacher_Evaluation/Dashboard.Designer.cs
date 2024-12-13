@@ -115,6 +115,7 @@
             label3.Size = new Size(332, 52);
             label3.TabIndex = 0;
             label3.Text = "Done Students:";
+            label3.Click += label3_Click;
             // 
             // Dashboard
             // 

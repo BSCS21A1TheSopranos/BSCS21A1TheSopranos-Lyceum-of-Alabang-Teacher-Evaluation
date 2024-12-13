@@ -18,15 +18,17 @@ namespace Teacher_Evaluation
         {
             InitializeComponent();
             this.studentID = studentID;
-            foreach (var teacher in StudentTeacherData.studentTeacherData[studentID])
-            {
-                dataGridView1.Rows.Add(teacher.Subject, teacher.ProfID);
-            }
+            LoadDataGridview();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            StudentTeacherData.AddStudentTeacherRecord(studentID, textBox1.Text, textBox3.Text);
+            if (TeacherDataHolder.Teachers.ContainsKey(textBox1.Text))
+            {
+                StudentTeacherData.AddStudentTeacherRecord(studentID, textBox1.Text, textBox3.Text);
+                LoadDataGridview();
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -37,6 +39,15 @@ namespace Teacher_Evaluation
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void LoadDataGridview()
+        {
+            dataGridView1.Rows.Clear();
+            foreach (var teacher in StudentTeacherData.studentTeacherData[studentID])
+            {
+                dataGridView1.Rows.Add(teacher.Subject, teacher.ProfID);
+            }
         }
     }
 }
