@@ -23,7 +23,7 @@ namespace Teacher_Evaluation
             label10.Text = StudentTeacherData.CountStudentsByProfessor(profId);
             label11.Text = StudentTeacherData.CountStatusDoneForProfessor(profId);
             label12.Text = StudentTeacherData.CountUniqueSubjectsForProfessor(profId);
-            label13.Text =TeacherFeedbackService.CalculateCreditPoints(profId);
+            label13.Text = TeacherFeedbackService.CalculateCreditPoints(profId);
             label14.Text = TeacherDataHolder.GetTeacherNameByProfID(profId);
             if (TeacherFeedbackService.feedbacksdata.ContainsKey(profId))
             {
@@ -65,6 +65,16 @@ namespace Teacher_Evaluation
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
