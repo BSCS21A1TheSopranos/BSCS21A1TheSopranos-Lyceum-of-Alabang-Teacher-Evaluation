@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 namespace Services
 {
-    // Define a class to encapsulate the feedback logic
     public static class TeacherFeedbackService
     {
         public static Dictionary<string, List<(string Feedback, string Sentiment, string Date)>> feedbacksdata = new Dictionary<string, List<(string, string, string)>>();
@@ -26,8 +25,8 @@ namespace Services
 
         public static string CalculateCreditPoints(string profId)
         {
-            
-            var totalStudents = int.Parse(StudentTeacherData.CountStatusDoneForProfessor(profId));
+
+            var totalStudents = int.Parse(StudentTeacherData.CountStudentsByProfessor(profId));
             if (!feedbacksdata.ContainsKey(profId))
             {
                 return "100%";
@@ -48,7 +47,7 @@ namespace Services
             double positiveImpact = positiveFeedbackCount * (100.0 / totalStudents);
             double negativeImpact = negativeFeedbackCount * (100.0 / totalStudents);
             double creditPoints = 100.0 + (positiveImpact - negativeImpact);
-            return creditPoints.ToString() + "%";
+            return creditPoints.ToString("F2") + "%";
         }
 
     }
