@@ -121,6 +121,10 @@ namespace Teacher_Evaluation
             WindowState = FormWindowState.Minimized;
         }
 
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
         private void mainpanel_Resize(object sender, EventArgs e)
         {
@@ -146,6 +150,10 @@ namespace Teacher_Evaluation
 
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 
 }
