@@ -19,6 +19,8 @@ namespace Teacher_Evaluation
         {
             InitializeComponent();
             LoadTeacherData();
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(31, 51, 92);
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.White;
 
         }
 
