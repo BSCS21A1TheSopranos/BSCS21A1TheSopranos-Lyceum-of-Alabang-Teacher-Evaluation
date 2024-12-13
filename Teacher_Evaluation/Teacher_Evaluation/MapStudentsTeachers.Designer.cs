@@ -31,6 +31,8 @@
             components = new System.ComponentModel.Container();
             bindingSource1 = new BindingSource(components);
             dataGridView1 = new DataGridView();
+            TeachersName = new DataGridViewTextBoxColumn();
+            Subject = new DataGridViewTextBoxColumn();
             textBox1 = new TextBox();
             textBox3 = new TextBox();
             button1 = new Button();
@@ -41,8 +43,6 @@
             panel2 = new Panel();
             panel3 = new Panel();
             button2 = new Button();
-            TeachersName = new DataGridViewTextBoxColumn();
-            Subject = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -53,108 +53,13 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { TeachersName, Subject });
-            dataGridView1.Location = new Point(416, 148);
+            dataGridView1.Location = new Point(364, 111);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(370, 399);
+            dataGridView1.Size = new Size(324, 299);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(147, 228);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(221, 27);
-            textBox1.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(147, 340);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(221, 27);
-            textBox3.TabIndex = 3;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(234, 463);
-            button1.Name = "button1";
-            button1.Size = new Size(135, 59);
-            button1.TabIndex = 4;
-            button1.Text = "Submit";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(51, 228);
-            label1.Name = "label1";
-            label1.Size = new Size(82, 20);
-            label1.TabIndex = 5;
-            label1.Text = "Teacher ID:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(54, 344);
-            label2.Name = "label2";
-            label2.Size = new Size(61, 20);
-            label2.TabIndex = 6;
-            label2.Text = "Subject:";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(31, 51, 92);
-            panel1.Controls.Add(label3);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(800, 100);
-            panel1.TabIndex = 7;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(208, 24);
-            label3.Name = "label3";
-            label3.Size = new Size(436, 50);
-            label3.TabIndex = 0;
-            label3.Text = "Map Student to Teacher";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(243, 196, 27);
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 576);
-            panel2.Margin = new Padding(3, 4, 3, 4);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(800, 15);
-            panel2.TabIndex = 8;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(243, 196, 27);
-            panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 100);
-            panel3.Margin = new Padding(3, 4, 3, 4);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(800, 20);
-            panel3.TabIndex = 9;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(51, 463);
-            button2.Name = "button2";
-            button2.Size = new Size(135, 59);
-            button2.TabIndex = 10;
-            button2.Text = "Cancel";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // TeachersName
             // 
@@ -168,11 +73,108 @@
             Subject.MinimumWidth = 6;
             Subject.Name = "Subject";
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(129, 171);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(194, 23);
+            textBox1.TabIndex = 1;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(129, 255);
+            textBox3.Margin = new Padding(3, 2, 3, 2);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(194, 23);
+            textBox3.TabIndex = 3;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(205, 347);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(118, 44);
+            button1.TabIndex = 4;
+            button1.Text = "Submit";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(45, 171);
+            label1.Name = "label1";
+            label1.Size = new Size(64, 15);
+            label1.TabIndex = 5;
+            label1.Text = "Teacher ID:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(47, 258);
+            label2.Name = "label2";
+            label2.Size = new Size(49, 15);
+            label2.TabIndex = 6;
+            label2.Text = "Subject:";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(31, 51, 92);
+            panel1.Controls.Add(label3);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(700, 75);
+            panel1.TabIndex = 7;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ButtonHighlight;
+            label3.Location = new Point(182, 18);
+            label3.Name = "label3";
+            label3.Size = new Size(344, 40);
+            label3.TabIndex = 0;
+            label3.Text = "Map Student to Teacher";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(243, 196, 27);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 432);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(700, 11);
+            panel2.TabIndex = 8;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(243, 196, 27);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 75);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(700, 15);
+            panel3.TabIndex = 9;
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.Location = new Point(45, 347);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(118, 44);
+            button2.TabIndex = 10;
+            button2.Text = "Cancel";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // MapStudentsTeachers
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 591);
+            ClientSize = new Size(700, 443);
             Controls.Add(button2);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -183,8 +185,10 @@
             Controls.Add(textBox3);
             Controls.Add(textBox1);
             Controls.Add(dataGridView1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MapStudentsTeachers";
             Text = "Form1";
+            Load += MapStudentsTeachers_Load;
             ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
