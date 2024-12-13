@@ -60,5 +60,14 @@ namespace ClassLibrary1
             }
             return null;
         }
+        public static string CountTeachers()
+        {
+            if (Teachers != null)
+            {
+                return Teachers.Count.ToString();
+            }
+            return "0"; 
+        }
+
     }
 }
