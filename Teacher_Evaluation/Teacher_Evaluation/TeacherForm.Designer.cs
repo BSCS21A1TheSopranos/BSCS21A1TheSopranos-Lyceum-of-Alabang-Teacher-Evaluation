@@ -45,9 +45,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(31, 51, 92);
-            label1.Location = new Point(7, 19);
+            label1.Location = new Point(8, 25);
             label1.Name = "label1";
-            label1.Size = new Size(196, 24);
+            label1.Size = new Size(248, 29);
             label1.TabIndex = 0;
             label1.Text = "Teacher's Masterlist";
             // 
@@ -58,9 +58,10 @@
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(716, 542);
+            dataGridView1.Size = new Size(818, 723);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
@@ -84,13 +85,15 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             button1.FlatAppearance.BorderSize = 2;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.FromArgb(31, 51, 92);
-            button1.Location = new Point(133, 605);
+            button1.Location = new Point(152, 807);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(127, 49);
+            button1.Size = new Size(145, 65);
             button1.TabIndex = 2;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = true;
@@ -98,13 +101,15 @@
             // 
             // button2
             // 
+            button2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             button2.FlatAppearance.BorderSize = 2;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.FromArgb(31, 51, 92);
-            button2.Location = new Point(464, 605);
+            button2.Location = new Point(530, 807);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(127, 49);
+            button2.Size = new Size(145, 65);
             button2.TabIndex = 3;
             button2.Text = "Delete";
             button2.UseVisualStyleBackColor = true;
@@ -114,21 +119,23 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.Controls.Add(dataGridView1);
-            panel1.Location = new Point(7, 53);
+            panel1.Location = new Point(8, 71);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(716, 542);
+            panel1.Size = new Size(818, 723);
             panel1.TabIndex = 4;
             // 
             // TeacherForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(735, 666);
+            ClientSize = new Size(840, 888);
             Controls.Add(panel1);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "TeacherForm";
             Text = "TeacherForm";
             Load += TeacherForm_Load;

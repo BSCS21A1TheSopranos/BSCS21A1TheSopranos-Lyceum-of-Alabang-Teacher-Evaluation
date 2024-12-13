@@ -182,7 +182,6 @@
             label5.TabIndex = 18;
             label5.Text = "Note: The Professor ID has Already Holder";
             label5.Visible = false;
-            label5.Click += label5_Click;
             // 
             // IDwarning
             // 
@@ -195,7 +194,6 @@
             IDwarning.TabIndex = 19;
             IDwarning.Text = "Required to Fill This Area\r\n";
             IDwarning.Visible = false;
-            IDwarning.Click += IDwarning_Click;
             // 
             // NameWarning
             // 
@@ -208,7 +206,6 @@
             NameWarning.TabIndex = 20;
             NameWarning.Text = "Required to Fill This Area\r\n";
             NameWarning.Visible = false;
-            NameWarning.Click += NameWarning_Click;
             // 
             // EmailWarning
             // 
@@ -221,7 +218,6 @@
             EmailWarning.TabIndex = 21;
             EmailWarning.Text = "Required to Fill This Area\r\n";
             EmailWarning.Visible = false;
-            EmailWarning.Click += EmailWarning_Click;
             // 
             // pictureBox3
             // 
@@ -293,7 +289,6 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "AddTeacher";
             Text = "Set Password";
-            Load += AddTeacher_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

@@ -25,25 +25,38 @@ namespace Teacher_Evaluation
             Validation validationClass = new Validation();
             if (validationClass.validID(textBox1.Text))
             {
-                if (textBox2.TextLength == 0 )
+                if (!StudentDataHolder.Students.ContainsKey(textBox1.Text))
                 {
-                    notif.Visible = true;
-                    notif.Text = ("Please fill the blank");
-                }
-                else if (textBox3.Text != textBox4.Text)
-                {
-                    notif.Visible = true;
-                    notif.Text = ("Password and Confirm password mismatch");
+                    if (textBox2.TextLength == 0)
+                    {
+                        notif.Visible = true;
+                        notif.Text = ("Please fill the blank");
+                    }
+                    else if (textBox3.Text != textBox4.Text)
+                    {
+                        notif.Visible = true;
+                        notif.Text = ("Password and Confirm password mismatch");
+                    }
+                    else
+                    {
+                        var newstudent = new Student(textBox1.Text, validationClass.encryptpassword(textBox3.Text), textBox2.Text, "Student");
+                        StudentDataHolder.AddStudent(newstudent);
+                        MSAcessDataSaveandRetrieve ms = new MSAcessDataSaveandRetrieve();
+                        ms.SaveStudents();
+                        notif.Visible = true;
+                        notif.Text = ("Account has been Saved");
+                    }
                 }
                 else
                 {
-                    var newstudent = new Student(textBox1.Text, validationClass.encryptpassword(textBox3.Text), textBox2.Text, "Student");
-                    StudentDataHolder.AddStudent(newstudent);
-                    MSAcessDataSaveandRetrieve ms = new MSAcessDataSaveandRetrieve();
-                    ms.SaveStudents();
                     notif.Visible = true;
-                    notif.Text = ("Account has been Saved");
+                    notif.Text = ("Student Already Exist");
                 }
+            }
+            else
+            {
+                notif.Visible = true;
+                notif.Text = ("Invalid Id ####-##");
             }
         }
 
