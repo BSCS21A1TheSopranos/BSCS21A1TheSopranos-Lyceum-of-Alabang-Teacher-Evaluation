@@ -26,8 +26,9 @@ namespace Teacher_Evaluation
 
         private void LoadDashboardData()
         {
-            
+
             stdCount.Text = StudentDataHolder.CountAllStudents();
+            doneStd.Text = StudentTeacherData.CountStudentsDoneWithAllProfessors();
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -42,7 +43,12 @@ namespace Teacher_Evaluation
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

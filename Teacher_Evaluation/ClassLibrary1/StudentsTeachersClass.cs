@@ -104,6 +104,21 @@ namespace ClassLibrary1
             return subjects.Count.ToString();
         }
 
+        public static string CountStudentsDoneWithAllProfessors()
+        {
+            int count = 0;
+
+            foreach (var studentRecord in studentTeacherData)
+            {
+                if (studentRecord.Value.All(record => record.Status == "Done"))
+                {
+                    count++;
+                }
+            }
+
+            return count.ToString();
+        }
+
 
 
 
