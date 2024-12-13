@@ -39,6 +39,7 @@
             label3 = new Label();
             textBox1 = new TextBox();
             label4 = new Label();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -46,7 +47,7 @@
             // textBox2
             // 
             textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(193, 121);
+            textBox2.Location = new Point(193, 198);
             textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(394, 27);
@@ -57,7 +58,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 11.25F);
-            label2.Location = new Point(17, 124);
+            label2.Location = new Point(17, 201);
             label2.Name = "label2";
             label2.Size = new Size(160, 24);
             label2.TabIndex = 2;
@@ -66,11 +67,12 @@
             // textBox3
             // 
             textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(193, 181);
+            textBox3.Location = new Point(193, 258);
             textBox3.Margin = new Padding(3, 4, 3, 4);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(394, 27);
             textBox3.TabIndex = 5;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label1
             // 
@@ -136,7 +138,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 11.25F);
-            label3.Location = new Point(66, 184);
+            label3.Location = new Point(66, 261);
             label3.Name = "label3";
             label3.Size = new Size(111, 24);
             label3.TabIndex = 4;
@@ -145,27 +147,41 @@
             // textBox1
             // 
             textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(193, 236);
+            textBox1.Location = new Point(193, 313);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(394, 27);
             textBox1.TabIndex = 16;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 11.25F);
-            label4.Location = new Point(120, 239);
+            label4.Location = new Point(120, 316);
             label4.Name = "label4";
             label4.Size = new Size(57, 24);
             label4.TabIndex = 17;
             label4.Text = "Email";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.ForeColor = Color.Firebrick;
+            label5.Location = new Point(193, 138);
+            label5.Name = "label5";
+            label5.Size = new Size(254, 20);
+            label5.TabIndex = 18;
+            label5.Text = "*The Professor ID has Already Holder";
+            label5.Visible = false;
+            label5.Click += label5_Click;
             // 
             // AddTeacher
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(613, 653);
+            Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(textBox1);
             Controls.Add(pictureBox2);
@@ -201,5 +217,6 @@
         private Label label3;
         private TextBox textBox1;
         private Label label4;
+        private Label label5;
     }
 }
