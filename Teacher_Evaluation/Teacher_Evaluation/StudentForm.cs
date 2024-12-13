@@ -26,7 +26,8 @@ namespace Teacher_Evaluation
 
         private void StudentForm_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(31, 51, 92);
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.White;
         }
 
         private void button3_Click(object sender, EventArgs e)
