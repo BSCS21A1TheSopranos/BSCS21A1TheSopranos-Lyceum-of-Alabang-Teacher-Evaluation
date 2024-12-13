@@ -36,7 +36,6 @@
             button1 = new Button();
             button2 = new Button();
             panel1 = new Panel();
-            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -45,9 +44,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Emoji", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(14, 20);
+            label1.Location = new Point(12, 15);
             label1.Name = "label1";
-            label1.Size = new Size(252, 32);
+            label1.Size = new Size(204, 26);
             label1.TabIndex = 0;
             label1.Text = "Teacher's  Masterlist";
             // 
@@ -58,10 +57,9 @@
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(818, 723);
+            dataGridView1.Size = new Size(716, 542);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
@@ -88,10 +86,9 @@
             button1.FlatAppearance.BorderSize = 2;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(152, 807);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(133, 605);
             button1.Name = "button1";
-            button1.Size = new Size(145, 65);
+            button1.Size = new Size(127, 49);
             button1.TabIndex = 2;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = true;
@@ -102,10 +99,9 @@
             button2.FlatAppearance.BorderSize = 2;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(530, 807);
-            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Location = new Point(464, 605);
             button2.Name = "button2";
-            button2.Size = new Size(145, 65);
+            button2.Size = new Size(127, 49);
             button2.TabIndex = 3;
             button2.Text = "Delete";
             button2.UseVisualStyleBackColor = true;
@@ -115,38 +111,21 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.Controls.Add(dataGridView1);
-            panel1.Location = new Point(8, 71);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(7, 53);
             panel1.Name = "panel1";
-            panel1.Size = new Size(818, 723);
+            panel1.Size = new Size(716, 542);
             panel1.TabIndex = 4;
-            // 
-            // button3
-            // 
-            button3.FlatAppearance.BorderSize = 2;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(343, 807);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(145, 65);
-            button3.TabIndex = 5;
-            button3.Text = "Convert";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
             // 
             // TeacherForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(840, 888);
-            Controls.Add(button3);
+            ClientSize = new Size(735, 666);
             Controls.Add(panel1);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "TeacherForm";
             Text = "TeacherForm";
             Load += TeacherForm_Load;
@@ -164,7 +143,6 @@
         private Button button1;
         private Button button2;
         private Panel panel1;
-        private Button button3;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
