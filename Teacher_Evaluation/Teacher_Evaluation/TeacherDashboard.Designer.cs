@@ -34,8 +34,6 @@
             panel2 = new Panel();
             label2 = new Label();
             panel3 = new Panel();
-            panel10 = new Panel();
-            button1 = new Button();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel8 = new Panel();
             dataGridView1 = new DataGridView();
@@ -55,10 +53,11 @@
             panel7 = new Panel();
             label13 = new Label();
             label6 = new Label();
+            panel10 = new Panel();
+            button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
-            panel10.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -67,6 +66,7 @@
             panel5.SuspendLayout();
             panel6.SuspendLayout();
             panel7.SuspendLayout();
+            panel10.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -138,32 +138,6 @@
             panel3.Size = new Size(819, 399);
             panel3.TabIndex = 2;
             panel3.Paint += panel3_Paint;
-            // 
-            // panel10
-            // 
-            panel10.BackColor = Color.FromArgb(232, 188, 27);
-            panel10.Controls.Add(button1);
-            panel10.Dock = DockStyle.Bottom;
-            panel10.Location = new Point(0, 512);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(819, 41);
-            panel10.TabIndex = 3;
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            button1.BackColor = Color.Transparent;
-            button1.FlatAppearance.BorderSize = 2;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(362, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(109, 35);
-            button1.TabIndex = 2;
-            button1.Text = "Log Out";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
             // tableLayoutPanel2
             // 
@@ -394,6 +368,32 @@
             label6.TabIndex = 3;
             label6.Text = "Credit Score:";
             // 
+            // panel10
+            // 
+            panel10.BackColor = Color.FromArgb(232, 188, 27);
+            panel10.Controls.Add(button1);
+            panel10.Dock = DockStyle.Bottom;
+            panel10.Location = new Point(0, 512);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(819, 41);
+            panel10.TabIndex = 3;
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            button1.BackColor = Color.Transparent;
+            button1.FlatAppearance.BorderSize = 2;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Black;
+            button1.Location = new Point(362, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(109, 35);
+            button1.TabIndex = 2;
+            button1.Text = "Log Out";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // TeacherDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -411,7 +411,6 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
-            panel10.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
@@ -425,6 +424,7 @@
             panel6.PerformLayout();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
+            panel10.ResumeLayout(false);
             ResumeLayout(false);
         }
 

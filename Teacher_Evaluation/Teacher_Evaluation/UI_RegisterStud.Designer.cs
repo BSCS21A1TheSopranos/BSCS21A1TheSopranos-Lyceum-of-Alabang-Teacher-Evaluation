@@ -56,9 +56,10 @@
             button1.FlatAppearance.BorderSize = 5;
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(608, 407);
+            button1.Location = new Point(532, 305);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(251, 41);
+            button1.Size = new Size(220, 31);
             button1.TabIndex = 0;
             button1.Text = "Register";
             button1.UseVisualStyleBackColor = false;
@@ -69,9 +70,9 @@
             label1.AutoSize = true;
             label1.BackColor = SystemColors.ActiveCaption;
             label1.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(283, 12);
+            label1.Location = new Point(248, 9);
             label1.Name = "label1";
-            label1.Size = new Size(0, 32);
+            label1.Size = new Size(0, 25);
             label1.TabIndex = 1;
             // 
             // label3
@@ -79,9 +80,9 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(41, 53);
+            label3.Location = new Point(36, 40);
             label3.Name = "label3";
-            label3.Size = new Size(243, 69);
+            label3.Size = new Size(197, 55);
             label3.TabIndex = 3;
             label3.Text = "Student";
             // 
@@ -90,9 +91,9 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Microsoft Sans Serif", 36.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(41, 203);
+            label4.Location = new Point(36, 152);
             label4.Name = "label4";
-            label4.Size = new Size(179, 71);
+            label4.Size = new Size(143, 57);
             label4.TabIndex = 4;
             label4.Text = "Form";
             // 
@@ -101,9 +102,9 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(41, 125);
+            label2.Location = new Point(36, 94);
             label2.Name = "label2";
-            label2.Size = new Size(360, 69);
+            label2.Size = new Size(292, 55);
             label2.TabIndex = 2;
             label2.Text = "Registration";
             // 
@@ -111,43 +112,43 @@
             // 
             label5.BackColor = Color.FromArgb(31, 51, 92);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(474, -47);
+            label5.Location = new Point(415, -35);
             label5.Name = "label5";
-            label5.Size = new Size(526, 741);
+            label5.Size = new Size(460, 556);
             label5.TabIndex = 9;
             label5.Click += label5_Click;
             // 
             // label6
             // 
             label6.BackColor = SystemColors.ScrollBar;
-            label6.Location = new Point(522, 69);
+            label6.Location = new Point(457, 52);
             label6.Name = "label6";
-            label6.Size = new Size(400, 527);
+            label6.Size = new Size(350, 395);
             label6.TabIndex = 10;
             // 
             // label7
             // 
             label7.BackColor = Color.FromArgb(189, 189, 189);
-            label7.Location = new Point(522, 69);
+            label7.Location = new Point(457, 52);
             label7.Name = "label7";
-            label7.Size = new Size(400, 517);
+            label7.Size = new Size(350, 388);
             label7.TabIndex = 11;
             // 
             // label8
             // 
             label8.BorderStyle = BorderStyle.FixedSingle;
-            label8.Location = new Point(522, 53);
+            label8.Location = new Point(457, 40);
             label8.Name = "label8";
-            label8.Size = new Size(400, 518);
+            label8.Size = new Size(350, 389);
             label8.TabIndex = 12;
             // 
             // label9
             // 
             label9.BackColor = SystemColors.ControlLightLight;
             label9.BorderStyle = BorderStyle.FixedSingle;
-            label9.Location = new Point(522, 53);
+            label9.Location = new Point(457, 40);
             label9.Name = "label9";
-            label9.Size = new Size(400, 73);
+            label9.Size = new Size(350, 55);
             label9.TabIndex = 13;
             // 
             // label10
@@ -155,9 +156,9 @@
             label10.AutoSize = true;
             label10.BackColor = Color.White;
             label10.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(617, 69);
+            label10.Location = new Point(540, 52);
             label10.Name = "label10";
-            label10.Size = new Size(211, 29);
+            label10.Size = new Size(170, 24);
             label10.TabIndex = 14;
             label10.Text = "Register Account\r\n";
             // 
@@ -169,9 +170,10 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.SteelBlue;
-            button2.Location = new Point(666, 454);
+            button2.Location = new Point(583, 340);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(137, 41);
+            button2.Size = new Size(120, 31);
             button2.TabIndex = 17;
             button2.Text = "Cancel?\r\n";
             button2.UseVisualStyleBackColor = false;
@@ -183,10 +185,11 @@
             textBox6.BorderStyle = BorderStyle.FixedSingle;
             textBox6.Font = new Font("Microsoft Sans Serif", 11.25F);
             textBox6.ForeColor = Color.DimGray;
-            textBox6.Location = new Point(562, 203);
+            textBox6.Location = new Point(492, 152);
+            textBox6.Margin = new Padding(3, 2, 3, 2);
             textBox6.Name = "textBox6";
             textBox6.PlaceholderText = "Student ID";
-            textBox6.Size = new Size(319, 29);
+            textBox6.Size = new Size(279, 24);
             textBox6.TabIndex = 19;
             // 
             // textBox7
@@ -195,10 +198,11 @@
             textBox7.BorderStyle = BorderStyle.FixedSingle;
             textBox7.Font = new Font("Microsoft Sans Serif", 11.25F);
             textBox7.ForeColor = Color.DimGray;
-            textBox7.Location = new Point(562, 271);
+            textBox7.Location = new Point(492, 203);
+            textBox7.Margin = new Padding(3, 2, 3, 2);
             textBox7.Name = "textBox7";
             textBox7.PlaceholderText = "Password";
-            textBox7.Size = new Size(322, 29);
+            textBox7.Size = new Size(282, 24);
             textBox7.TabIndex = 20;
             // 
             // textBox8
@@ -207,20 +211,20 @@
             textBox8.BorderStyle = BorderStyle.FixedSingle;
             textBox8.Font = new Font("Microsoft Sans Serif", 11.25F);
             textBox8.ForeColor = Color.DimGray;
-            textBox8.Location = new Point(560, 339);
+            textBox8.Location = new Point(490, 254);
+            textBox8.Margin = new Padding(3, 2, 3, 2);
             textBox8.Name = "textBox8";
             textBox8.PlaceholderText = "Confirm Password";
-            textBox8.Size = new Size(321, 29);
+            textBox8.Size = new Size(281, 24);
             textBox8.TabIndex = 21;
             textBox8.TextChanged += textBox8_TextChanged;
             // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(866, 375);
-            checkBox1.Margin = new Padding(3, 4, 3, 4);
+            checkBox1.Location = new Point(758, 281);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(18, 17);
+            checkBox1.Size = new Size(15, 14);
             checkBox1.TabIndex = 22;
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
@@ -231,9 +235,9 @@
             notif3.BackColor = SystemColors.ControlLight;
             notif3.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             notif3.ForeColor = Color.Firebrick;
-            notif3.Location = new Point(562, 371);
+            notif3.Location = new Point(492, 278);
             notif3.Name = "notif3";
-            notif3.Size = new Size(77, 17);
+            notif3.Size = new Size(68, 13);
             notif3.TabIndex = 28;
             notif3.Text = "pogi si paul";
             notif3.TextAlign = ContentAlignment.TopCenter;
@@ -246,9 +250,9 @@
             notif1.BackColor = SystemColors.ControlLight;
             notif1.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             notif1.ForeColor = Color.Firebrick;
-            notif1.Location = new Point(682, 235);
+            notif1.Location = new Point(597, 176);
             notif1.Name = "notif1";
-            notif1.Size = new Size(77, 17);
+            notif1.Size = new Size(68, 13);
             notif1.TabIndex = 29;
             notif1.Text = "pogi si paul";
             notif1.Visible = false;
@@ -259,20 +263,20 @@
             notif2.BackColor = SystemColors.ControlLight;
             notif2.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             notif2.ForeColor = Color.Firebrick;
-            notif2.Location = new Point(682, 303);
+            notif2.Location = new Point(597, 227);
             notif2.Name = "notif2";
-            notif2.Size = new Size(77, 17);
+            notif2.Size = new Size(68, 13);
             notif2.TabIndex = 31;
             notif2.Text = "pogi si paul";
             notif2.Visible = false;
             // 
             // UI_RegisterStud
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.load_blurred;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(953, 629);
+            ClientSize = new Size(834, 472);
             Controls.Add(notif2);
             Controls.Add(notif1);
             Controls.Add(notif3);
@@ -293,6 +297,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             DoubleBuffered = true;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "UI_RegisterStud";
             Text = "UI_RegisterStud";
             ResumeLayout(false);

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            mainpanel = new Panel();
             label1 = new Label();
             button5 = new Button();
             panel1 = new Panel();
@@ -36,19 +35,11 @@
             button2 = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
+            mainpanel = new Panel();
             panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // mainpanel
-            // 
-            mainpanel.Location = new Point(280, 39);
-            mainpanel.Name = "mainpanel";
-            mainpanel.Size = new Size(735, 666);
-            mainpanel.TabIndex = 2;
-            mainpanel.Paint += mainpanel_Paint_1;
-            mainpanel.Resize += mainpanel_Resize;
             // 
             // label1
             // 
@@ -162,13 +153,21 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // mainpanel
+            // 
+            mainpanel.Location = new Point(280, 0);
+            mainpanel.Name = "mainpanel";
+            mainpanel.Size = new Size(735, 666);
+            mainpanel.TabIndex = 2;
+            mainpanel.Paint += mainpanel_Paint_1;
+            mainpanel.Resize += mainpanel_Resize;
+            // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(232, 188, 27);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(280, 0);
+            panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(735, 33);
+            panel2.Size = new Size(1015, 11);
             panel2.TabIndex = 3;
             // 
             // Admin
@@ -189,7 +188,6 @@
         }
 
         #endregion
-        private Panel mainpanel;
         private Label label1;
         private Button button5;
         private Panel panel1;
@@ -197,6 +195,7 @@
         private Button button2;
         private Button button1;
         private PictureBox pictureBox1;
+        private Panel mainpanel;
         private Panel panel2;
     }
 }
