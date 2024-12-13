@@ -41,6 +41,11 @@ namespace ClassLibrary1
         {
             Students.Add(newStudent.StudentID, newStudent);
         }
+
+        public static string CountAllStudents()
+        {
+            return Students.Count.ToString();
+        }
     }
 
 }
