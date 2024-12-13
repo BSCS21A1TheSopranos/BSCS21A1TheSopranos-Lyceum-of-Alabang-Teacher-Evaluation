@@ -29,6 +29,7 @@ namespace Teacher_Evaluation
 
             stdCount.Text = StudentDataHolder.CountAllStudents();
             doneStd.Text = StudentTeacherData.CountStudentsDoneWithAllProfessors();
+            teacherCount.Text = TeacherDataHolder.CountTeachers();
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -55,5 +56,6 @@ namespace Teacher_Evaluation
         {
 
         }
+
     }
 }
