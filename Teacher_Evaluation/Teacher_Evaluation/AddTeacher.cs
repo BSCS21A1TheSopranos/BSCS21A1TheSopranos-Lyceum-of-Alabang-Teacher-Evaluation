@@ -9,10 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClassLibrary1;
+using Services;
 
 namespace Teacher_Evaluation
 {
-    
+
     public partial class AddTeacher : Form
     {
 
@@ -31,14 +32,34 @@ namespace Teacher_Evaluation
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            TeacherDataHolder.AddTeacherToDictionary(textBox2.Text, textBox3.Text, textBox1.Text, textBox2.Text);
-            MSAcessDataSaveandRetrieve mS = new MSAcessDataSaveandRetrieve();
-            mS.SaveAllTeachers();
+            Validation valid = new Validation();
+            if (valid.validID(textBox2.Text))
+            {
+                if(!TeacherDataHolder.AddTeacherToDictionary(textBox2.Text, textBox3.Text, textBox1.Text, textBox2.Text))
+                {
+                    label5.Visible = true;
+                }
+                else
+                {
+                    MSAcessDataSaveandRetrieve mS = new MSAcessDataSaveandRetrieve();
+                    mS.SaveAllTeachers();
 
 
-            TeacherAdded?.Invoke();
+                    TeacherAdded?.Invoke();
 
-            this.Close();
+                    this.Close();
+                }
+                
+            }
+
+
+
+
+
+
+
+
+
 
         }
 
@@ -48,6 +69,21 @@ namespace Teacher_Evaluation
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
