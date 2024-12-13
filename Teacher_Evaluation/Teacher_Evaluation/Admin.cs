@@ -134,7 +134,21 @@ namespace Teacher_Evaluation
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult response = MessageBox.Show(
+            "Are you sure that you want to exit the application?",
+            "EXIT THE APP",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+            );
+
+            if (response == DialogResult.Yes)
+            {
+                LoginForm loginForm = new LoginForm();
+                this.Hide();
+                loginForm.ShowDialog();
+            }
+
         }
     }
+    
 }
