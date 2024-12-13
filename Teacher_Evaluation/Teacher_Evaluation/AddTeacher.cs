@@ -35,7 +35,7 @@ namespace Teacher_Evaluation
             Validation valid = new Validation();
             if (valid.validID(textBox2.Text))
             {
-                if(!TeacherDataHolder.AddTeacherToDictionary(textBox2.Text, textBox3.Text, textBox1.Text, textBox2.Text))
+                if (!TeacherDataHolder.AddTeacherToDictionary(textBox2.Text, textBox3.Text, textBox1.Text, textBox2.Text))
                 {
                     label5.Visible = true;
                 }
@@ -49,7 +49,7 @@ namespace Teacher_Evaluation
 
                     this.Close();
                 }
-                
+
             }
 
 
@@ -84,6 +84,21 @@ namespace Teacher_Evaluation
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IDwarning_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NameWarning_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmailWarning_Click(object sender, EventArgs e)
         {
 
         }
