@@ -43,12 +43,13 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Emoji", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 15);
+            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(31, 51, 92);
+            label1.Location = new Point(7, 19);
             label1.Name = "label1";
-            label1.Size = new Size(204, 26);
+            label1.Size = new Size(196, 24);
             label1.TabIndex = 0;
-            label1.Text = "Teacher's  Masterlist";
+            label1.Text = "Teacher's Masterlist";
             // 
             // dataGridView1
             // 
@@ -86,6 +87,7 @@
             button1.FlatAppearance.BorderSize = 2;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.FromArgb(31, 51, 92);
             button1.Location = new Point(133, 605);
             button1.Name = "button1";
             button1.Size = new Size(127, 49);
@@ -99,6 +101,7 @@
             button2.FlatAppearance.BorderSize = 2;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.FromArgb(31, 51, 92);
             button2.Location = new Point(464, 605);
             button2.Name = "button2";
             button2.Size = new Size(127, 49);
