@@ -1,4 +1,5 @@
 ﻿using ClassLibrary1;
+using Microsoft.VisualBasic.Logging;
 using Services;
 using System;
 using System.Collections.Generic;
@@ -42,7 +43,20 @@ namespace Teacher_Evaluation
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            DialogResult response = MessageBox.Show(
+            "Are you sure that you want to exit the application?",
+            "EXIT THE APP",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+);
+
+            if (response == DialogResult.Yes)
+            {
+                LoginForm loginForm = new LoginForm();
+                this.Hide();
+                loginForm.ShowDialog();
+            }
+
         }
 
         private void TeacherDashboard_Load(object sender, EventArgs e)
