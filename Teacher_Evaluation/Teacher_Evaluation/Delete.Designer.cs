@@ -69,6 +69,7 @@
             button2.TabIndex = 4;
             button2.Text = "CANCEL";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Delete
             // 

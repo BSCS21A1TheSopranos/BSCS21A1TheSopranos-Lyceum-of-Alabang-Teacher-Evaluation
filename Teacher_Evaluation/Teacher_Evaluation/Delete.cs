@@ -25,7 +25,7 @@ namespace Teacher_Evaluation
 
         private void Delete_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -35,17 +35,15 @@ namespace Teacher_Evaluation
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (var teacher in StudentTeacherData.studentTeacherData["2022-18"])
-            {
-                MessageBox.Show(teacher.Subject, teacher.ProfID);
-            }
             TeacherDataHolder.DeleteTeacherFromDictionary(textBox1.Text);
             MSAcessDataSaveandRetrieve ms = new MSAcessDataSaveandRetrieve();
             ms.SaveAllTeachers();
-            foreach (var teacher in StudentTeacherData.studentTeacherData["2022-18"])
-            {
-            MessageBox.Show(teacher.Subject, teacher.ProfID);
-            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
