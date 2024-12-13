@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClassLibrary1;
+using Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +15,18 @@ namespace Teacher_Evaluation
 {
     public partial class Feedback : Form
     {
-        public Feedback()
-        {
-            InitializeComponent();
+
+        private string teacherid;
+        private string teachername;
+        private string studentid;
+
+
+    public Feedback(string teacherid, string teachername, string studentid)
+    {
+                this.teacherid = teacherid;
+                this.teachername = teachername;
+                this.studentid = studentid;
+                InitializeComponent();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -36,6 +47,12 @@ namespace Teacher_Evaluation
             {
                 label3.Text = sentiment;
             }
+            string currentDateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            StudentTeacherData.UpdateStatusInDictionary(studentid, teacherid);
+            TeacherFeedbackService.AddFeedback(teacherid, textBox1.Text, sentiment, currentDateTime);
+            StudentTeachers form1 = new StudentTeachers(studentid);
+            form1.Show();
+            this.Close();
         }
 
         private string AnalyzeSentiment(string text)
