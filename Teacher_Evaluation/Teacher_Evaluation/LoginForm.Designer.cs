@@ -65,13 +65,13 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Book Antiqua", 27F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 27F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(31, 51, 92);
             label1.Location = new Point(288, 33);
             label1.Margin = new Padding(0);
             label1.Name = "label1";
             label1.Padding = new Padding(0, 7, 0, 0);
-            label1.Size = new Size(187, 60);
+            label1.Size = new Size(194, 59);
             label1.TabIndex = 0;
             label1.Text = "Teacher";
             label1.Click += label1_Click;
@@ -132,13 +132,13 @@
             button1.BackColor = Color.FromArgb(243, 196, 27);
             button1.BackgroundImageLayout = ImageLayout.Center;
             button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Book Antiqua", 11.25F, FontStyle.Bold);
+            button1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold);
             button1.ForeColor = Color.Black;
             button1.Location = new Point(310, 623);
             button1.Name = "button1";
             button1.Size = new Size(329, 43);
             button1.TabIndex = 10;
-            button1.Text = "Create an Account";
+            button1.Text = "Register\r\n";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -147,7 +147,7 @@
             button2.BackColor = Color.FromArgb(31, 51, 92);
             button2.BackgroundImageLayout = ImageLayout.None;
             button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Book Antiqua", 11.25F, FontStyle.Bold);
+            button2.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold);
             button2.ForeColor = SystemColors.Control;
             button2.Location = new Point(311, 456);
             button2.Name = "button2";
@@ -183,12 +183,12 @@
             label10.AutoSize = true;
             label10.BackColor = Color.Transparent;
             label10.FlatStyle = FlatStyle.Flat;
-            label10.Font = new Font("Book Antiqua", 27F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Font = new Font("Microsoft Sans Serif", 27F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.FromArgb(232, 188, 27);
             label10.Location = new Point(467, 40);
             label10.Margin = new Padding(0);
             label10.Name = "label10";
-            label10.Size = new Size(245, 53);
+            label10.Size = new Size(243, 52);
             label10.TabIndex = 17;
             label10.Text = "Evaluation";
             label10.TextAlign = ContentAlignment.TopCenter;
@@ -241,7 +241,7 @@
             button3.BackgroundImageLayout = ImageLayout.None;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Book Antiqua", 11.25F, FontStyle.Bold);
+            button3.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold);
             button3.ForeColor = Color.SteelBlue;
             button3.Location = new Point(310, 505);
             button3.Name = "button3";
@@ -249,15 +249,16 @@
             button3.TabIndex = 22;
             button3.Text = "Forgot Password?";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.BackColor = Color.White;
-            label11.Font = new Font("Book Antiqua", 14.25F, FontStyle.Bold);
+            label11.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
             label11.Location = new Point(367, 113);
             label11.Name = "label11";
-            label11.Size = new Size(211, 28);
+            label11.Size = new Size(221, 29);
             label11.TabIndex = 23;
             label11.Text = "Log In to Evaluate";
             // 
@@ -285,7 +286,7 @@
             // 
             textBox5.BackColor = Color.White;
             textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Font = new Font("Arial Narrow", 11.25F);
+            textBox5.Font = new Font("Microsoft Sans Serif", 11.25F);
             textBox5.ForeColor = Color.DimGray;
             textBox5.Location = new Point(311, 275);
             textBox5.Name = "textBox5";
@@ -297,7 +298,7 @@
             // textBox6
             // 
             textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Font = new Font("Arial Narrow", 11.25F);
+            textBox6.Font = new Font("Microsoft Sans Serif", 11.25F);
             textBox6.ForeColor = Color.DimGray;
             textBox6.Location = new Point(310, 336);
             textBox6.Name = "textBox6";

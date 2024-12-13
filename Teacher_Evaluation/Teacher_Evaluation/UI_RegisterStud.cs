@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using ClassLibrary1;
+using Services;
 namespace Teacher_Evaluation
 {
     public partial class UI_RegisterStud : Form
@@ -20,28 +21,28 @@ namespace Teacher_Evaluation
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Student student = new Student(textBox6.Text, textBox7.Text, textBox8.Text, "Student");
+            Validation validation = new Validation();
             RegistrationClass registration = new RegistrationClass();
             LoginForm loginForm = new LoginForm();
 
-            if (!registration.validstudentNo(student))
+            if (!validation.validID(textBox6.Text))
             {
                 notif1.Visible = true;
                 notif1.Text = "Account Not Found";
             }
-            if (!registration.checkpassword(student))
+            if (!validation.checkpassword(textBox7.Text, textBox6.Text))
             {
                 notif2.Visible = true;
                 notif2.Text = "Wrong Password";
             }
-            if (!registration.validpaassword(textBox8.Text))
+            if (!validation.validpaassword(textBox8.Text))
             {
                 notif3.Visible = true;
-                notif3.Text = "Minimum of 8 characters";
+                notif3.Text = "Password must be 8+ characters with uppercase, lowercase, number, and (@$!%*?&).";
             }
-            if (registration.validstudentNo(student) && (registration.validpaassword(textBox8.Text)) && (registration.checkpassword(student)))
+            if (validation.validID(textBox6.Text) && (validation.validpaassword(textBox8.Text)) && (validation.checkpassword(textBox7.Text, textBox6.Text)))
             {
-                registration.encryptpassword(textBox8.Text, student);
+                Student student = new Student(textBox6.Text, validation.encryptpassword(textBox8.Text), StudentDataHolder.Students[textBox6.Text].Email, "Student");
                 RegistrationClass.Update(student);
                 loginForm.Show();
                 this.Close();

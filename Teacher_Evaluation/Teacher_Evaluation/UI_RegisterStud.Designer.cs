@@ -40,7 +40,6 @@
             label9 = new Label();
             label10 = new Label();
             button2 = new Button();
-            textBox5 = new TextBox();
             textBox6 = new TextBox();
             textBox7 = new TextBox();
             textBox8 = new TextBox();
@@ -57,7 +56,7 @@
             button1.FlatAppearance.BorderSize = 5;
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(591, 432);
+            button1.Location = new Point(608, 407);
             button1.Name = "button1";
             button1.Size = new Size(251, 41);
             button1.TabIndex = 0;
@@ -158,9 +157,9 @@
             label10.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.Location = new Point(617, 69);
             label10.Name = "label10";
-            label10.Size = new Size(264, 29);
+            label10.Size = new Size(211, 29);
             label10.TabIndex = 14;
-            label10.Text = "Create a new account";
+            label10.Text = "Register Account\r\n";
             // 
             // button2
             // 
@@ -170,26 +169,13 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.SteelBlue;
-            button2.Location = new Point(591, 496);
+            button2.Location = new Point(666, 454);
             button2.Name = "button2";
-            button2.Size = new Size(251, 41);
+            button2.Size = new Size(137, 41);
             button2.TabIndex = 17;
-            button2.Text = "Already have an account?";
+            button2.Text = "Cancel?\r\n";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
-            // 
-            // textBox5
-            // 
-            textBox5.BackColor = Color.White;
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Font = new Font("Microsoft Sans Serif", 11.25F);
-            textBox5.ForeColor = Color.DimGray;
-            textBox5.Location = new Point(562, 165);
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Enter Name";
-            textBox5.Size = new Size(319, 29);
-            textBox5.TabIndex = 18;
-            textBox5.TextChanged += textBox5_TextChanged;
             // 
             // textBox6
             // 
@@ -197,7 +183,7 @@
             textBox6.BorderStyle = BorderStyle.FixedSingle;
             textBox6.Font = new Font("Microsoft Sans Serif", 11.25F);
             textBox6.ForeColor = Color.DimGray;
-            textBox6.Location = new Point(562, 228);
+            textBox6.Location = new Point(562, 203);
             textBox6.Name = "textBox6";
             textBox6.PlaceholderText = "Student ID";
             textBox6.Size = new Size(319, 29);
@@ -209,7 +195,7 @@
             textBox7.BorderStyle = BorderStyle.FixedSingle;
             textBox7.Font = new Font("Microsoft Sans Serif", 11.25F);
             textBox7.ForeColor = Color.DimGray;
-            textBox7.Location = new Point(562, 303);
+            textBox7.Location = new Point(562, 271);
             textBox7.Name = "textBox7";
             textBox7.PlaceholderText = "Password";
             textBox7.Size = new Size(322, 29);
@@ -221,7 +207,7 @@
             textBox8.BorderStyle = BorderStyle.FixedSingle;
             textBox8.Font = new Font("Microsoft Sans Serif", 11.25F);
             textBox8.ForeColor = Color.DimGray;
-            textBox8.Location = new Point(562, 371);
+            textBox8.Location = new Point(560, 339);
             textBox8.Name = "textBox8";
             textBox8.PlaceholderText = "Confirm Password";
             textBox8.Size = new Size(321, 29);
@@ -231,7 +217,7 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(866, 407);
+            checkBox1.Location = new Point(866, 375);
             checkBox1.Margin = new Padding(3, 4, 3, 4);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(18, 17);
@@ -245,11 +231,12 @@
             notif3.BackColor = SystemColors.ControlLight;
             notif3.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             notif3.ForeColor = Color.Firebrick;
-            notif3.Location = new Point(682, 407);
+            notif3.Location = new Point(562, 371);
             notif3.Name = "notif3";
             notif3.Size = new Size(77, 17);
             notif3.TabIndex = 28;
             notif3.Text = "pogi si paul";
+            notif3.TextAlign = ContentAlignment.TopCenter;
             notif3.Visible = false;
             notif3.Click += notif_Click;
             // 
@@ -259,7 +246,7 @@
             notif1.BackColor = SystemColors.ControlLight;
             notif1.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             notif1.ForeColor = Color.Firebrick;
-            notif1.Location = new Point(682, 270);
+            notif1.Location = new Point(682, 235);
             notif1.Name = "notif1";
             notif1.Size = new Size(77, 17);
             notif1.TabIndex = 29;
@@ -272,7 +259,7 @@
             notif2.BackColor = SystemColors.ControlLight;
             notif2.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             notif2.ForeColor = Color.Firebrick;
-            notif2.Location = new Point(682, 335);
+            notif2.Location = new Point(682, 303);
             notif2.Name = "notif2";
             notif2.Size = new Size(77, 17);
             notif2.TabIndex = 31;
@@ -293,7 +280,6 @@
             Controls.Add(textBox8);
             Controls.Add(textBox7);
             Controls.Add(textBox6);
-            Controls.Add(textBox5);
             Controls.Add(button2);
             Controls.Add(label3);
             Controls.Add(label10);
@@ -327,7 +313,6 @@
         private Label label9;
         private Label label10;
         private Button button2;
-        private TextBox textBox5;
         private TextBox textBox6;
         private TextBox textBox7;
         private TextBox textBox8;

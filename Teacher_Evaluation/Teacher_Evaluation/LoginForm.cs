@@ -31,7 +31,7 @@ namespace Teacher_Evaluation
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,14 +52,14 @@ namespace Teacher_Evaluation
 
             else
             {
-                
+
                 fillAreaStudentID.Visible = false;
                 fillAreaPass.Visible = false;
             }
 
             if (string.IsNullOrWhiteSpace(textBox5.Text))
             {
-                
+
                 fillAreaStudentID.Visible = true;
                 return;
             }
@@ -74,11 +74,11 @@ namespace Teacher_Evaluation
             if (string.IsNullOrWhiteSpace(textBox6.Text))
             {
                 fillAreaPass.Visible = true;
-                
+
                 return;
             }
 
-           
+
 
             if (string.IsNullOrWhiteSpace(textBox5.Text))
             {
@@ -94,12 +94,11 @@ namespace Teacher_Evaluation
 
             else
             {
-               
+
                 fillAreaStudentID.Visible = false;
                 fillAreaPass.Visible = false;
             }
-            MSAcessDataSaveandRetrieve mSAcessDataSaveandRetrieve = new MSAcessDataSaveandRetrieve();
-            mSAcessDataSaveandRetrieve.SaveStudents();
+
             LoginClass login = new LoginClass(textBox5.Text);
 
             if (login.checkStudent())
@@ -130,7 +129,7 @@ namespace Teacher_Evaluation
                 {
                     notif.Visible = true;
                     notif.Text = "Password or Student ID mismatch";
-                  
+
                     textBox5.Clear();
                     textBox6.Clear();
                 }
@@ -139,7 +138,7 @@ namespace Teacher_Evaluation
             {
                 notif.Visible = true;
                 notif.Text = "Invalid account";
-              
+
                 textBox5.Clear();
                 textBox6.Clear();
             }
@@ -184,7 +183,7 @@ namespace Teacher_Evaluation
 
         }
 
-        
+
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
@@ -194,7 +193,12 @@ namespace Teacher_Evaluation
         private void textBox6_TextChanged_1(object sender, EventArgs e)
         {
             fillAreaPass.Visible = false;
-            
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Contact Mister Paul :} ");
         }
     }
 }
