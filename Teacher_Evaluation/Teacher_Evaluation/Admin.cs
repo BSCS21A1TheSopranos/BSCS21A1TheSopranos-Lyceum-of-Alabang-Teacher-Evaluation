@@ -152,7 +152,12 @@ namespace Teacher_Evaluation
 
         private void button7_Click(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void Admin_Load_2(object sender, EventArgs e)
+        {
+            LoadForm(new Dashboard());
         }
     }
 
