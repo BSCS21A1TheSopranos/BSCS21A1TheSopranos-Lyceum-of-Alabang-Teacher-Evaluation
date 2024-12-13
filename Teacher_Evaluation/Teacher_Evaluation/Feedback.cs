@@ -45,14 +45,14 @@ namespace Teacher_Evaluation
             }
             else
             {
-                label3.Text = sentiment;
+                string currentDateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                StudentTeacherData.UpdateStatusInDictionary(studentid, teacherid);
+                TeacherFeedbackService.AddFeedback(teacherid, textBox1.Text, sentiment, currentDateTime);
+                StudentTeachers form1 = new StudentTeachers(studentid);
+                form1.Show();
+                this.Close();
             }
-            string currentDateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            StudentTeacherData.UpdateStatusInDictionary(studentid, teacherid);
-            TeacherFeedbackService.AddFeedback(teacherid, textBox1.Text, sentiment, currentDateTime);
-            StudentTeachers form1 = new StudentTeachers(studentid);
-            form1.Show();
-            this.Close();
+            
         }
 
         private string AnalyzeSentiment(string text)
