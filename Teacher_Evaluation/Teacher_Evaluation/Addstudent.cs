@@ -21,20 +21,21 @@ namespace Teacher_Evaluation
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+
             Validation validationClass = new Validation();
-
-
-
-            if (textBox3.Text != textBox4.Text)
+            if (validationClass.validID(textBox1.Text))
             {
-                notif.Text = ("Password and Confirm Password Mismatch");
-            }
-            else
-            {
-                var newstudent = new Student(textBox1.Text, validationClass.encryptpassword(textBox3.Text), textBox2.Text, "Student");
-                StudentDataHolder.AddStudent(newstudent);
-                MSAcessDataSaveandRetrieve ms = new MSAcessDataSaveandRetrieve();
-                ms.SaveStudents();
+                if (textBox3.Text != textBox4.Text)
+                {
+                    notif.Text = ("Password and Confirm Password Mismatch");
+                }
+                else
+                {
+                    var newstudent = new Student(textBox1.Text, validationClass.encryptpassword(textBox3.Text), textBox2.Text, "Student");
+                    StudentDataHolder.AddStudent(newstudent);
+                    MSAcessDataSaveandRetrieve ms = new MSAcessDataSaveandRetrieve();
+                    ms.SaveStudents();
+                }
             }
         }
 
