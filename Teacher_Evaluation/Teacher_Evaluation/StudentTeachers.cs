@@ -1,4 +1,5 @@
 ﻿using ClassLibrary1;
+using Microsoft.VisualBasic.Logging;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -49,7 +50,19 @@ namespace Teacher_Evaluation
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult response = MessageBox.Show(
+            "Are you sure that you want to exit the application?",
+            "EXIT THE APP",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+);
+
+            if (response == DialogResult.Yes)
+            {
+                LoginForm loginForm = new LoginForm();
+                this.Hide();
+                loginForm.Show();
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

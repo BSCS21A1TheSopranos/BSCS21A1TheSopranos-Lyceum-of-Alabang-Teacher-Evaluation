@@ -32,9 +32,6 @@
     <Compile Update="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="LOGIN.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
