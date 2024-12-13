@@ -28,5 +28,10 @@ namespace Teacher_Evaluation
         {
             StudentTeacherData.AddStudentTeacherRecord(studentID, textBox1.Text, textBox3.Text);
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
