@@ -44,6 +44,9 @@
             NameWarning = new Label();
             EmailWarning = new Label();
             pictureBox3 = new PictureBox();
+            label6 = new Label();
+            SetPword = new TextBox();
+            setPass = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -65,9 +68,9 @@
             label2.Font = new Font("Microsoft Sans Serif", 11.25F);
             label2.Location = new Point(17, 201);
             label2.Name = "label2";
-            label2.Size = new Size(160, 24);
+            label2.Size = new Size(161, 24);
             label2.TabIndex = 2;
-            label2.Text = "Enter professor ID";
+            label2.Text = "Enter Professor ID";
             // 
             // textBox3
             // 
@@ -97,7 +100,7 @@
             buttonAdd.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             buttonAdd.FlatAppearance.BorderSize = 2;
             buttonAdd.Font = new Font("Microsoft Sans Serif", 11.25F);
-            buttonAdd.Location = new Point(338, 511);
+            buttonAdd.Location = new Point(329, 582);
             buttonAdd.Margin = new Padding(3, 4, 3, 4);
             buttonAdd.Name = "buttonAdd";
             buttonAdd.Size = new Size(211, 39);
@@ -110,7 +113,7 @@
             // 
             button1.FlatAppearance.BorderSize = 2;
             button1.Font = new Font("Microsoft Sans Serif", 11.25F);
-            button1.Location = new Point(50, 511);
+            button1.Location = new Point(41, 582);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(211, 39);
@@ -163,11 +166,11 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 11.25F);
-            label4.Location = new Point(120, 391);
+            label4.Location = new Point(71, 387);
             label4.Name = "label4";
-            label4.Size = new Size(57, 24);
+            label4.Size = new Size(107, 24);
             label4.TabIndex = 17;
-            label4.Text = "Email";
+            label4.Text = "Enter Email";
             // 
             // label5
             // 
@@ -188,9 +191,9 @@
             IDwarning.ForeColor = Color.Firebrick;
             IDwarning.Location = new Point(329, 229);
             IDwarning.Name = "IDwarning";
-            IDwarning.Size = new Size(122, 17);
+            IDwarning.Size = new Size(154, 17);
             IDwarning.TabIndex = 19;
-            IDwarning.Text = "Please Fill This Area\r\n";
+            IDwarning.Text = "Required to Fill This Area\r\n";
             IDwarning.Visible = false;
             IDwarning.Click += IDwarning_Click;
             // 
@@ -201,9 +204,9 @@
             NameWarning.ForeColor = Color.Firebrick;
             NameWarning.Location = new Point(329, 324);
             NameWarning.Name = "NameWarning";
-            NameWarning.Size = new Size(122, 17);
+            NameWarning.Size = new Size(154, 17);
             NameWarning.TabIndex = 20;
-            NameWarning.Text = "Please Fill This Area\r\n";
+            NameWarning.Text = "Required to Fill This Area\r\n";
             NameWarning.Visible = false;
             NameWarning.Click += NameWarning_Click;
             // 
@@ -214,27 +217,62 @@
             EmailWarning.ForeColor = Color.Firebrick;
             EmailWarning.Location = new Point(329, 419);
             EmailWarning.Name = "EmailWarning";
-            EmailWarning.Size = new Size(122, 17);
+            EmailWarning.Size = new Size(154, 17);
             EmailWarning.TabIndex = 21;
-            EmailWarning.Text = "Please Fill This Area\r\n";
+            EmailWarning.Text = "Required to Fill This Area\r\n";
             EmailWarning.Visible = false;
             EmailWarning.Click += EmailWarning_Click;
             // 
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.FromArgb(243, 196, 27);
-            pictureBox3.Location = new Point(-1, 577);
+            pictureBox3.Location = new Point(-1, 662);
             pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(619, 13);
             pictureBox3.TabIndex = 22;
             pictureBox3.TabStop = false;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Microsoft Sans Serif", 11.25F);
+            label6.Location = new Point(49, 483);
+            label6.Name = "label6";
+            label6.Size = new Size(124, 24);
+            label6.TabIndex = 24;
+            label6.Text = "Set Password";
+            // 
+            // SetPword
+            // 
+            SetPword.BorderStyle = BorderStyle.FixedSingle;
+            SetPword.Location = new Point(193, 480);
+            SetPword.Margin = new Padding(3, 4, 3, 4);
+            SetPword.Name = "SetPword";
+            SetPword.Size = new Size(394, 27);
+            SetPword.TabIndex = 23;
+            SetPword.TextChanged += textBox4_TextChanged;
+            // 
+            // setPass
+            // 
+            setPass.AutoSize = true;
+            setPass.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            setPass.ForeColor = Color.Firebrick;
+            setPass.Location = new Point(329, 511);
+            setPass.Name = "setPass";
+            setPass.Size = new Size(154, 17);
+            setPass.TabIndex = 25;
+            setPass.Text = "Requirde to Fill This Area\r\n";
+            setPass.Visible = false;
+            // 
             // AddTeacher
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(613, 591);
+            ClientSize = new Size(613, 675);
+            Controls.Add(setPass);
+            Controls.Add(label6);
+            Controls.Add(SetPword);
             Controls.Add(pictureBox3);
             Controls.Add(EmailWarning);
             Controls.Add(NameWarning);
@@ -254,7 +292,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "AddTeacher";
-            Text = "AddTeacher";
+            Text = "Set Password";
             Load += AddTeacher_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -281,5 +319,8 @@
         private Label NameWarning;
         private Label EmailWarning;
         private PictureBox pictureBox3;
+        private Label label6;
+        private TextBox SetPword;
+        private Label setPass;
     }
 }

@@ -40,28 +40,52 @@ namespace Teacher_Evaluation
                 {
                     label5.Visible = true;
                 }
-                else
-                {
-                    MSAcessDataSaveandRetrieve mS = new MSAcessDataSaveandRetrieve();
-                    mS.SaveAllTeachers();
 
 
-                    TeacherAdded?.Invoke();
-                    this.Close();
-                }
+               
 
             }
 
-            if (string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(textBox3.Text))
+            
+
+            if (string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(textBox3.Text) && string.IsNullOrWhiteSpace(SetPword.Text))
             {
                 EmailWarning.Visible = true;
-                IDwarning.Visible = true;   
-                NameWarning.Visible = true; 
+                IDwarning.Visible = true;
+                NameWarning.Visible = true;
+                setPass.Visible = true;
+
+                return;
             }
 
+          
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                IDwarning.Visible = false;
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                NameWarning.Visible = false;
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                EmailWarning.Visible = false;
+                return;
+            }
+
+            if(!string.IsNullOrWhiteSpace(textBox2.Text) && !string.IsNullOrWhiteSpace(textBox3.Text) && !string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace (SetPword.Text))
+            {
+                MSAcessDataSaveandRetrieve mS = new MSAcessDataSaveandRetrieve();
+                mS.SaveAllTeachers();
 
 
-
+                TeacherAdded?.Invoke();
+                this.Close();
+            }
 
 
 
@@ -77,17 +101,20 @@ namespace Teacher_Evaluation
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            NameWarning.Visible = false;
+            IDwarning.Visible = false;
+            return;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            IDwarning.Visible = false;
+            NameWarning.Visible = false;
+            return;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             EmailWarning.Visible = false;
+            return;
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -108,6 +135,12 @@ namespace Teacher_Evaluation
         private void EmailWarning_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            setPass.Visible = false;
+            return;
         }
     }
 }

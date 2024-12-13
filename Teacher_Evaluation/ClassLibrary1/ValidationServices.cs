@@ -17,6 +17,13 @@ namespace Services
             return Regex.IsMatch(ProfID, pattern);
         }
 
+        public bool validpaassword(string newpassword)
+        {
+            string password = newpassword;
+            string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[A-Za-z0-9@$!%*?&]{8,}$";
+            return Regex.IsMatch(password, pattern);
+        }
+
     }
     
 }
