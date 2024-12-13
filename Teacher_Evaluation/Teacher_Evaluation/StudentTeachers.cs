@@ -43,8 +43,8 @@ namespace Teacher_Evaluation
             }
 
             string teacherSubject = selectedRow.Cells["Subject"].Value.ToString();
-            Form2 form2 = new Form2(profID, teacherSubject, studentID);
-            form2.Show();
+            Feedback feedback = new Feedback(profID, teacherSubject, studentID);
+            feedback.Show();
             this.Hide();
         }
 
