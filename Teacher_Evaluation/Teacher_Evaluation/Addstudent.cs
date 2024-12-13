@@ -22,8 +22,8 @@ namespace Teacher_Evaluation
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             Validation validationClass = new Validation();
-            
-            
+
+
 
             if (textBox3.Text != textBox4.Text)
             {
@@ -46,6 +46,11 @@ namespace Teacher_Evaluation
         private void notif_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
