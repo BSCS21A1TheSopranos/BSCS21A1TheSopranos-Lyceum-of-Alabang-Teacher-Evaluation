@@ -69,6 +69,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(345, 23);
             textBox3.TabIndex = 6;
+            textBox3.UseSystemPasswordChar = true;
             // 
             // textBox4
             // 
@@ -77,6 +78,7 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(345, 23);
             textBox4.TabIndex = 7;
+            textBox4.UseSystemPasswordChar = true;
             // 
             // label3
             // 
