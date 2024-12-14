@@ -57,11 +57,66 @@ namespace Teacher_Evaluation
                 }
             }
 
+            if(string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(textBox3.Text) && string.IsNullOrWhiteSpace(textBox1.Text) && string.IsNullOrWhiteSpace(SetPword.Text))
+            {
+                IDwarning.Visible = true;
+                NameWarning.Visible = true;
+                EmailWarning.Visible = true;    
+                setPass.Visible = true;
+            }
+
+            else if (string.IsNullOrWhiteSpace(textBox3.Text) && string.IsNullOrWhiteSpace(textBox1.Text) && string.IsNullOrWhiteSpace(SetPword.Text))
+            {
+                NameWarning.Visible = true;
+                EmailWarning.Visible= true;
+                setPass.Visible= true;
+            }
+
+            else if(string.IsNullOrWhiteSpace(textBox1.Text) && string.IsNullOrWhiteSpace(SetPword.Text))
+            {
+                EmailWarning.Visible = true;
+                setPass.Visible = true;
+            }
+
+
+            if (string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(textBox1.Text) && string.IsNullOrWhiteSpace(SetPword.Text))
+            {
+                IDwarning.Visible= true;
+                EmailWarning.Visible = true;
+                setPass.Visible= true;  
+            }
+
+            else if (string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(SetPword.Text))
+            {
+                IDwarning.Visible= true;
+                setPass.Visible= true;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(textBox3.Text) && string.IsNullOrWhiteSpace(SetPword.Text))
+            {
+                IDwarning.Visible= true;
+                NameWarning.Visible= true;
+                setPass.Visible = true;
+            }
+
+            else if(string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                IDwarning.Visible= true;
+                NameWarning.Visible= true;
+            }
+
+            if(string.IsNullOrWhiteSpace(textBox2.Text) && string.IsNullOrWhiteSpace(textBox3.Text) && string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                IDwarning.Visible = true;
+                NameWarning.Visible= true;
+                EmailWarning.Visible= true;
+            }
+
             
 
             if (string.IsNullOrWhiteSpace(textBox2.Text))
             {
-                EmailWarning.Visible = true;
+                IDwarning.Visible = true;
                 return;
             }
 
@@ -78,19 +133,14 @@ namespace Teacher_Evaluation
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(textBox2.Text))
-            {
-                IDwarning.Visible = true;
-                return;
-            }
-
-
             if (string.IsNullOrWhiteSpace(SetPword.Text))
             {
                 setPass.Visible = true;
 
                 return;
             }
+
+
 
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
