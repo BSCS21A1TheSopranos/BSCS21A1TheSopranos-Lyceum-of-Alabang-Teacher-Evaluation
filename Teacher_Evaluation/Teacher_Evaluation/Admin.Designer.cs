@@ -37,8 +37,10 @@
             pictureBox1 = new PictureBox();
             mainpanel = new Panel();
             panel2 = new Panel();
+            panel3 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -48,7 +50,7 @@
             label1.BackColor = Color.FromArgb(31, 51, 92);
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(90, 223);
+            label1.Location = new Point(75, 200);
             label1.Name = "label1";
             label1.Size = new Size(164, 54);
             label1.TabIndex = 1;
@@ -62,10 +64,10 @@
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button5.ForeColor = SystemColors.Control;
-            button5.Location = new Point(90, 739);
+            button5.Location = new Point(44, 683);
             button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
-            button5.Size = new Size(138, 77);
+            button5.Size = new Size(209, 77);
             button5.TabIndex = 1;
             button5.Text = "Log Out";
             button5.UseVisualStyleBackColor = true;
@@ -172,11 +174,21 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(232, 188, 27);
+            panel2.Controls.Add(panel3);
             panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
             panel2.Size = new Size(1160, 15);
             panel2.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(232, 188, 27);
+            panel3.Location = new Point(0, 0);
+            panel3.Margin = new Padding(3, 4, 3, 4);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1160, 15);
+            panel3.TabIndex = 4;
             // 
             // Admin
             // 
@@ -193,6 +205,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -206,5 +219,6 @@
         private PictureBox pictureBox1;
         private Panel mainpanel;
         private Panel panel2;
+        private Panel panel3;
     }
 }
